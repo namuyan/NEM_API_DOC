@@ -1,69 +1,8 @@
-<style>h4{font-size:110%;border-left:4px solid lightgrey;padding-left:.4em;margin-bottom:.4em}.youtube{position:relative;padding-bottom:56.25%;height:0px}.tweet .figcaption{margin-top:-.8em}.tweet{max-width:500px;margin:0 auto}.tweet iframe{margin-bottom:0}.twitter-tweet{width:512px}#post iframe{border:none;position:absolute;top:0;left:0;width:100%;height:100%;margin:0 auto}.tweet blockquote{width:100%;padding:0}textarea{width:98%}#nav-post-smh a{padding:.2em}a:visited{color:#8b008b}#post .social-body{margin-bottom:1em}#breadcrumb,#post h2{border-top:1px solid #d3d3d3}#post h2{margin-top:2em;margin-bottom:1em;border-left:6px solid #87cefa;padding-left:0.8em;font-size:150%}#source-area{border-top:1px solid #d3d3d3;padding-top:1em}.post-ex{margin-bottom:2.4em}.caption{max-width:512px}.tweet .figcaption{margin-top:-.8em}.figcaption,.related{border-top:1px solid #d3d3d3}.related h3{padding:.6em 0;color:#696969;font-size:105%}.post-image img{width:250px;height:150px;margin-top:.6em;border:1px solid #d3d3d3;border-radius:4px;padding:0.2em;display:inline-block}.wimg{display:inline-block}#post-summary-area{border-top:1px solid #d3d3d3;padding-top:1em;color:#696969;margin-top:0.4em}.summary-icon{margin-right:1em;position:relative;top:0.12em;background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -162px -142px no-repeat;width:16px;height:16px;display:inline-block}#summary{font-size:95%;width:60%;margin:0 auto}#summary li{list-style:none;margin-bottom:2em}#post-summary-area h2{font-size:95%;border-left:4px solid #FFA500;border-top:none;padding-left:0.4em;display:inline-block;font-weight:bold;margin-bottom:1em !important}#post-prev a{float:left}#post-next a{float:right}#post-prev a,#post-next a{font-size:95%;margin-top:1em}.custom-field{font-size:85%;margin-top:0.6em;color:#808080;display:inline-block}#header-zone,#rss-menu{border-bottom:1px solid orange}#header-contents,#rss-menu,#rss-zone{max-width:1200px}#open-rss,#rss-menu,.move-page-top{text-align:center}#sidebar-area li,#site-sns li,.rss-list li{list-style:none}#archives-font,.rss-menu-top,.rss-menu-list li{margin-bottom:0.8em}*{font-family:-apple-system,'Lucida Grande','Helvetica Neue','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN',YuGothic,'Yu Gothic','游ゴシック体','游ゴシック',Helvetica,Arial,sans-serif;margin:0;padding:0;word-break:break-all;line-height:1.8}a{color:#0563C1}.clear{clear:both}#header-zone{border-top:2px solid #87cefa}#header-contents{margin-left:auto;margin-right:auto}#headlogo{margin:0 auto 0 12px;display:block;width:139px;height:35px;overflow:hidden}#headlogo img:hover{margin-top:-35px}#move-top,.move{display:none}#breadcrumb li,#social-top li,.rss-menu-list li{display:inline-block}#sitename a,.move-page-top,a{text-decoration:none}#site-info{float:left;margin:0.6em 0}#sitename{font-size:150%;font-weight:700;margin-left:1.2em}.move-page-top{background:orange;width:50px;height:50px;color:#fff;line-height:50px}#rss-menu{border-top:1px solid orange;background:snow;border-radius:4px;padding-top:1.2em;font-size:90%;margin:0 auto 12px}#open-rss a,.rss-menu-list li a{background:#f8f8f8;color:#696969}#rss-menu-bottom{margin-top:1.2em}#open-rss{padding:1.2em 0;border-radius:2px}#open-rss a{font-size:90%;border:1px solid #d3d3d3;border-radius:4px;padding:0.6em 1em}.rss-menu-list li{list-style:none;border:none;width:110px;padding:0 0.4em}.rss-menu-list li a{border:1px solid #d3d3d3;border-radius:4px;padding:0.4em 0.8em;display:block;width:80px;white-space:nowrap}.index-sns .social-button li a,#site-sns li a{width:32px;height:32px}.rss-smh{display:none}#site-sns{float:right;margin-top:0.6em}#site-sns li{border:none;padding:0;display:inline-block}#site-sns li a{display:block}#facebook{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -40px -70px no-repeat}#googlep{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -72px -70px no-repeat}#facebook{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) 0 -110px no-repeat}#googlep{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -32px -110px no-repeat}#twitter{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -64px -110px no-repeat}#feedly{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -96px -110px no-repeat}#rss{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -128px -110px no-repeat}#hatena{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) 0 -174px no-repeat;width:80px!important;height:20px!important;margin:0 1.2em 0.4em 0}body{background:snow;color:#333}#rss-menu>ul>li a,#sitename a,.entry-title{color:#696969}#contents-area{background:#fcfcfc}.index-sns{margin-top:1em}.index-sns .social-body{text-align:left}.social-button .facebook-index a{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) 0 -142px no-repeat}.social-button .google-index a{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -32px -142px no-repeat}.social-button .hatena-index a{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -64px -142px no-repeat}.social-button .pocket-index a{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -96px -142px no-repeat}.social-button .twitter-index a{background:url(//www.pr1sm.com/pr1sm-sprite-base.png) -128px -142px no-repeat}#archives-font,#post-thumbnail,.source-url,#source:after,.caption,.move-page-top,.fig2{text-align:center}#post small,#source:after,.move-page-top,label{display:block}.search-submit{padding:0.1em 0.8em;margin-top:0.4em}.entry-thumbnail{margin-top:0.6em}#contents{max-width:1200px;margin:0 auto}#main-contents,#side-content{margin-top:1em}#main-contents{float:left;width:800px;margin-left:3em;border-right:1px solid #f8f8ff}.entry{padding-bottom:0.6em;padding-top:0.6em;margin-bottom:1.2em;border-top:1px solid #d3d3d3}.thumbnail-area{float:left;margin-right:1.2em;margin-left:0.3em;}.thumbnail-area img{border:1px solid #d3d3d3;border-radius:4px;padding:0.2em;width:120px;height:120px}.entry-title{font-size:105%}.entry-time{color:grey;font-size:80%}#sidebar-area{float:right;width:310px;margin-right:0.3em}#side-content>div>p{font-size:100%;margin-bottom:0.2em;color:#696969;border-bottom:1px solid orange;border-top:2px solid #87cefa;padding:0.2em}#breadcrumb,#post,#post-head,#side-area li{border-bottom:1px solid #d3d3d3}#side-content>div{margin-bottom:1.6em;padding:0em 0.2em 0.2em 0.2em}#side-area a{color:#696969;display:block}#side-area li{border-bottom:1px solid #d3d3d3;font-size:95%;padding:0.4em;margin:-0.1em}.time-category,.category-area{font-size:80%;padding:0.2em 0.4em;display:inline-block}.page-top p{margin:0;padding:0;position:fixed;right:20px;bottom:20px}.page-top a{color:#fff!important;border-radius:6px}#breadcrumb li a,#post h2,#post-date,#rss-menu>ul>li a{color:#696969}#breadcrumb{text-align:center;padding:1em 0}#breadcrumb li a{padding:0.2em 0.4em}#breadcrumb li{margin:0 0.4em}#post h2,#post-title,#side-content>div>p,#sitename{text-shadow:2px 2px 0 #EEE}#post-title{margin-top:0.6em;font-size:105%}#thumb-content{margin-top:-2.6em;font-size:105%}#post,#post-head{padding-bottom:1.2em}#post-update{margin-left:0.6em}#breadcrumb,#post-date{font-size:90%}#post-title{font-size:170%;color:#696969}#post-thumbnail{float:right;margin-left:1.6em}.caption,.fig2{margin:0 auto;border:1px solid #d3d3d3;border-radius:2px 2px 6px 6px;background:#F5F5F5}#post-content p{margin-bottom:1.2em}#post-first{min-height:200px;margin-top:.6em}.figcaption{padding:.4em .2em;font-size:85%;color:grey}#thumbnail-caption{font-size:80%;color:grey;width:250px;margin:0 auto .8em}.source-url a,#source:after{font-weight:700;font-style:italic;margin:0 0.6em}.category-area a{color:#fff!important;border:1px solid;background:grey;margin:0 0.4em;padding:0.2em 0.4em;border-radius:6px}#post .thumbnail-area{margin:0}.post-img{text-align:center;margin-bottom:2.4em}.post-img img{display:block;margin:0 auto}#post small{margin-bottom:2em}#source:after{content:"- Source -";font-size:80%}@media screen and (max-width:1200px){#contents,#header-contents,#rss-menu{max-width:800px}#contents{padding:0.2em 1.2em}#main-contents{float:none;width:100%;margin:1.2em 0 0;border:none}#sidebar-area{float:none;width:100%;margin-top:2.4em}#rss-menu{overflow-x:scroll;white-space:nowrap}}@media screen and (max-width:900px){.entry-category{float:none}}@media screen and (max-width:600px){#nav-post-smh{font-size:90%;border-top:1px solid #d3d3d3}.nav-smh-prev{padding:.6em;float:left}.nav-smh-next{padding:.6em;float:right}#thumb-content{font-size:100%;margin-top:0}#header-contents,#header-zone,.entry,.move{text-align:center}#sidebar-area,#site-info,.entry{float:none}.caption,.post-img img{width:100%;height:auto}#post-thumbnail{float:none;margin:0}#contents{margin:0 auto;padding:0 .4em}#site-info{margin:0}.entry{width:auto}#header-contents{margin-left:auto;margin-right:auto}#site-sns,.rss-pc{display:none}#footer-content li,.rss-smh{display:block!important}#headlogo{margin:0 auto}#rss-main li{padding:1.2em 0}#footer-content li{margin:1.6em 0}.move{display:block;margin:0.6em auto}#move-top,.move a{text-decoration:none!important;color:#4169e1!important}#move-top{display:block;border-bottom:1px solid #4169e1;background:#fff;position:fixed;top:0;width:100%;box-shadow:0 0 2px rgba(0,0,0,.5);opacity:.8}#header-zone{border-bottom:1px solid orange;border-top:none;margin-top:3.6em;margin-bottom:0.4em}#site-info{margin-bottom:0.8em}#page-top{display:none}.time-category{margin-bottom:1.2em}.entry-title{margin-top:0.6em}#sitename{margin:0}.thumbnail-area{float:none}#summary{font-size:90%}}</style><script>function loadCSS(e,t,n){"use strict";function r(){for(var t,s=0;s<i.length;s++)i[s].href&&i[s].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),s=t||window.document.getElementsByTagName("script")[0],i=window.document.styleSheets;return o.rel="stylesheet ",o.href=e,o.media="only x",s.parentNode.insertBefore(o,s),r(),o}loadCSS("//www.pr1sm.com/files/themes/pr1sm/theme.css");</script><noscript></noscript> <div id="header-zone"><div id="header-contents"><div id="site-info">
-
-[![PR1SM](//www.pr1sm.com/pr1sm-sprite-base.png)](https://www.pr1sm.com/ "トップページへ移動")
-</div><div id="site-sns">
-
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=PR1SM "PR1SMをはてブする")
-*   [](https://www.facebook.com/pr1sm/ "いいね！")
-*   [](https://twitter.com/PR1SMweb "Twitterページ")
-*   [](https://plus.google.com/+Pr1smgplus/posts "google+ページ")
-*   [](https://feedly.com/i/subscription/feed/https://www.pr1sm.com "feedlyページ")
-*   [](https://www.pr1sm.com/feed/ "RSSフィード")</div><div class="clear"></div><noscript>**Javascriptが無効になっています。有効化していないと正しくコンテンツを表示出来ません。**</noscript></div>[<div class="move">▲ サイト最上部へ移動 ▲</div>](# "サイトの一番上へ移動する")</div><div id="contents-area"><div id="open-rss">[アンテナメニュー開閉](#)</div><nav id="rss-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement" style="display:none">
-
-*   [総合2ch](https://www.pr1sm.com/rss/all2ch)
-*   [ニュース2ch](https://www.pr1sm.com/rss/news2ch)
-*   [エンタメ2ch](https://www.pr1sm.com/rss/ent2ch)
-*   [サブカル2ch](https://www.pr1sm.com/rss/subcul2ch)
-*   [趣味2ch](https://www.pr1sm.com/rss/hobby2ch)
-*   [スポーツ2ch](https://www.pr1sm.com/rss/sport2ch)
-*   [その他2ch](https://www.pr1sm.com/rss/etc2ch)
-*   [衝撃](https://www.pr1sm.com/rss/shock)
-*   [アダルト](https://www.pr1sm.com/rss/adult)
-
-*   [総合](https://www.pr1sm.com/rss/all)
-*   [ニュース](https://www.pr1sm.com/rss/news)
-*   [エンタメ](https://www.pr1sm.com/rss/ent)
-*   [サブカル](https://www.pr1sm.com/rss/subcul)
-*   [趣味](https://www.pr1sm.com/rss/hobby)
-*   [スポーツ](https://www.pr1sm.com/rss/sport)
-*   [その他](https://www.pr1sm.com/rss/etc)
-*   [行政機関](https://www.pr1sm.com/rss/gov)
-*   [軽量版](https://www.pr1sm.com/rss/all-light)
-
-*   [ニュース2ch](https://www.pr1sm.com/rss/news2ch)
-*   [エンタメ2ch](https://www.pr1sm.com/rss/ent2ch)
-*   [サブカル2ch](https://www.pr1sm.com/rss/subcul2ch)
-*   [趣味2ch](https://www.pr1sm.com/rss/hobby2ch)
-*   [スポーツ2ch](https://www.pr1sm.com/rss/sport2ch)
-*   [その他2ch](https://www.pr1sm.com/rss/etc2ch)
-
-*   [ニュース](https://www.pr1sm.com/rss/news)
-*   [エンタメ](https://www.pr1sm.com/rss/ent)
-*   [サブカル](https://www.pr1sm.com/rss/subcul)
-*   [趣味](https://www.pr1sm.com/rss/hobby)
-*   [スポーツ](https://www.pr1sm.com/rss/sport)
-*   [その他](https://www.pr1sm.com/rss/etc)
-
-*   [総合](https://www.pr1sm.com/rss/all)
-*   [総合2ch](https://www.pr1sm.com/rss/all2ch)
-*   [行政機関](https://www.pr1sm.com/rss/gov)
-*   [衝撃](https://www.pr1sm.com/rss/shock)
-*   [アダルト](https://www.pr1sm.com/rss/adult)
-*   [軽量版](https://www.pr1sm.com/rss/all-light)</nav><div id="contents"><div id="main-contents"><div id="nav-post-smh">
-
-*   [←前の記事](https://www.pr1sm.com/review/vultr/ "前の記事へ移動")
-*   [次の記事→](https://www.pr1sm.com/crypto-coin/internet-of-coin/ "次の記事へ移動")</div><div class="clear"></div><div id="nav-post"><span id="post-prev">[←前の記事](https://www.pr1sm.com/review/vultr/) </span><span id="post-next">[次の記事→](https://www.pr1sm.com/crypto-coin/internet-of-coin/)</span> <nav itemprop="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">   
-
-*   [ <span itemprop="title">Home</span> ](https://www.pr1sm.com/ "Home") 
-*   -
-*   [ <span itemprop="title">クリプトコイン</span> ](//www.pr1sm.com/category/crypto-coin/) 
-*   -
-*   [ <span>本記事</span> ](https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/)  </nav></div><main itemscope="" itemtype="http://schema.org/Blog"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><div id="post">
-
 # New Economy Movement(NEM) APIマニュアル和訳
 
 NEM公式APIマニュアルの日本語訳。
-<div id="post-date-category"><span id="post-date"><span class="post-date" itemprop="datePublished">2017/03/14 - 6:37</span><time id="post-update" datetime="2017-04-10T16:38:39+00:00" itemprop="dateModified">最終更新：2017/04/10 - 16:38</time></span></div><div id="thumb-content"><div id="post-thumbnail"><figure class="post-image" title="New Economy Movement(NEM) APIマニュアル和訳" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![New Economy Movement(NEM) APIマニュアル和訳](https://www.pr1sm.com/files/uploads/2017/03/NEM-250x150.jpg)<figcaption id="thumbnail-caption">新経済運動(NEM - New Economy Movement)のAPIマニュアル和訳。</figcaption></figure></div><div id="post-content" itemprop="articleBody"><div id="post-first"><section>
+New Economy Movement(NEM) APIマニュアル和訳
+新経済運動(NEM - New Economy Movement)のAPIマニュアル和訳。
 
 ## New Economy Movement
 
@@ -77,7 +16,7 @@ NEMはその名前が表すように、金銭の自由、分散化、公平と�
 
 さて、記事のタイトルにもあるように、今回はNEM公式APIマニュアルの日本語翻訳を行いました。
 
-これはNEMの任意団体であるNEM UF([NEM UDON FOUNDATION](https://sites.google.com/view/udon-foundation/))によるNEM公式APIマニュアルの[和訳依頼](https://sites.google.com/view/udon-foundation/%E5%A0%B1%E5%A5%A8%E9%87%91%E5%88%B6%E5%BA%A6/wanted)を受けたものであり、ソフトウェアライセンスの[MIT Licence](https://opensource.org/licenses/MIT)に沿って公開されています。
+これはNEMの任意団体である[NEM UDON FOUNDATION](https://sites.google.com/view/udon-foundation/)によるNEM公式APIマニュアルの[和訳依頼](https://sites.google.com/view/udon-foundation/%E5%A0%B1%E5%A5%A8%E9%87%91%E5%88%B6%E5%BA%A6/wanted)を受けたものであり、ソフトウェアライセンスの[MIT Licence](https://opensource.org/licenses/MIT)に沿って公開されています。
 
 読みやすさを考慮しつつもなるべく原文との正確性も保つよう和訳を行っていますが、多少ズレがある可能性も考えられるため、より正しい内容を求める方は[公式マニュアル](http://bob.nem.ninja/docs/)を読むことをおすすめします。
 
@@ -96,7 +35,6 @@ NEMはその名前が表すように、金銭の自由、分散化、公平と�
 *   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/&t=New Economy Movement(NEM) APIマニュアル和訳 "この記事をFacebookでシェアする")
 *   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/ "この記事をGoogle+でおすすめする")
 *   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=New Economy Movement(NEM) APIマニュアル和訳 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/&title=New Economy Movement(NEM) APIマニュアル和訳 "この記事をpocketに保存する")</div><div class="clear"></div><div id="source-area"><div id="source"></div><small class="source-url">[NEM NIS API Documentation](http://bob.nem.ninja/docs/) by [NEM - Distributed Ledger Technology](https://www.nem.io/)</small></div><style>ol{list-style:none}ol > li > a{padding-left:1em}ol > li ol {padding-left:1em}#site-sns > ul > li{margin-bottom:0}ul > li{list-style:inside;padding-left:1em;margin-bottom:1em}section > ul,ul > ul{padding-left:1em;padding:1.2em;border:1px solid #ccc;border-radius:4px;margin-bottom:2.4em;}</style><section>
 
 ## NEM NIS API ドキュメンテーション
 
@@ -4649,563 +4587,197 @@ JSON構造の例
 
 公式情報：[Error messages](http://bob.nem.ninja/docs/#error-messages)
 
-*   
-
-**Request method ‘GET’ not supported**
+* **Request method ‘GET’ not supported**
 リクエストはGETリクエストとして実行されましたが、POSTリクエストであると予想されていました。
 
-*   
-
-**address must be valid**
+* **address must be valid**
 リクエストで指定されたアドレスが無効です。アドレスはリクエストを処理する前に検証されます。検証に失敗すると、このメッセージを含むエラーが返されます。
 
-*   
-
-**FAILURE_SERVER_LIMIT**
+* **FAILURE_SERVER_LIMIT**
 NISで収穫が許可されたアカウントの数を超えました。
 
-*   
-
-**JSON Object was expected**
+* **JSON Object was expected**
 リクエストにパラメータがありません。
 
-*   
-
-**FAILURE_UNKNOWN_ACCOUNT**
+* **FAILURE_UNKNOWN_ACCOUNT**
 リクエストで指定されたアカウントが不明です。
 
-*   
-
-**block not found in the db**
+*  **block not found in the db**
 要求されたブロックはデータベースに見つかりませんでした。
 
-*   
-
-**height must be positive**
+*  **height must be positive**
 リクエストで指定されたブロックの高さはゼロまたは負であった。 ブロックの高さは常にゼロより大きくなければなりません。
 
-*   
-
-**network has not been booted yet**
+* **network has not been booted yet**
 ほとんどのリクエストではすでに起動されているリクエストに応答するノードが必要です。ノードがまだ起動されていない場合はこのエラーメッセージが返されます。
 
-*   
-
-**network boot was already attempted**
+* **network boot was already attempted**
 既に起動されているノードを起動しようとしました。ノードは一度しかブートできません。
 
-*   
-
-**remote 123.45.67.89 attempted to call local /node/boot**
+* **remote 123.45.67.89 attempted to call local /node/boot**
 リモートノードをブートしようとしました。 ローカルノードだけが起動できます。
 
-*   
-
-**FAILURE_PAST_DEADLINE**
+* **FAILURE_PAST_DEADLINE**
 エンティティの期限はすでに切れています。 期限は常に将来の時刻でなければなりません。
 
-*   
-
-**FAILURE_FUTURE_DEADLINE**
+* **FAILURE_FUTURE_DEADLINE**
 期限があまりにも先になっています。 期限は将来24時間までしか許可されません。
 
-*   
-
-**FAILURE_INSUFFICIENT_BALANCE**
+* **FAILURE_INSUFFICIENT_BALANCE**
 アカウントに十分な資金がありません。
 
-*   
-
-**FAILURE_MESSAGE_TOO_LARGE**
+* **FAILURE_MESSAGE_TOO_LARGE**
 トランザクションのメッセージが512バイトの制限を超えています。
 
-*   
-
-**FAILURE_HASH_EXISTS**
+* **FAILURE_HASH_EXISTS**
 エンティティのハッシュはすでにキャッシュまたはデータベースに存在します。
 
-*   
-
-**FAILURE_SIGNATURE_NOT_VERIFIABLE**
+* **FAILURE_SIGNATURE_NOT_VERIFIABLE**
 エンティティの署名が検証に失敗しました。
 
-*   
-
-**FAILURE_TIMESTAMP_TOO_FAR_IN_PAST**
+* **FAILURE_TIMESTAMP_TOO_FAR_IN_PAST**
 エンティティのタイムスタンプが遥か先になっています。
 
-*   
-
-**FAILURE_TIMESTAMP_TOO_FAR_IN_PAST**
+* **FAILURE_TIMESTAMP_TOO_FAR_IN_PAST**
 エンティティのタイムスタンプが遥か過去になっています。
 
-*   
-
-**FAILURE_TIMESTAMP_TOO_FAR_IN_FUTURE**
+* **FAILURE_TIMESTAMP_TOO_FAR_IN_FUTURE**
 エンティティのタイムスタンプは、遥か先になっています。
 
-*   
-
-**FAILURE_INELIGIBLE_BLOCK_SIGNER**
+* **FAILURE_INELIGIBLE_BLOCK_SIGNER**
 ブロックに不適格な署名者が含まれているため、検証に失敗しました。これは通常、リモートハーベスティングがアクティブ化または非アクティブ化されているときに発生します。
 
-*   
-
-**FAILURE_ENTITY_UNUSABLE_OUT_OF_SYNC**
+* **FAILURE_ENTITY_UNUSABLE_OUT_OF_SYNC**
 リモートノードがローカルノードと同期していないため、エンティティを処理できません。これはノードが完全に同期しておらず、自身のチェーンよりもはるかに高い新しいブロックを受け取った場合に頻繁に発生します。
 
-*   
-
-**FAILURE_INSUFFICIENT_FEE**
+* **FAILURE_INSUFFICIENT_FEE**
 提供されたトランザクションに不十分な手数料があります。
 
-*   
-
-**FAILURE_NEMESIS_ACCOUNT_TRANSACTION_AFTER_NEMESIS_BLOCK**
+* **FAILURE_NEMESIS_ACCOUNT_TRANSACTION_AFTER_NEMESIS_BLOCK**
 提供されたトランザクションには送信者としてのネメシスアカウントがあり、通常のブロックに含めることはできません。
 
-*   
-
-**FAILURE_TRANSACTION_CACHE_TOO_FULL**
+* **FAILURE_TRANSACTION_CACHE_TOO_FULL**
 トランザクションキャッシュが限界であるため、トランザクションは拒否されました。これはアカウントが短時間に多すぎるトランザクションを送信しようとしたときに発生します。トランザクションが承認される可能性を高めるために、トランザクション手数料を引き上げることができます。
 
-*   
-
-**FAILURE_WRONG_NETWORK**
+* **FAILURE_WRONG_NETWORK**
 エンティティは間違ったネットワークが指定されていたため、拒否されました。
 
-*   
-
-**FAILURE_CANNOT_HARVEST_FROM_BLOCKED_ACCOUNT**
+* **FAILURE_CANNOT_HARVEST_FROM_BLOCKED_ACCOUNT**
 ブロックされたアカウント(通常は予約されているNEMファンド)によって収穫されたため、ブロックは拒否されました。
 
-*   
-
-**FAILURE_DESTINATION_ACCOUNT_HAS_NONZERO_BALANCE**
+* **FAILURE_DESTINATION_ACCOUNT_HAS_NONZERO_BALANCE**
 ゼロ以外の残高を持つアカウントには重要性を移すことはできません。
 
-*   
-
-**FAILURE_IMPORTANCE_TRANSFER_IN_PROGRESS**
+* **FAILURE_IMPORTANCE_TRANSFER_IN_PROGRESS**
 進行中の重要性の移転が既に存在するため、トランザクションは競合しています。
 
-*   
-
-**FAILURE_IMPORTANCE_TRANSFER_NEEDS_TO_BE_DEACTIVATED**
+* **FAILURE_IMPORTANCE_TRANSFER_NEEDS_TO_BE_DEACTIVATED**
 重要性が既に移転されたため、トランザクションは競合しています。
 
-*   
-
-**FAILURE_IMPORTANCE_TRANSFER_IS_NOT_ACTIVE**
+* **FAILURE_IMPORTANCE_TRANSFER_IS_NOT_ACTIVE**
 重要性がまだ移転されていないため、トランザクションは競合しています。
 
-*   
-
-**FAILURE_TRANSACTION_NOT_ALLOWED_FOR_REMOTE**
+* **FAILURE_TRANSACTION_NOT_ALLOWED_FOR_REMOTE**
 トランザクションが不適切な方法でリモートアカウントを使用しているため、検証に失敗しました。
 
-*   
-
-**FAILURE_MULTISIG_NOT_A_COSIGNER**
+* **FAILURE_MULTISIG_NOT_A_COSIGNER**
 トランザクションの署名者が内部トランザクションの送信者アカウントのコーパスリーダではないため、マルチシグトランザクションは拒否されました。
 
-*   
-
-**FAILURE_MULTISIG_INVALID_COSIGNERS**
+* **FAILURE_MULTISIG_INVALID_COSIGNERS**
 マルチシグトランザクションに接続された署名者が無効であるため、検証に失敗しました。
 
-*   
-
-**FAILURE_MULTISIG_NO_MATCHING_MULTISIG**
+* **FAILURE_MULTISIG_NO_MATCHING_MULTISIG**
 対応するマルチシグトランザクションが見つからなかったため、署名トランザクションは拒否されました。
 
-*   
-
-**FAILURE_TRANSACTION_NOT_ALLOWED_FOR_MULTISIG**
+* **FAILURE_TRANSACTION_NOT_ALLOWED_FOR_MULTISIG**
 署名者はマルチシグ署名アカウントであるため、トランザクションは拒否されました。マルチシグアカウントはいかなるトランザクションも開始することができません(単一アカウントでは許可されています)。
 
-*   
-
-**FAILURE_MULTISIG_ALREADY_A_COSIGNER**
+* **FAILURE_MULTISIG_ALREADY_A_COSIGNER**
 トランザクションは、すでにこの署名者を持つマルチシグ署名アカウントに署名者を追加しようとしたため、拒否されました。
 
-*   
-
-**FAILURE_MULTISIG_MODIFICATION_MULTIPLE_DELETES**
+* **FAILURE_MULTISIG_MODIFICATION_MULTIPLE_DELETES**
 このトランザクションは一度に複数の署名者を削除しようとしたために却下されました。一度に1つの署名者を削除することのみ許可されています。
 
-*   
-
-**FAILURE_MULTISIG_MODIFICATION_REDUNDANT_MODIFICATIONS**
+* **FAILURE_MULTISIG_MODIFICATION_REDUNDANT_MODIFICATIONS**
 冗長な変更を行おうとしたためトランザクションは拒否されました。 これはトランザクションが同じ署名者を2回追加しようとした場合に発生します。
 
-*   
-
-**FAILURE_CONFLICTING_MULTISIG_MODIFICATION**
+* **FAILURE_CONFLICTING_MULTISIG_MODIFICATION**
 トランザクションにはマルチシグアカウントの矛盾した変更が含まれていたため拒否されました。 例えばトランザクションが同じ署名者を追加してから削除しようとすると、これが起こります。
 
-*   
-
-**FAILURE_TOO_MANY_MULTISIG_COSIGNERS**
+* **FAILURE_TOO_MANY_MULTISIG_COSIGNERS**
 トランザクションには余分な共約が含まれているため拒否されました。 マルチシグアカウントに許可されている署名者の最大数は32です。
 
-*   
-
-**FAILURE_MULTISIG_ACCOUNT_CANNOT_BE_COSIGNER**
+* **FAILURE_MULTISIG_ACCOUNT_CANNOT_BE_COSIGNER**
 マルチシグの変更により、マルチシグアカウントが署名者になるため、検証に失敗しました。
 
-*   
-
-**FAILURE_MULTISIG_MIN_COSIGNATORIES_OUT_OF_RANGE**
+* **FAILURE_MULTISIG_MIN_COSIGNATORIES_OUT_OF_RANGE**
 署名者の最小数が負であるか、署名者の数よりも大きいため、検証は失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_UNKNOWN**
+* **FAILURE_NAMESPACE_UNKNOWN**
 ネームスペースが不明なため、検証に失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_ALREADY_EXISTS**
+* **FAILURE_NAMESPACE_ALREADY_EXISTS**
 ネームスペースが既に存在するため、検証に失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_EXPIRED**
+* **FAILURE_NAMESPACE_EXPIRED**
 ネームスペースの有効期限が切れているため、検証に失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_OWNER_CONFLICT**
+* **FAILURE_NAMESPACE_OWNER_CONFLICT**
 トランザクション署名者がネームスペースの所有者ではないため、検証に失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_INVALID_NAME(**
+* **FAILURE_NAMESPACE_INVALID_NAME(**
 ネームスペースの名前が無効であるため、検証に失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_INVALID_RENTAL_FEE_SINK**
+* **FAILURE_NAMESPACE_INVALID_RENTAL_FEE_SINK**
 指定されたネームスペースレンタルフィーシンクが無効であるため、検証に失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_INVALID_RENTAL_FEE**
+* **FAILURE_NAMESPACE_INVALID_RENTAL_FEE**
 指定されたレンタル手数料が無効であるため、検証に失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_PROVISION_TOO_EARLY**
+* **FAILURE_NAMESPACE_PROVISION_TOO_EARLY**
 プロビジョニングが早過ぎたため、検証に失敗しました。
 
-*   
-
-**FAILURE_NAMESPACE_NOT_CLAIMABLE**
+* **FAILURE_NAMESPACE_NOT_CLAIMABLE**
 ネームスペースに予約された部分が含まれているため、検証ができませんでした。
 
-*   
-
-**FAILURE_MOSAIC_UNKNOWN**
+* **FAILURE_MOSAIC_UNKNOWN**
 モザイクが不明なため、検証に失敗しました。
 
-*   
-
-**FAILURE_MOSAIC_MODIFICATION_NOT_ALLOWED**
+* **FAILURE_MOSAIC_MODIFICATION_NOT_ALLOWED**
 既存のモザイクの変更が許可されていないため、検証に失敗しました。
 
-*   
-
-**FAILURE_MOSAIC_CREATOR_CONFLICT**
+* **FAILURE_MOSAIC_CREATOR_CONFLICT**
 トランザクション署名者がモザイクの作成者ではないため、検証に失敗しました。
 
-*   
-
-**FAILURE_MOSAIC_SUPPLY_IMMUTABLE**
+* **FAILURE_MOSAIC_SUPPLY_IMMUTABLE**
 モザイクの供給が不変であるため、検証に失敗しました。
 
-*   
-
-**FAILURE_MOSAIC_MAX_SUPPLY_EXCEEDED**
+* **FAILURE_MOSAIC_MAX_SUPPLY_EXCEEDED**
 モザイク全体の最大供給量を超えているため、検証に失敗しました。
 
-*   
-
-**FAILURE_MOSAIC_NOT_TRANSFERABLE**
+* **FAILURE_MOSAIC_NOT_TRANSFERABLE**
 モザイクが転送できないため、検証に失敗しました。
 
-*   
-
-**FAILURE_MOSAIC_DIVISIBILITY_VIOLATED**
+* **FAILURE_MOSAIC_DIVISIBILITY_VIOLATED**
 モザイクの分割可能性に違反しているため、検証に失敗しました。
 
-*   
-
-**FAILURE_CONFLICTING_MOSAIC_CREATION**
+* **FAILURE_CONFLICTING_MOSAIC_CREATION**
 競合するモザイク作成が存在するため、検証に失敗しました。
 
-*   
-
-**FAILURE_MOSAIC_INVALID_CREATION_FEE_SINK**
+* **FAILURE_MOSAIC_INVALID_CREATION_FEE_SINK**
 モザイククリエーションシンクが無効であるため、検証に失敗しました。
 
-*   
-
-**FAILURE_MOSAIC_INVALID_CREATION_FEE**
+* **FAILURE_MOSAIC_INVALID_CREATION_FEE**
 指定された作成料金が無効であるため、検証に失敗しました。
+  
 
-*   
-
-**FAILURE_TOO_MANY_MOSAIC_TRANSFERS**
-転送トランザクションに添付されたモザイク転送が多すぎるため、検証に失敗しました。</section></section></div></div><div class="clear"></div><footer id="post-end"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=New Economy Movement(NEM) APIマニュアル和訳：https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/&t=New Economy Movement(NEM) APIマニュアル和訳 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=New Economy Movement(NEM) APIマニュアル和訳 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/&title=New Economy Movement(NEM) APIマニュアル和訳 "この記事をpocketに保存する")</div><div class="clear"></div><div id="post-end-info">
+* **FAILURE_TOO_MANY_MOSAIC_TRANSFERS**
+転送トランザクションに添付されたモザイク転送が多すぎるため、検証に失敗しました。
 
 タイトル：New Economy Movement(NEM) APIマニュアル和訳
 
-カテゴリー：[<span itemprop="name">クリプトコイン</span>](//www.pr1sm.com/category/crypto-coin/)タグ：[howto](https://www.pr1sm.com/tag/howto/) [New-Economy-Movement](https://www.pr1sm.com/tag/new-economy-movement/) [ネットサービス](https://www.pr1sm.com/tag/%e3%83%8d%e3%83%83%e3%83%88%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9/)
-
-URL：https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/
-<nav class="post-nav"><div class="post-nav-prev">
-
-前の記事：[とっても優秀な海外VPS『VULTR』を使ってみよう](https://www.pr1sm.com/review/vultr/)
- </div><div class="post-nav-next">
-
-次の記事：[2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』](https://www.pr1sm.com/crypto-coin/internet-of-coin/)
-</div></nav></div></footer></div></article><div class="clear"></div><div class="related-post-area">
-
-## 暗号通貨アドレス
-
-寄付されたコインはサイト運営やコミュニティの発展のために使用されます。
-
-NEM：NDBEQJ-7XIF6P-46AST5-2JQVLP-JIJS43-VOY5L7-LWA5
-</div><div class="related-post-area">
-
-## アンテナサービス運営中
-
-当サイトでは現在アンテナサービス([プリズムアンテナ](https://www.pr1sm.com/rss/all2ch))を運営しています。
-
-様々なジャンルのサイト(200以上)を取り扱っているので、よろしければ暇つぶしにどうぞご利用下さい。
-
-アンテナのジャンルについては『[アンテナについて](https://www.pr1sm.com/about-antenna/)』をご覧下さい。
-</div><aside><div class="related-post-area">
-
-## おすすめ記事一覧
-
- <div class="related"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2016-06-03T14:09:00+00:00" itemprop="datePublished"></time><time datetime="2017-02-24T23:43:26+00:00" itemprop="dateModified"></time>[<div class="thumbnail-area"><span title="【WP設定】高速で強力なWordPressサイトを構築する４" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image"></span></div>
-
-### 【WP設定】高速で強力なWordPressサイトを構築する４
-
-](https://www.pr1sm.com/column/high-performance-wordpress-4/)<div class="clear"></div></article></div> <div class="related"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2016-04-23T13:04:19+00:00" itemprop="datePublished"></time><time datetime="2017-02-24T23:43:41+00:00" itemprop="dateModified"></time>[<div class="thumbnail-area"><span title="【はじめに】高速で強力なWordPressサイトを構築する１" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image"></span></div>
-
-### 【はじめに】高速で強力なWordPressサイトを構築する１
-
-](https://www.pr1sm.com/column/high-performance-wordpress/)<div class="clear"></div></article></div> <div class="related"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2017-03-16T23:18:29+00:00" itemprop="datePublished"></time><time datetime="2017-03-27T17:53:10+00:00" itemprop="dateModified"></time>[<div class="thumbnail-area"><span title="惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image"></span></div>
-
-### 惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』
-
-](https://www.pr1sm.com/crypto-coin/new-web-shift/)<div class="clear"></div></article></div> <div class="related"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2015-10-20T15:42:08+00:00" itemprop="datePublished"></time><time datetime="2017-02-24T23:43:46+00:00" itemprop="dateModified"></time>[<div class="thumbnail-area"><span title="頭痛が発生する原因とは何か？" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image"></span></div>
-
-### 頭痛が発生する原因とは何か？
-
-](https://www.pr1sm.com/life/what-causes-headaches/)<div class="clear"></div></article></div> <div class="related"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2017-03-15T02:44:14+00:00" itemprop="datePublished dateModified"></time>[<div class="thumbnail-area"><span title="NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image"></span></div>
-
-### NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容
-
-](https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/)<div class="clear"></div></article></div> <div class="clear"></div></div></aside><aside><div class="related-post-area">
-
-## 「[クリプトコイン](https://www.pr1sm.com/category/crypto-coin/)」の最新記事
-
- <div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2017-03-27T18:54:26+00:00" itemprop="datePublished"></time><time datetime="2017-03-31T03:28:44+00:00" itemprop="dateModified"></time><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』](https://www.pr1sm.com/files/uploads/2017/03/visio-120x120.jpg)</div></div>
-
-### IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』
-
-](https://www.pr1sm.com/crypto-coin/visio/)
-
-究極のビデオシェアリング。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』：https://www.pr1sm.com/crypto-coin/visio/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/visio/&t=IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/visio/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/visio/&title=IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div> <div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2017-03-16T23:18:29+00:00" itemprop="datePublished"></time><time datetime="2017-03-27T17:53:10+00:00" itemprop="dateModified"></time><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』](https://www.pr1sm.com/files/uploads/2017/03/new-web-shift-120x120.jpg)</div></div>
-
-### 惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』
-
-](https://www.pr1sm.com/crypto-coin/new-web-shift/)
-
-新たなウェブ世界の到来。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』：https://www.pr1sm.com/crypto-coin/new-web-shift/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/new-web-shift/&t=惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/new-web-shift/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/new-web-shift/&title=惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div> <div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2017-03-15T02:44:14+00:00" itemprop="datePublished dateModified"></time><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容](https://www.pr1sm.com/files/uploads/2017/03/send-trump-to-hell-120x120.jpg)</div></div>
-
-### NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容
-
-](https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/)
-
-3人のとある人物を地獄に突き落とすトンデモゲーム。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容：https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/&t=NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/&title=NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div> <div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2017-03-14T07:11:03+00:00" itemprop="datePublished"></time><time datetime="2017-03-23T23:40:04+00:00" itemprop="dateModified"></time><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』](https://www.pr1sm.com/files/uploads/2017/03/ioc-120x120.jpg)</div></div>
-
-### 2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』
-
-](https://www.pr1sm.com/crypto-coin/internet-of-coin/)
-
-等価交換を行える暗号通貨『IoC』。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』：https://www.pr1sm.com/crypto-coin/internet-of-coin/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/internet-of-coin/&t=2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/internet-of-coin/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/internet-of-coin/&title=2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div> <div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><time datetime="2017-02-25T05:30:52+00:00" itemprop="datePublished"></time><time datetime="2017-03-08T00:01:35+00:00" itemprop="dateModified"></time><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="暗号通貨のマイニングで遊んでみる" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![暗号通貨のマイニングで遊んでみる](https://www.pr1sm.com/files/uploads/2017/02/bitcoin-120x120.jpg)</div></div>
-
-### 暗号通貨のマイニングで遊んでみる
-
-](https://www.pr1sm.com/crypto-coin/mining-crypto-coin/)
-
-マイニングで新たなコインを掘り起こそう。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=暗号通貨のマイニングで遊んでみる：https://www.pr1sm.com/crypto-coin/mining-crypto-coin/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/mining-crypto-coin/&t=暗号通貨のマイニングで遊んでみる "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/mining-crypto-coin/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=暗号通貨のマイニングで遊んでみる "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/mining-crypto-coin/&title=暗号通貨のマイニングで遊んでみる "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div> </div></aside><div class="clear"></div><aside><div class="related-post-area">
-
-## [新着記事](https://www.pr1sm.com/)
-
-<div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><div class="time-category"><span><time datetime="2017-03-27T18:54:26+00:00" itemprop="datePublished"></time><time datetime="2017-03-31T03:28:44+00:00" itemprop="dateModified"></time></span></div><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』](https://www.pr1sm.com/files/uploads/2017/03/visio-120x120.jpg)</div></div>
-
-### IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』
-
-](https://www.pr1sm.com/crypto-coin/visio/)
-
-究極のビデオシェアリング。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』：https://www.pr1sm.com/crypto-coin/visio/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/visio/&t=IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/visio/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/visio/&title=IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div><div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><div class="time-category"><span><time datetime="2017-03-16T23:18:29+00:00" itemprop="datePublished"></time><time datetime="2017-03-27T17:53:10+00:00" itemprop="dateModified"></time></span></div><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』](https://www.pr1sm.com/files/uploads/2017/03/new-web-shift-120x120.jpg)</div></div>
-
-### 惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』
-
-](https://www.pr1sm.com/crypto-coin/new-web-shift/)
-
-新たなウェブ世界の到来。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』：https://www.pr1sm.com/crypto-coin/new-web-shift/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/new-web-shift/&t=惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/new-web-shift/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/new-web-shift/&title=惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div><div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><div class="time-category"><span><time datetime="2017-03-15T02:44:14+00:00" itemprop="datePublished dateModified"></time></span></div><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容](https://www.pr1sm.com/files/uploads/2017/03/send-trump-to-hell-120x120.jpg)</div></div>
-
-### NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容
-
-](https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/)
-
-3人のとある人物を地獄に突き落とすトンデモゲーム。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容：https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/&t=NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/&title=NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div><div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><div class="time-category"><span><time datetime="2017-03-14T07:11:03+00:00" itemprop="datePublished"></time><time datetime="2017-03-23T23:40:04+00:00" itemprop="dateModified"></time></span></div><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』](https://www.pr1sm.com/files/uploads/2017/03/ioc-120x120.jpg)</div></div>
-
-### 2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』
-
-](https://www.pr1sm.com/crypto-coin/internet-of-coin/)
-
-等価交換を行える暗号通貨『IoC』。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』：https://www.pr1sm.com/crypto-coin/internet-of-coin/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/internet-of-coin/&t=2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/internet-of-coin/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/internet-of-coin/&title=2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div><div class="entry"><article itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting" itemref="publisher"><div class="time-category"><span><time datetime="2017-03-14T06:37:31+00:00" itemprop="datePublished"></time><time datetime="2017-04-10T16:38:39+00:00" itemprop="dateModified"></time></span></div><div class="entry-thumbnail">[<div class="thumbnail-area"><div class="entry-image" title="New Economy Movement(NEM) APIマニュアル和訳" itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image">![New Economy Movement(NEM) APIマニュアル和訳](https://www.pr1sm.com/files/uploads/2017/03/NEM-120x120.jpg)</div></div>
-
 ### New Economy Movement(NEM) APIマニュアル和訳
 
-](https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/)
+https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/
 
 NEM公式APIマニュアルの日本語訳。
-<div class="index-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=New Economy Movement(NEM) APIマニュアル和訳：https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/&t=New Economy Movement(NEM) APIマニュアル和訳 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=New Economy Movement(NEM) APIマニュアル和訳 "この記事をはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/&title=New Economy Movement(NEM) APIマニュアル和訳 "この記事をpocketに保存する")</div><div class="clear"></div></div></div><div class="clear"></div></article></div></div></aside><div class="clear"></div><div class="clear"></div></main></div><div id="sidebar-area"> <aside itemscope="" itemtype="http://schema.org/WPSideBar"><div id="side-area"><div id="side-content"><div class="Side_widget_text">
-
-検索
-<div class="textwidget"><form method="get" id="searchform" action="/"><label><input class="search-field" placeholder=" 検索" name="s" title="Search for:" type="search"></label><input class="search-submit" value="Search" type="submit"></form></div></div><div id="recent-posts-3" class="Side_widget_recent_entries">
-
-最新記事
-
-*   [IPFSとブロックチェーンで生み出される、制限なき動画共有プラットフォーム『Visio』](https://www.pr1sm.com/crypto-coin/visio/)
-*   [惑星間ファイルシステムとブロックチェーンによる新たなウェブ『Shift』](https://www.pr1sm.com/crypto-coin/new-web-shift/)
-*   [NEMブロックチェーンの採用を発表したゲーム会社のスマホゲームがトンデモ内容](https://www.pr1sm.com/crypto-coin/xhai-studios-mobile-game/)
-*   [2017年の暗号通貨業界に新たな風、ハイブリッド資産『Internet of Coin』](https://www.pr1sm.com/crypto-coin/internet-of-coin/)
-*   [New Economy Movement(NEM) APIマニュアル和訳](https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/)
-*   [とっても優秀な海外VPS『VULTR』を使ってみよう](https://www.pr1sm.com/review/vultr/)
-*   [暗号通貨のマイニングで遊んでみる](https://www.pr1sm.com/crypto-coin/mining-crypto-coin/)
-*   [【AMP導入】高速で強力なWordPressサイトを構築する８](https://www.pr1sm.com/column/high-performance-wordpress-8/)</div><div id="text-2" class="Side_widget_text">
-
-カテゴリー
-<div class="textwidget">
-
-*   [ニュース](https://www.pr1sm.com/category/news/ "『ニュース』カテゴリーは主に時事などをはじめ、一般的なニュースを扱っています。")
-*   [エンタメ](https://www.pr1sm.com/category/entertainment/ "『エンタメ』カテゴリーは面白い話題などといった、エンターテイメント方面に特化した内容の記事を指しています。")
-*   [サイエンス](https://www.pr1sm.com/category/science/ "『サイエンス』カテゴリーは主に科学分野に関連するニュースを扱っています。")
-*   [テクノロジー](https://www.pr1sm.com/category/technology/ "『テクノロジー』カテゴリーは主に工学分野に関連しているニュースを扱っています。")
-*   [ライフ](https://www.pr1sm.com/category/life/ "『ライフ』カテゴリーは主に衣食住など、一般の生活全般を扱っています。")
-*   [スポーツ](https://www.pr1sm.com/category/sport/ "『スポーツ』カテゴリーはスポーツ全般に関する内容を扱っています。")
-*   [レビュー](https://www.pr1sm.com/category/review/ "『レビュー』カテゴリーは筆者が実際に利用した店舗やアイテムに関しての体験談を扱っています。")
-*   [コラム](https://www.pr1sm.com/category/column/ "『コラム』カテゴリーは筆者による分析や評論による独自記事を扱っています。")
-*   [クリプトコイン](https://www.pr1sm.com/category/crypto-coin/ "『クリプトコイン』カテゴリーはBitcoinをはじめ、暗号通貨に関する情報を扱っています。")</div></div><div id="archives-3" class="Side_widget_archive">
-
-アーカイブ
-
-*   [2017年3月](https://www.pr1sm.com/2017/03/)
-*   [2017年2月](https://www.pr1sm.com/2017/02/)
-*   [2016年7月](https://www.pr1sm.com/2016/07/)
-*   [2016年6月](https://www.pr1sm.com/2016/06/)
-*   [2016年5月](https://www.pr1sm.com/2016/05/)
-*   [2016年4月](https://www.pr1sm.com/2016/04/)
-*   [2015年10月](https://www.pr1sm.com/2015/10/)</div><div class="Side_widget_text">
-
-QRコード
-<div class="textwidget">![QRコード](//www.pr1sm.com/pr1sm-qr-code.png)</div></div></div><div id="side-fixed"></div></div></aside></div><div class="clear"></div></div><div class="clear"></div></div><footer id="site-footer" itemscope="" itemtype="http://schema.org/WPFooter"><div id="footer-zone"><div id="footer-content">
-
-*   [当サイトについて](https://www.pr1sm.com/about/)
-*   [アンテナについて](https://www.pr1sm.com/about-antenna/)
-*   [役に立ちそうなリンク集](https://www.pr1sm.com/useful-links/)
-*   [QRコード表示](https://www.pr1sm.com/pr1sm-qr-code.png)<div class="clear"></div><div id="footer-sns"><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=PR1SM：https://www.pr1sm.com/ "PR1SMをTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/&t=PR1SM "PR1SMをFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/ "PR1SMをGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=PR1SM "PR1SMをはてブする")
-*   [](http://getpocket.com/edit?url=https://www.pr1sm.com/&title=PR1SM "PR1SMをpocketに保存する")</div><div class="clear"></div></div><small id="publisher" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"></span>Copyright© 2018 [PR1SM](https://www.pr1sm.com)- All Rights Reserved.</small><div class="clear"></div></div></div><script>function open_menu(){var e=document.getElementById("rss-menu").style.display;"none"==e?document.getElementById("rss-menu").style.display="block":document.getElementById("rss-menu").style.display="none"}</script><div id="page-top" class="page-top">
-
-[▲](# "最上部へ移動する")
-</div></footer>
