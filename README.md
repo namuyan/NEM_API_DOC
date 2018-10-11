@@ -4,6 +4,8 @@ NEM公式APIマニュアルの日本語訳。
 New Economy Movement(NEM) APIマニュアル和訳
 新経済運動(NEM - New Economy Movement)のAPIマニュアル和訳。
 
+**この文章について、本来[pr1smさんのサイト](https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/)に掲載されていましたが削除されました。そこで残存していたキャッシュより復元しここに残します。**
+
 ## New Economy Movement
 
 暗号通貨にはビットコインに追従する形で多くの代替コイン(オルトコイン)が存在し、これらコインはそれぞれ異なった性質を持ち、またそれぞれ別の目標や信念を掲げて開発が続けられています。
