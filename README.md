@@ -29,14 +29,9 @@ NEMはその名前が表すように、金銭の自由、分散化、公平と�
 
 ## (本文前に)簡単な3行まとめ
 
-*   <span class="summary-icon"></span><span>NEM公式APIマニュアルを和訳。</span>
-*   <span class="summary-icon"></span><span>正しい情報を求める場合は公式ページの閲覧を推奨。</span>
-*   <span class="summary-icon"></span><span>暫定的であるため、今後変更の可能性あり。</span></div></section></div><span id="more-2131"></span><div class="social-body">
-
-*   [ ](http://twitter.com/intent/tweet?text=New Economy Movement(NEM) APIマニュアル和訳：https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/ "この記事をTwitterでつぶやく")
-*   [](http://www.facebook.com/sharer.php?u=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/&t=New Economy Movement(NEM) APIマニュアル和訳 "この記事をFacebookでシェアする")
-*   [](https://plus.google.com/share?url=https://www.pr1sm.com/crypto-coin/nem-nis-api-documentation-in-japanese/ "この記事をGoogle+でおすすめする")
-*   [](http://b.hatena.ne.jp/add?mode=confirm&url=https://www.pr1sm.com/&title=New Economy Movement(NEM) APIマニュアル和訳 "この記事をはてブする")
++ NEM公式APIマニュアルを和訳。
++ 正しい情報を求める場合は公式ページの閲覧を推奨。
++ 暫定的であるため、今後変更の可能性あり。
 
 ## NEM NIS API ドキュメンテーション
 
