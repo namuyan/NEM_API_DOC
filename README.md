@@ -25,7 +25,6 @@ NEMはその名前が表すように、金銭の自由、分散化、公平と�
 また、この記事は暫定的なものであるため、後に修正される場合があります。
 
 ※3月14日に[検証が開始](https://twitter.com/udon_crypto/status/841439749097234432)されています。
-</section><div class="clear"></div><section><div id="post-summary-area">
 
 ## (本文前に)簡単な3行まとめ
 
@@ -39,7 +38,7 @@ NEMはその名前が表すように、金銭の自由、分散化、公平と�
 
 作成日時(公式)：2015年11月6日16時43分
 
-公式APIマニュアル：[http://bob.nem.ninja/docs/](http://bob.nem.ninja/docs/)</section><section>
+公式APIマニュアル：[http://bob.nem.ninja/docs/](http://bob.nem.ninja/docs/)
 
 ## 目次
 
@@ -190,12 +189,11 @@ NEMはその名前が表すように、金銭の自由、分散化、公平と�
     42.  9.42.[エラーオブジェクト](#error-object)
 10.  10.[NISエラー](#appendix-B:-NIS-errors)
 
-    1.  10.1.[エラーメッセージ](#error-messages)</section><section>
+    1.  10.1.[エラーメッセージ](#error-messages)
 
 ## 1.イントロダクション
 
 公式情報：[Introduction](http://bob.nem.ninja/docs/#introduction)
-<section>
 
 ### 1.1.一般情報
 
@@ -204,7 +202,6 @@ NEMはその名前が表すように、金銭の自由、分散化、公平と�
 NEMインフラストラクチャーサーバー(NIS – NEM Infrastructure Server)はJavaで記述されており、実行するにはJava 8が必要です。
 
 Java仮想マシンの場合、少なくとも512MBのメモリで実行可能ですが、少なくとも1GBを推奨します。
-</section><section>
 
 ### 1.2.インストール手順
 
@@ -219,7 +216,6 @@ NISは[http://bob.nem.ninja/installer/](http://bob.nem.ninja/installer/)から�
 インストーラを使用する場合はソフトウェアのインストールと起動は自動的に行われます。
 
 スタンドアロン版は選択したディレクトリに解凍する必要があります。コマンドプロンプトからrunNis.bat(windows)またはnix.runNis.sh(linux)を実行して起動します。
-</section><section>
 
 ### 1.3.リクエスト
 
@@ -239,7 +235,6 @@ HTTP POSTリクエストはリクエスト本体のJSON構造を使用するこ�
 JSON構造を使用してデータが返された場合、両方のリクエストタイプを返還します。
 
 [JSON構造の概要](#appendix-A:-description-of-the-JSON-structures)ではこの文書で使用されている全てのJSONの構造について説明しています。
-</section></section><section>
 
 ## 2.NISのステータスに関連するリクエスト
 
@@ -254,7 +249,6 @@ NISの状態に関する情報を得る方法として、2つのリクエスト�
 どちらの要求もNemリクエストリザルトオブジェクト(NemRequestResult)を返します。 
 
 Nemリクエストリザルトの詳細については、[Nemリクエストリザルト](#nemRequestResult)を参照してください。
-<section>
 
 ### 2.1.ハートビートリクエスト
 
@@ -274,7 +268,7 @@ Nemリクエストリザルトの詳細については、[Nemリクエストリ�
                 "message": "ok"
                 }
 
-可能性のあるエラー：このリクエストに対する応答がない場合、NISは実行されていないか、リクエストを処理できない状態になっています。</section><section>
+可能性のあるエラー：このリクエストに対する応答がない場合、NISは実行されていないか、リクエストを処理できない状態になっています。
 
 ### 2.2.ステータスリクエスト
 
@@ -303,7 +297,7 @@ Nemリクエストリザルトの詳細については、[Nemリクエストリ�
     *   5：ローカルノードがブートされています(NISが実行中であることを意味します)。
     *   6：ローカルノードが同期しています(NISが実行中で、ローカルノードが起動していることを意味します)。
     *   7：NISローカルノードがリモートNISノードを認識しません(実行中および起動中を意味します)。
-    *   8：現在NISはデータベースからブロックチェーンをロードしています。この状態ではNISはリクエストを処理できません。可能性のあるエラー：このリクエストに対する応答がない場合、NISは実行されていないか、リクエストを処理できない状態になっています。</section></section><section>
+    *   8：現在NISはデータベースからブロックチェーンをロードしています。この状態ではNISはリクエストを処理できません。可能性のあるエラー：このリクエストに対する応答がない場合、NISは実行されていないか、リクエストを処理できない状態になっています。
 
 ## 3.アカウントに関連するリクエスト
 
@@ -413,12 +407,11 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
 *   isSet：フィールド ”score” ”ev”および”height”が使用可能かどうかを示します。isSetの値は0または1です。isSetが0の場合はフィールドを使用できません。
 *   score：アカウントの重要性を表します。重要度の範囲は0?1です。
 *   ev：重要度のページランク部分。ページランクは0と1の間の範囲です。
-*   height：重要度計算が実行された高さ。<section>
+*   height：重要度計算が実行された高さ。
 
 ### 3.1.アカウントデータの取得
 
 公式情報：[Retrieving account data](http://bob.nem.ninja/docs/#retrieving-account-data)
-<section>
 
 #### 3.1.1.新しいアカウントデータの生成
 
@@ -438,7 +431,7 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
                 "publicKey": "c2e19751291d01140e62ece9ee3923120766c6302e1099b04014fe1009bc89d3"
                 }
 
-可能性のあるエラー：無し。</section><section>
+可能性のあるエラー：無し。
 
 #### 3.1.2.アカウントデータのリクエスト
 
@@ -482,7 +475,7 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
 *   パラメータ：publicKey：アカウントの公開鍵を16進文字列として表します。
 *   例：http://127.0.0.1:7890/account/get/from-public-key?publicKey=f9bd190dd0c364261f5c8a74870cc7f7374e631352293c62ecc437657e5de2cd
 *   返されるJSONオブジェクトの例：返されるJSONオブジェクトの構造は、最初の例と同じです。
-*   可能性のあるエラー：publicKeyパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+*   可能性のあるエラー：publicKeyパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.3.委任アカウントのオリジナルデータリクエスト
 
@@ -526,7 +519,7 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
 *   パラメータ：publicKey：アカウントの公開鍵を16進文字列として表します。
 *   例：http://127.0.0.1:7890/account/get/forwarded/from-public-key?publicKey=bdd8dd702acb3d88daf188be8d6d9c54b3a29a32561a068b25d2261b2b2b7f02
 *   返されるJSONオブジェクトの例：返されるJSONオブジェクトの構造は、最初の例と同じです。
-*   可能性のあるエラー：publicKeyパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+*   可能性のあるエラー：publicKeyパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.4.アカウントステータスのリクエスト
 
@@ -546,7 +539,7 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
                 "remoteStatus": "ACTIVE"
                 }
 
-可能性のあるエラー：addressパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：addressパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.5.アカウントのトランザクションデータリクエスト
 
@@ -756,7 +749,7 @@ APIパス：/account/unconfirmedTransactions
                 }]
                 }
 
-可能性のあるエラー：addressパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：addressパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.6.デコードされたメッセージによるトランザクションデータ
 
@@ -779,7 +772,7 @@ APIパス：/local/account/transfers/incoming
 *   パラメータ：page：アカウント秘密鍵トランザクションページで説明されているアカウント秘密鍵トランザクションページ([AccountPrivateKeyTransactionsPage](#accountPrivateKeyTransactionsPage))JSONオブジェクト。
 *   例：リクエストはブラウザでは実行できません。
 *   返されるJSONオブジェクトの例：[アカウントのトランザクションデータリクエスト](#requesting-transaction-data-for-an-account)を見て下さい。
-*   可能性のあるエラー：秘密鍵が提供されていない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+*   可能性のあるエラー：秘密鍵が提供されていない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.7.アカウントの収穫情報データリクエスト
 
@@ -805,7 +798,7 @@ APIパス：/local/account/transfers/incoming
                 }]
                 }
 
-可能性のあるエラー：addressパラメータが有効でないか、またはハッシュがデータベースに見つからない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：addressパラメータが有効でないか、またはハッシュがデータベースに見つからない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.8.アカウントの重要度情報の取得
 
@@ -837,7 +830,7 @@ APIパス：/local/account/transfers/incoming
                 }]
                 }
 
-可能性のあるエラー：無し。</section><section>
+可能性のあるエラー：無し。
 
 #### 3.1.9.アカウントが所有するネームスペースの取得
 
@@ -862,7 +855,7 @@ APIパス：/local/account/transfers/incoming
                 }]
                 }
 
-可能性のあるエラー：アドレスまたは(提供されている)親が無効である場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：アドレスまたは(提供されている)親が無効である場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.10.アカウントが作成したモザイク定義を取得
 
@@ -906,7 +899,7 @@ idパラメータはオプションであり、25のモザイク定義のバッ�
                 }]
                 }
 
-可能性のあるエラー：アドレスもしくは親(提供されている場合)またはID(提供されている場合)が無効な場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：アドレスもしくは親(提供されている場合)またはID(提供されている場合)が無効な場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.11.アカウントが所有するモザイクを取得
 
@@ -936,7 +929,7 @@ idパラメータはオプションであり、25のモザイク定義のバッ�
                 }]
                 }
 
-可能性のあるエラー：アドレスが無効な場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：アドレスが無効な場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.12.アカウントのロックとロック解除
 
@@ -964,7 +957,7 @@ APIパス：/account/lock
     *   概要：アカウントをロックする(収穫を停止する)。
     *   パラメータ：privateKey：秘密鍵([PrivateKey](#privateKey))で説明されているPrivateKey JSONオブジェクト。
     *   例：リクエストはブラウザでは実行できません。
-    *   返り値なし可能性のあるエラー：秘密鍵がアカウントに対応していないか、アカウントに対して収穫を許可されていない場合、両方のリクエストはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+    *   返り値なし可能性のあるエラー：秘密鍵がアカウントに対応していないか、アカウントに対して収穫を許可されていない場合、両方のリクエストはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 3.1.13.ロック解除情報の取得
 
@@ -972,7 +965,7 @@ APIパス：/account/lock
 
 各ノードでは、委任されたキーを使用してユーザーがそのノードで収穫できるようにすることができます。
 
-NIS構成には許可されたハーベスタの最大数を設定するためのエントリがあり、オプションで特定のアカウントアドレスに対してのみハーベスティングを許可することもできます。 
+NIS構成には許可されたハーベスタの最大数を設定するためのエントリがあり、オプションで特定のアカウントアドレスに対してのみハーベスティングを許可することもできます。
 
 アンロック情報は、許可されたハーベスタの最大数、およびノードをすでに使用しているハーベスタ数についての情報を提供します。
 
@@ -988,7 +981,7 @@ NIS構成には許可されたハーベスタの最大数を設定するため�
                 "max-unlocked" : 3
                 }
 
-可能性のあるエラー：無し。</section></section><section>
+可能性のあるエラー：無し。
 
 ### 3.2.アカウントの履歴データ検索
 
@@ -1025,7 +1018,7 @@ NISでこの機能を有効にするには、config.propertiesファイルのオ
                 ]
                 }
 
-可能性のあるエラー：アドレスが無効であることや、開始の高さが終わりの高さより大きい場合、または増加数が正数でない場合、あるいはリクエストの結果が1000データを超える場合にエラーが返されます。</section></section><section>
+可能性のあるエラー：アドレスが無効であることや、開始の高さが終わりの高さより大きい場合、または増加数が正数でない場合、あるいはリクエストの結果が1000データを超える場合にエラーが返されます。
 
 ## 4.ブロックチェーン関連のリクエスト
 
@@ -1056,12 +1049,10 @@ NEMは求められるあらゆる情報を含むブロックチェーンを構�
 *   フィールド：height：ブロックの高さ。各ブロックには固有の高さがあります。後続のブロックの高さは1だけ異なります。
 
 トランザクションは『3.[アカウントに関連するリクエスト](#account-related-requests)』で既に説明しました。JSONトランザクションオブジェクトの例についてはトランザクション([Transaction](#transaction))を参照してください。
-<section>
 
 ### 4.1.ブロックチェーンステータス情報のリクエスト
 
 公式情報：[Requesting the block chain status information](http://bob.nem.ninja/docs/#requesting-the-block-chain-status-information)
-<section>
 
 #### 4.1.1.ブロックチェーンの高さ
 
@@ -1079,7 +1070,7 @@ NEMは求められるあらゆる情報を含むブロックチェーンを構�
                 "height": 42799
                 }
 
-可能性のあるエラー：無し。</section><section>
+可能性のあるエラー：無し。
 
 #### 4.1.2.ブロックチェーンスコア
 
@@ -1097,7 +1088,7 @@ NEMは求められるあらゆる情報を含むブロックチェーンを構�
                 "score": "18722d5a7d590deb"
                 }
 
-可能性のあるエラー：無し。</section><section>
+可能性のあるエラー：無し。
 
 #### 4.1.3.ブロックチェーンスコアラストブロック
 
@@ -1125,14 +1116,13 @@ NEMは求められるあらゆる情報を含むブロックチェーンを構�
                 "height": 42804
                 }
 
-可能性のあるエラー：無し。</section></section><section>
+可能性のあるエラー：無し。
 
 ### 4.2.ブロックチェーンの一部リクエスト
 
 公式情報：[Requesting parts of the block chain](http://bob.nem.ninja/docs/#requesting-parts-of-the-block-chain)
 
 NISはブロックの高さまたはブロックのハッシュによって識別される個々のブロックを供給することや、特定の高さから始まるブロックを最大10個まで供給することもできます。
-<section>
 
 #### 4.2.1.指定されたハッシュでブロックを取得する
 
@@ -1160,7 +1150,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 "height": 42803
                 }
 
-可能性のあるエラー：ブロックハッシュがデータベースに見つからない場合、NISはJSONエラーオブジェクトを返します。 エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：ブロックハッシュがデータベースに見つからない場合、NISはJSONエラーオブジェクトを返します。 エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 4.2.2.指定した高さでブロックを取得する
 
@@ -1188,7 +1178,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 "height": 42803
                 }
 
-可能性のあるエラー：指定された高さのブロックがデータベースに見つからない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：指定された高さのブロックがデータベースに見つからない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 4.2.3.チェーンの一部を取得する
 
@@ -1202,7 +1192,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   返されるJSONオブジェクトの例
 *   
 
-<code>{
+        {
             "data":[{
             "txes":[{
             "tx": <explorerviewmodeltransaction>
@@ -1212,8 +1202,8 @@ NISはブロックの高さまたはブロックのハッシュによって識�
             "hash":"8ca8a3e01ac0eb482e668fda74141984ba118b027fc5f1f67d2d36a38bf48c49"
             }]
             }
-    </block></explorerviewmodeltransaction></explorerviewmodeltransaction></code>
-可能性のあるエラー：指定されたブロックの高さが整数でない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section></section><section>
+
+可能性のあるエラー：指定されたブロックの高さが整数でない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 ## 5.ノード関連のリクエスト
 
@@ -1246,12 +1236,11 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   フィールド：host：エンドポイントのIPアドレス。
 *   フィールド：application：ノードを実行しているアプリケーションの名前。
 *   フィールド：version：アプリケーションのバージョン。
-*   フィールド：platform：基礎となるプラットフォーム(OS、javaバージョン)。<section>
+*   フィールド：platform：基礎となるプラットフォーム(OS、javaバージョン)。
 
 ### 5.1.ノードに関する情報のリクエスト
 
 公式情報：[Requesting information about a node](http://bob.nem.ninja/docs/#requesting-information-about-a-node)
-<section>
 
 #### 5.1.1.基本ノード情報
 
@@ -1285,7 +1274,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 }
                 }
 
-可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 5.1.2.拡張ノード情報
 
@@ -1330,12 +1319,11 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 }
                 }
 
-可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section></section><section>
+可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 ### 5.2.ノードの近辺を発見するリクエスト
 
 公式情報：[Request for discovering the neighborhood of a node](http://bob.nem.ninja/docs/#request-for-discovering-the-neighborhood-of-a-node)
-<section>
 
 #### 5.2.1.完全な近辺
 
@@ -1368,7 +1356,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 ]
                 }
 
-可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 5.2.2.到達可能な近辺
 
@@ -1404,7 +1392,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 ]
                 }
 
-可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 5.2.3.稼働中の近辺
 
@@ -1440,7 +1428,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 ]
                 }
 
-可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 #### 5.2.4.稼働している近辺の最大チェーンの高さ
 
@@ -1458,7 +1446,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 "height": 43920
                 }
 
-可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section></section><section>
+可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 ### 5.3.ノードエクスペリエンスのリクエスト
 
@@ -1502,7 +1490,7 @@ NISはブロックの高さまたはブロックのハッシュによって識�
                 }]
                 }
 
-可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section><section>
+可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 ### 5.4.ローカルノードの起動
 
@@ -1514,12 +1502,11 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：bootNodeRequest：ブートノードリクエスト([Error object](#bootNodeRequest“>BootNodeRequest)で説明されている、ブートノードリクエスト JSONオブジェクト。
 *   例：リクエストはブラウザでは実行できません。
 *   返り値無し。
-*   可能性のあるエラー：ノードが既にブートされている場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト(<a href=")" href=""></a>)、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section></section><section>
+*   可能性のあるエラー：ノードが既にブートされている場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト(<a href=")" href=""></a>)、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 ## 6.ネームスペースとモザイク
 
 公式情報：[Namespaces and Mosaics](http://bob.nem.ninja/docs/#namespaces-and-mosaics)
-<section>
 
 ### 6.1.ネームスペース
 
@@ -1563,7 +1550,6 @@ NEMはインターネットドメイン名のNEMアナログであるネーム�
 *   5000 XEM (サブネームスペース)
 
 モザイクを作成するにはネームスペースの所有権が必要です。
-<section>
 
 #### 6.1.1.ルートネームスペースの取得
 
@@ -1579,7 +1565,7 @@ NEMはインターネットドメイン名のNEMアナログであるネーム�
 *   
 
 `{ "data": [{ "meta":{ "id":26264, }, "namespace":{ "fqn": "makoto.metal.coins", "owner": TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH", "height": 13465 } },{ "meta":{ "id":25421, }, "namespace":{ "fqn": "gimre.vouchers", "owner": TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA", "height": 12392 } }] }`
-可能性のあるエラー：無し。</section><section>
+可能性のあるエラー：無し。
 
 #### 6.1.2.特定のネームスペースを取得
 
@@ -1594,7 +1580,7 @@ NEMはインターネットドメイン名のNEMアナログであるネーム�
 *   
 
 `{ "fqn": "makoto.metal.coins", "owner": TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH", "height": 13465 }`
-可能性のあるエラー：ネームスペースパラメータがないか無効である場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section></section><section>
+可能性のあるエラー：ネームスペースパラメータがないか無効である場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 ### 6.2.モザイク
 
@@ -1645,7 +1631,7 @@ levyデータは以下のとおりです。
 *   divisibility: 6
 *   supply mutable: false
 *   transferable: true
-*   levy: none<section>
+*   levy: none
 
 #### 6.2.1モザイク定義の取得
 
@@ -1691,7 +1677,7 @@ levyデータは以下のとおりです。
                 }]
                 }
 
-可能性のあるエラー：ネームスペースパラメータがないか無効である場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。</section></section></section><section>
+可能性のあるエラー：ネームスペースパラメータがないか無効である場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
 ## 7.トランザクションの開始
 
@@ -1724,7 +1710,6 @@ levyデータは以下のとおりです。
 ほとんどのクライアントはローカルのNISに依存してトランザクション署名を作成します。6.1章から6.6章ではトランザクション関連のアクションについて説明しています。
 
 6.7章では署名が必要なデータを収集するための手順と、トランザクションを第2の方法で開始する方法について説明しています。ただし、署名の作成方法については説明していません。これはこのドキュメントの範囲外の暗号概念を含むためです。
-<section>
 
 ### 7.1.トランザクションの開始
 
@@ -1760,14 +1745,13 @@ levyデータは以下のとおりです。
     *   すでに通過しているためdeadlineは無効です。(The deadline is invalid because it has already been passed.)
     *   添付されたメッセージが大きすぎます。(The attached message is too large.)
     *   トランザクションは既に知られています。(The transaction is already known.)
-    *   このトランザクションと競合する別のトランザクションがあります。これは重要度を別のアカウントに転送しようとしているときに発生します。(There is another transaction conflicting with this transaction. This can happen when trying to transfer the importance to another account.)</section><section>
+    *   このトランザクションと競合する別のトランザクションがあります。これは重要度を別のアカウントに転送しようとしているときに発生します。(There is another transaction conflicting with this transaction. This can happen when trying to transfer the importance to another account.)
 
 ### 7.2.転送トランザクションの開始
 
 公式情報：[Initiating a transfer transaction](http://bob.nem.ninja/docs/#initiating-a-transfer-transaction)
 
 NISはバージョン1または2の転送トランザクションをサポートしています。バージョン1の転送トランザクションはメッセージとXEMコインのみを転送でき、バージョン2の転送トランザクションはモザイクセットも転送できます。
-<section>
 
 #### 7.2.1.転送トランザクションバージョン1
 
@@ -1815,7 +1799,6 @@ NISは署名を作成するため、オブジェクトのトランザクショ�
                 "innerTransactionHash": {}
                 }
 
-</section><section>
 
 #### 7.2.2.転送トランザクションバージョン2
 
@@ -1878,7 +1861,6 @@ NISは署名を作成するため、オブジェクトのトランザクショ�
 *   アタッチメントで指定された少なくとも1つのモザイクは転送不可と定義され、送信者と受信者の両方がその作成者ではありません
 
 モザイク『makoto.metals.silver * coin』のモザイク定義に、silverモザイクを含む送信ごとにXEMをアドレス付きの受取人に支払わなければならない旨の課金(levy)セクションがある場合、『TDGOGOGOWZJ3HU4F6CUM5IKE7GHG4FFTF5BZ7JPW』は転送トランザクションによって、トランザクション転送者から10XEMの送信が『TDGOGOGOWZJ3HU4F6CUM5IKE7GHG4FFTF5BZ7JPW』に自動的に誘導されます。
-</section></section><section>
 
 ### 7.3.アカウントをマルチシグアカウントに変換する
 
@@ -1933,7 +1915,6 @@ Aliceを公開鍵で変換したいと仮定した場合、以下のとおりで
 なお、NISによって署名されるため、署名はありません。
 
 トランザクションがNISによって署名され、ブロックにそれを含めることによってネットワークに受け入れられた結果、アカウント『Alice』は2/3マルチシグアカウントになりました。
-</section><section>
 
 ### 7.4.マルチシグトランザクションの開始
 
@@ -1996,7 +1977,6 @@ NISはトランザクションに署名し、それを公表します。
 ハッシュは上記のトランザクションのためにマルチシグ署名トランザクションを作成するノードによって必要とされます。
 
 この時点でトランザクションをブロックに含めることはできません(そして、されないでしょう)。なぜなら、他の共同署名者のJusanとGoはまだいずれのトランザクションにも署名していないからです…
-<section>
 
 #### 7.4.1.マルチシグトランザクションの署名
 
@@ -2028,7 +2008,6 @@ JusanはBobの要求からNISによって返されたハッシュ『otherHash』
 NISがトランザクションに署名してネットワークに送信した後、署名トランザクションはマルチシグトランザクションに付与されます。
 
 JusanがBobが開始したマルチシグトランザクションに署名すると、3つの署名者のうちの2つが内部転送トランザクション(マルチシグトランザクションを開始することによって間接的に署名されたBob)に署名し、マルチシグトランザクションをブロックに含めることができます。
-</section></section><section>
 
 ### 7.5.署名者の追加と削除
 
@@ -2083,7 +2062,6 @@ NISがネットワークに署名してそのトランザクションをネッ�
 署名者を削除するためには削除済みを除いて、すべての署名者がトランザクションに署名する必要があります。 一度ネットワークによって承認されると、署名者『hachi』はもはやマルチシグアカウント『Alice』の署名者ではありません。
 
 警告：**アカウントの削除は最終的なものではなく、変更の対象となる可能性があります。**
-</section><section>
 
 ### 7.6.マルチシグアカウントの使用方法
 
@@ -2111,7 +2089,6 @@ NISがネットワークに署名してそのトランザクションをネッ�
 署名者の秘密鍵のいずれかが侵害された場合、そのアカウントを署名者リストから直ちに削除し、その後、新しい署名者を追加する必要があります(これについては[署名者の追加と削除](#adding-and-removing-cosignatories)の章を参照してください)。
 
 **秘密鍵がコンピュータに保存されている場合、そのコンピュータはインターネットをサーフィンしたり、他の危険なことをしたりするために使用するべきではありません。**
-</section><section>
 
 ### 7.7.ネームスペースのプロビジョニング
 
@@ -2181,12 +2158,10 @@ NISが成功メッセージで応答すると、トランザクションはネ�
 サブネームスペース『alice.vouchers.special』をレンタルする場合は、アナウンス準備のリクエスト(RequestPrepareAnnounce)オブジェクトを再度発行する必要があります。このとき、親は『alice.vouchers』に設定されます。newPartは『special』です。
 
 1年後、ルートネームスペースの有効期限が切れます。これが起こらないようにするには、有効期限が切れる1か月以内にルートネームスペースのネームスペーストランザクションのプロビジョニング(provision namespace transaction)を送信する必要があります。アナウンス準備のリクエスト(RequestPrepareAnnounce)オブジェクトは初めてネームスペースをレンタルする場合と同じです。ルートネームスペースの更新はアカウントが既に所有しているルートネームスペースのサブネームスペースも自動的に更新します。
-</section></section><section>
 
 ### 7.8.モザイクの作成
 
 公式情報：[Creating mosaics](http://bob.nem.ninja/docs/#creating-mosaics)
-<section>
 
 #### 7.8.1.モザイク定義の作成
 
@@ -2268,7 +2243,6 @@ NEMモザイクの概念の基礎は[モザイク](#mosaics)の章にありま�
 *   トランザクションの課金部分のモザイクIDはNISには不明です。
 
 トランザクションがブロックに含まれ、ブロックが実行されると『initialSupply』フィールド(例では1000)に記述されているモザイクの量が作成者に入金されます。
-</section><section>
 
 #### 7.8.2.モザイク定義を変更する
 
@@ -2280,7 +2254,6 @@ NEMモザイクの概念の基礎は[モザイク](#mosaics)の章にありま�
 *   プロパティと徴収データは、作成者がそのタイプのすべての単一モザイクを所有している場合にのみ変更できます。 これはクリエイターが秘密に徴収金を導入したり、供給を増やしてモザイクを膨らませたりするのを防ぐために必要です。
 
 モザイク定義を更新すると500XEM(ハードフォーク前は50000XEM)のコストがかかりますので、トランザクションを発行する前にデータを再確認する必要があります。
-</section><section>
 
 #### 7.8.3.モザイク供給の変更
 
@@ -2322,14 +2295,12 @@ NEMモザイクの概念の基礎は[モザイク](#mosaics)の章にありま�
 *   供給を減らそうとするとき、作成者は自分が削除したいモザイクの数量を所有していなければなりません。
 
 トランザクションがブロックチェーンに含まれると、供給の変更が実現されます。
-</section></section><section>
 
 ### 7.9.署名付きトランザクションの作成
 
 公式情報：[Creating a signed transaction](http://bob.nem.ninja/docs/#creating-a-signed-transaction)
 
 この章ではトランザクションのどのデータを署名する必要があるのか、どのJSONオブジェクトをNISに送信するのかについて説明します。
-<section>
 
 #### 7.9.1.署名用データの収集
 
@@ -2837,7 +2808,6 @@ SHA3ハッシュバイト：32バイト。
 **トランザクションのハッシュ計算**
 
 NISはSHA3-256ハッシュ関数を使用します。トランザクションのハッシュを作成するには、トランザクションのbyte配列をハッシュする必要があります。トランザクションからbyte配列を構築する方法については、上記セクションを参照してください。
-</section><section>
 
 #### 7.9.2.NISにデータを送信する
 
@@ -2865,7 +2835,7 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
                 }
                 }
 
-可能性のあるエラー：可能性のあるエラーについては、6.1章で説明しています。</section></section><section>
+可能性のあるエラー：可能性のあるエラーについては、6.1章で説明しています。
 
 ### 7.10.トランザクション手数料
 
@@ -2902,7 +2872,7 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
 *   *   6XEMネームスペーストランザクションのプロビジョニング
 *   *   108XEMモザイク定義作成トランザクション
 *   *   108XEMモザイク供給変更トランザクション
-*   *   108XEM</section></section><section>
+*   *   108XEM
 
 ## 8.NISからの追加情報要求
 
@@ -2911,7 +2881,6 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
 いくつかのリクエストは、NISの内部ステータスに関する追加情報を提供します。
 
 **警告：これらのリクエストは将来のバージョンのNISで今後予告なしに削除される可能性があります。その存在に頼るべきではありません。**
-<section>
 
 ### 8.1.ネットワーク時間の監視
 
@@ -2944,7 +2913,7 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
                 }]
                 }
 
-可能性のあるエラー：無し。</section><section>
+可能性のあるエラー：無し。
 
 ### 8.2.受信および送信コールの監視
 
@@ -3019,7 +2988,7 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
                 }]
                 }
 
-可能性のあるエラー：無し。</section><section>
+可能性のあるエラー：無し。
 
 ### 8.3.時間監視
 
@@ -3059,12 +3028,11 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
                 }]
                 }
 
-可能性のあるエラー：無し。</section></section><section>
+可能性のあるエラー：無し。
 
 ## 9.JSON構造の概要
 
 公式情報：[Appendix A: Description of the JSON Structures](http://bob.nem.ninja/docs/#appendix-A:-description-of-the-JSON-structures)
-<section>
 
 ### 9.1.アカウント履歴データビューモデル
 
@@ -3092,7 +3060,7 @@ JSON構造の例
 *   vestedBalance：残高の確定部分。
 *   unvestedBalance：残高の未払部分。
 *   importance：アカウントの重要度。
-*   pageRank：重要度のページランク部分。</section><section>
+*   pageRank：重要度のページランク部分。
 
 ### 9.2.アカウント重要度ビューモデル
 
@@ -3120,7 +3088,7 @@ JSON構造の例
 *   isSet：フィールド 『score』『ev』および『height』でのavailable.isSetの値が0または1であるかどうかを示します。isSetが0の場合、フィールドは使用できません。
 *   score：アカウントの重要性。重要度の範囲は0?1です。
 *   ev：重要度のページランク部分。 ページランクは0と1の間の範囲です。
-*   height：重要度計算が行われた高さ。</section><section>
+*   height：重要度計算が行われた高さ。
 
 ### 9.3.アカウント情報
 
@@ -3148,7 +3116,7 @@ JSON構造の例
 *   importance：アカウントの重要性 
 *   publicKey：アカウントの公開鍵。
 *   label：アカウントのラベル(使用されていない、常にnull)。
-*   harvestedBlocks：アカウントによってすでに収穫されているブロック数。</section><section>
+*   harvestedBlocks：アカウントによってすでに収穫されているブロック数。
 
 ### 9.4.アカウントメタデータ
 
@@ -3158,7 +3126,7 @@ JSON構造の例
 
 JSON構造の例
 
-<code>{
+        {
             "status": "LOCKED",
             "remoteStatus": "ACTIVE",
             "cosignatoryOf" : [
@@ -3170,14 +3138,14 @@ JSON構造の例
             <accountinfo>
             ]
             }
-    </accountinfo></accountinfo></accountinfo></accountinfo></code>
+
 
 フィールドの説明
 
 *   status：照会されたアカウントの収穫状況。収穫状況は、次のいずれかの値になります。『UNKNOWN』：アカウントの収穫状況は不明です。『LOCKED』：アカウントは収穫されていません。『UNLOCKED』：アカウントが収穫されています。
 *   remoteStatus：照会されたアカウントのリモートハーベストのステータス。リモート収集ステータスは、次のいずれかの値になります。『ACTIVATING』：アカウントはリモートハーベストを有効にしましたが、まだアクティブではありません。『ACTIVE』：アカウントはリモートハーベスティングを有効にしており、リモートハーベスティングはアクティブです。『DEACTIVATING』：アカウントはリモートハーベスティングを無効にしましたが、リモートハーベスティングはまだ有効です。『INACTIVE』：アカウントは非アクティブなリモートハーベスティングを行っているか、リモートハーベスティングを無効にしており、非アクティブ化が動作しています。
 *   cosignatoryOf：AccountInfo構造のJSON配列。このアカウントは配列内の各アカウントに共通して使用されます。
-*   cosignatories：AccountInfo構造のJSON配列。この配列には該当アカウントの署名者すべてが格納されます。</section><section>
+*   cosignatories：AccountInfo構造のJSON配列。この配列には該当アカウントの署名者すべてが格納されます。
 
 ### 9.5.アカウントメタデータペア
 
@@ -3199,7 +3167,7 @@ JSON構造の例
 *   account：アカウントオブジェクトを含みます。
 *   <AccountInfo>：アカウント情報([AccountInfo](#accountInfo))で説明されているアカウントオブジェクト。
 *   meta：アカウントメタデータオブジェクトが含まれます。
-*   <AccountMetaData>：[AccountMetaData](#accountMetaData)で説明されているアカウントメタデータオブジェクト。</section><section>
+*   <AccountMetaData>：[AccountMetaData](#accountMetaData)で説明されているアカウントメタデータオブジェクト。
 
 ### 9.6.アカウントの秘密鍵トランザクションページ
 
@@ -3220,7 +3188,7 @@ JSON構造の例
 *   value：秘密鍵は16進数文字列です。
 *   hash：アカウント情報([AccountInfo](#accountInfo))で説明されているアカウントオブジェクト。
 *   meta：オプションのハッシュ値。
-*   id：オプションのトランザクションID。</section><section>
+*   id：オプションのトランザクションID。
 
 ### 9.7.アプリケーションメタデータ
 
@@ -3244,7 +3212,7 @@ JSON構造の例
 *   application：ノード上で実行されているアプリケーションの名前。
 *   startTime：アプリケーションが開始されたネットワーク時間。
 *   version：アプリケーションのバージョン。
-*   signer：アプリケーションで使用される証明書の署名者。</section><section>
+*   signer：アプリケーションで使用される証明書の署名者。
 
 ### 9.8.監査収集
 
@@ -3277,7 +3245,7 @@ JSON構造の例
 *   start-time：ネメシスブロックの作成から経過した秒数。
 *   host：リクエストを開始したホスト。
 *   elapsed-time：リクエストが受信されてから経過した時間(秒)。
-*   id：リクエストの一意のID。</section><section>
+*   id：リクエストの一意のID。
 
 ### 9.9.ブロック
 
@@ -3312,7 +3280,7 @@ JSON構造の例(メインネットワーク)
 *   transactions：トランザクション構造の配列。この構造の詳細については[トランザクション](#transaction)を参照してください。
 *   version：ブロックバージョン。以下のバージョンがサポートされています。『0x68 < 24="" +="" 1（4バイト整数として1744830465）：メインネットワークのバージョン』『0x98="">< 24="" +="">
 *   signer：ブロックのハーベスタの公開鍵は16進数で表します。
-*   height：ブロックの高さ。各ブロックには固有の高さがあります。後続のブロックの高さは1だけ異なります。</section><section>
+*   height：ブロックの高さ。各ブロックには固有の高さがあります。後続のブロックの高さは1だけ異なります。
 
 ### 9.10.ブロックチェーンスコア
 
@@ -3328,7 +3296,7 @@ JSON構造の例
 
 フィールドの説明
 
-*   score：スコアは0以上の整数です。これは16進数形式で提出されます。</section><section>
+*   score：スコアは0以上の整数です。これは16進数形式で提出されます。
 
 ### 9.11.ブロックの高さ
 
@@ -3344,7 +3312,7 @@ JSON構造の例
 
 フィールドの説明
 
-*   height：高さは0より大きい整数です。</section><section>
+*   height：高さは0より大きい整数です。
 
 ### 9.12.ブートノードリクエスト
 
@@ -3382,7 +3350,7 @@ JSON構造の例
 *   host：使用するIPアドレス。
 *   identity：身元の基礎構造を表します。
 *   private-key：IDを作成するために使用される秘密鍵。
-*   name：ノードの名前(何でもかまいません)。</section><section>
+*   name：ノードの名前(何でもかまいません)。
 
 ### 9.13.通信タイムスタンプ
 
@@ -3400,7 +3368,7 @@ JSON構造の例
 フィールドの説明
 
 *   sendTimeStamp：応答が送信された時点のネットワーク時間。
-*   receiveTimeStamp：リクエストが受信された瞬間のネットワーク時間。</section><section>
+*   receiveTimeStamp：リクエストが受信された瞬間のネットワーク時間。
 
 ### 9.14.エクスプローラブロックビューモデル
 
@@ -3410,7 +3378,7 @@ JSON構造の例
 
 JSON構造の例
 
-<code>{
+        {
             "data":[
             {
             "txes":[
@@ -3425,7 +3393,7 @@ JSON構造の例
             …
             ]
             }
-    </block></explorertransferviewmodel></explorertransferviewmodel></code>
+
 
 フィールドの説明
 
@@ -3434,7 +3402,7 @@ JSON構造の例
 *   block：JSONブロックオブジェクトを含むエントリ。
 *   <Block>：[ブロック](#block)で説明されているBlockオブジェクト。
 *   hash：ブロックのハッシュを16進数文字列として表します。
-*   difficulty：ブロックの難易度。</section><section>
+*   difficulty：ブロックの難易度。
 
 ### 9.15.エクスプローラ転送ビューモデル
 
@@ -3444,12 +3412,11 @@ JSON構造の例
 
 JSON構造の例
 
-<code>{
+        {
             "tx": <transaction>,
             "hash": "5cba4614e52af19417fb53c4bdf442a57b9f558aee17ece530a5220da55cf47d",
             "innerHash": "ae3b107f1216e1ccf12b6f3c3c555bc1d95311747338ce66f539ea2c18c0aa57"
             }
-    </transaction></code>
 
 フィールドの説明
 
@@ -3458,7 +3425,7 @@ JSON構造の例
 *   hash：トランザクションのハッシュ。
 *   innerHash：内部トランザクションのハッシュ。このエントリはマルチシグトランザクションでのみ利用可能です。
 *   hash：ブロックのハッシュを16進数文字列として表します。
-*   difficulty：ブロックの難易度。</section><section>
+*   difficulty：ブロックの難易度。
 
 ### 9.16.拡張ノードエクスペリエンスペア
 
@@ -3490,7 +3457,7 @@ JSON構造の例
 *   syncs：ノードがリモートノードと持っていた同期試行の回数。
 *   experience：ノードエクスペリエンスの下部構造の始まりを表します。
 *   s：リモートノードとの正常な通信の数。
-*   f：リモートノードとの通信に失敗した回数。</section><section>
+*   f：リモートノードとの通信に失敗した回数。
 
 ### 9.17.収穫情報
 
@@ -3516,7 +3483,7 @@ JSON構造の例
 *   id：収穫されたブロックのデータベースID。
 *   difficulty：ブロックの難易度。最初の難易度は100000000000000に設定されました。ブロックの難易度は、常に難易度の10分の1から10倍の間です。
 *   totalFee：ブロックを収穫して集められた合計料金。
-*   height：収穫されたブロックの高さ。</section><section>
+*   height：収穫されたブロックの高さ。
 
 ### 9.18.キーペアビューモデル
 
@@ -3536,12 +3503,11 @@ JSON構造の例
 
 *   privateKey：アカウントの秘密鍵を16進数文字列として表します。
 *   publicKey：アカウントの公開鍵を16進数文字列として表します。
-*   address：アカウントのアドレス。</section><section>
+*   address：アカウントのアドレス。
 
 ### 9.19.トランザクションオブジェクト
 
 公式情報：[Transaction objects](http://bob.nem.ninja/docs/#transaction-objects)
-<section>
 
 #### 9.19.1.重要度転送トランザクション
 
@@ -3573,7 +3539,7 @@ JSON構造の例
 *   type：トランザクションタイプ。
 *   deadline：トランザクションの期限。deadlineは、ネメシスブロックの作成から経過した秒数で与えられます。締め切りに達する前にトランザクションがブロックに含まれない場合、トランザクションは削除されます。
 *   version：構造のバージョン。
-*   signer：トランザクションを作成したアカウントの公開鍵。</section><section>
+*   signer：トランザクションを作成したアカウントの公開鍵。
 
 #### 9.19.2.モザイク定義作成トランザクション
 
@@ -3638,7 +3604,7 @@ JSON構造の例(テストネットワーク)
 *   signer：トランザクションを作成したアカウントの公開鍵。
 *   creationFee：モザイクの作成のための手数料。
 *   creationFeeSink：作成手数料が転送される残高の公開鍵。
-*   mosaicDefinition：実際のモザイクの定義。 詳細については、モザイク定義([MosaicDefinition](#mosaicDefinition))を参照してください。</section><section>
+*   mosaicDefinition：実際のモザイクの定義。 詳細については、モザイク定義([MosaicDefinition](#mosaicDefinition))を参照してください。
 
 #### 9.19.3.モザイク供給変更トランザクション
 
@@ -3676,7 +3642,7 @@ JSON構造の例(テストネットワーク)
 *   signer：トランザクションを作成したアカウントの公開鍵。
 *   supplyType：供給タイプ。 サポートされている電源の種類は次のとおりです。『1：供給の増加。』『2：供給の減少。』
 *   delta：モザイクの単位で供給が変化します。
-*   mosaicId：モザイクID。 詳細については[MosaicId](#mosaicId)を参照してください。</section><section>
+*   mosaicId：モザイクID。 詳細については[MosaicId](#mosaicId)を参照してください。
 
 #### 9.19.4.マルチシグ集計変更トランザクション
 
@@ -3686,7 +3652,7 @@ JSON構造の例(テストネットワーク)
 
 JSON構造の例(メインネットワーク)
 
-<code>{
+        {
             "timeStamp": 9111526,
             "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
             "fee": 3000000,
@@ -3702,7 +3668,6 @@ JSON構造の例(メインネットワーク)
             "relativeChange" : 2
             }
             }
-    </multisigcosignatorymodification></multisigcosignatorymodification></code>
 
 フィールドの説明
 
@@ -3716,7 +3681,7 @@ JSON構造の例(メインネットワーク)
 *   signer：トランザクションを作成したアカウントの公開鍵。
 *   modifications：マルチシグ変更のJSON配列。
 *   minCosignatories：最小署名者変更を保持するJSONオブジェクト。
-*   relativeChange：最小署名者の相対的な変化を示す値。</section><section>
+*   relativeChange：最小署名者の相対的な変化を示す値。
 
 #### 9.19.5.マルチシグ署名者変更
 
@@ -3734,7 +3699,7 @@ JSON構造の例
 フィールドの説明
 
 *   modificationType：変更の種類。 可能な値は次のとおりです。『1：新しい共通記号を追加する。』『2：既存の協会を削除する。』
-*   cosignatoryAccount：署名者アカウントの公開鍵を16進数文字列で表します。</section><section>
+*   cosignatoryAccount：署名者アカウントの公開鍵を16進数文字列で表します。
 
 #### 9.19.6.マルチシグ署名トランザクション
 
@@ -3769,7 +3734,7 @@ JSON構造の例(テストネットワーク)
 *   version：構造のバージョン。
 *   signer：トランザクションを作成したアカウントの公開鍵。
 *   otherHash：対応するマルチシグトランザクションの内部トランザクションハッシュ。
-*   otherAccount：対応するマルチシグアカウントのアドレス。</section><section>
+*   otherAccount：対応するマルチシグアカウントのアドレス。
 
 #### 9.19.7.マルチシグトランザクション
 
@@ -3779,7 +3744,7 @@ JSON構造の例(テストネットワーク)
 
 JSON構造の例(テストネットワーク)
 
-<code>{
+        {
             "timeStamp": 9111526,
             "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
             "fee": 3000000,
@@ -3793,7 +3758,6 @@ JSON構造の例(テストネットワーク)
             <multisigsignaturetransaction>
             ]
             }
-    </multisigsignaturetransaction></multisigsignaturetransaction></inner></code>
 
 フィールドの説明
 
@@ -3806,7 +3770,7 @@ JSON構造の例(テストネットワーク)
 *   version：構造のバージョン。
 *   signer：トランザクションを作成したアカウントの公開鍵。
 *   otherTrans：内部トランザクション。内部トランザクションは転送トランザクション、重要度転送トランザクション、またはマルチシグ集計変更トランザクションとすることができます。内部トランザクションに有効な署名はありません。
-*   signatures：マルチシグ署名トランザクション(MulsigSignatureTransaction)オブジェクトのJSON配列。</section><section>
+*   signatures：マルチシグ署名トランザクション(MulsigSignatureTransaction)オブジェクトのJSON配列。
 
 #### 9.19.8.ネームスペーストランザクションのプロビジョニング
 
@@ -3844,7 +3808,7 @@ JSON構造の例(テストネットワーク)
 *   rentalFeeSink：レンタル料が払い出されるアカウントの公開鍵。
 *   rentalFee：ネームスペースをレンタルするための手数料。
 *   newPart：親に連結された新しい部分は区切りとして『.』で始まります。
-*   parent：親のネームスペース。トランザクションがルートネームスペースをレンタルする場合、これはnullになります。</section><section>
+*   parent：親のネームスペース。トランザクションがルートネームスペースをレンタルする場合、これはnullになります。
 
 #### 9.19.9.転送トランザクション
 
@@ -3917,7 +3881,7 @@ JSON構造の例(転送トランザクションバージョン2)
 *   payload：トランザクションにメッセージが含まれている場合のオプションフィールド。ペイロードは実際に(出来るだけ暗号化された)メッセージデータです。
 *   mosaics：[モザイク](#mosaic)オブジェクトの配列。
 *   version：構造のバージョン。
-*   signer：トランザクションを作成したアカウントの公開鍵。</section></section><section>
+*   signer：トランザクションを作成したアカウントの公開鍵。
 
 ### 9.20.モザイク
 
@@ -3938,7 +3902,7 @@ JSON構造の例
 フィールドの説明
 
 *   mosaicId：モザイクID。[MosaicId](#mosaicId)を参照してください。
-*   quantity：モザイクの数量。量は常にモザイクの最小単位で与えられる。すなわち、それが3の分割可能性を有する場合、その量はミリ秒単位で与えられる。</section><section>
+*   quantity：モザイクの数量。量は常にモザイクの最小単位で与えられる。すなわち、それが3の分割可能性を有する場合、その量はミリ秒単位で与えられる。
 
 ### 9.21.モザイク定義
 
@@ -3985,7 +3949,7 @@ JSON構造の例
 *   id：モザイクID。[MosaicId](#mosaicId)を参照してください。
 *   description：モザイクの説明。 説明の長さは最大512文字で空であってはなりません。
 *   properties：モザイクのプロパティ。プロパティはすべてのプロパティのデフォルト値が適用される空の配列です。詳細については[MosaicProperties](#mosaicProperties)を参照してください。
-*   levy：モザイクのオプション徴収。 作成者はモザイク転送ごとに追加料金を請求することができます。詳細はモザイク徴収([MosaicLevy](#mosaicLevy))を参照してください。</section><section>
+*   levy：モザイクのオプション徴収。 作成者はモザイク転送ごとに追加料金を請求することができます。詳細はモザイク徴収([MosaicLevy](#mosaicLevy))を参照してください。
 
 ### 9.22.モザイク定義メタデータペア
 
@@ -4019,7 +3983,7 @@ JSON構造の例
 *   creator：モザイク定義作成者の公開鍵。
 *   id：モザイクID。[MosaicId](#mosaicId)を参照してください。
 *   description：モザイクの説明。 説明の長さは最大512文字で空であってはなりません。
-*   properties：モザイクのプロパティ。</section><section>
+*   properties：モザイクのプロパティ。
 
 ### 9.23.モザイクプロパティ
 
@@ -4052,7 +4016,7 @@ JSON構造の例
 フィールドの説明
 
     *   name：モザイクプロパティの名前。
-    *   value：モザイクプロパティの名前。</section><section>
+    *   value：モザイクプロパティの名前。
 
 ### 9.24.モザイク徴収
 
@@ -4077,7 +4041,7 @@ JSON構造の例
 *   type：課金タイプ。次のタイプがサポートされています：『1：課税は絶対料金です。フィールド『fee』は、指定されたモザイクのサブユニットの数を受信者に転送することを示します。』『2：徴収額は譲渡された金額から計算されます。項目『fee』には転送された数量のパーセンタイル数が受信者に転送される数量として記載されています。』
 *   recipient：徴収の受領者。
 *   mosaicId：徴収されたモザイク。
-*   recipient：手数料。解釈は徴収の種類に依存する</section><section>
+*   recipient：手数料。解釈は徴収の種類に依存する
 
 ### 9.25.モザイクId
 
@@ -4095,7 +4059,7 @@ JSON構造の例
 フィールドの説明
 
 *   namespaceId：対応するネームスペースID。詳細についてはネームスペース([Namespace](#namespace))構造の説明を参照してください。
-*   name：モザイク定義の名前。</section><section>
+*   name：モザイク定義の名前。
 
 ### 9.26.ネームスペース
 
@@ -4115,7 +4079,7 @@ JSON構造の例
 
 *   fqn：ネームスペースの完全修飾名。ネームスペースIDとも呼ばれます。
 *   owner：ネームスペースの所有者。
-*   height：所有権が始まる高さ。</section><section>
+*   height：所有権が始まる高さ。
 
 ### 9.27.ネームスペースメタデータペア
 
@@ -4143,7 +4107,7 @@ JSON構造の例
 *   namespace：ネームスペースオブジェクトのラベル。
 *   fqn：ネームスペースの完全修飾名。ネームスペースIDとも呼ばれます。
 *   owner：ネームスペースの所有者。
-*   height：所有権が始まる高さ。</section><section>
+*   height：所有権が始まる高さ。
 
 ### 9.28.Nemアナウンス結果
 
@@ -4171,7 +4135,7 @@ JSON構造の例
 *   code：Nemアナウンス結果([NemRequestResult](#nemRequestResult))の説明を参照してください。
 *   message：Nemアナウンス結果([NemRequestResult](#nemRequestResult))の説明を参照してください。
 *   transactionHash：トランザクションのJSONハッシュオブジェクト。
-*   innerTransactionHash：内部トランザクションのJSONハッシュオブジェクト。トランザクションがマルチシグトランザクションでない場合はnull。</section><section>
+*   innerTransactionHash：内部トランザクションのJSONハッシュオブジェクト。トランザクションがマルチシグトランザクションでない場合はnull。
 
 ### 9.29.Nem非同期タイマービジター
 
@@ -4203,7 +4167,7 @@ JSON構造の例
 *   is-executing：タスクが実行中の場合はtrue、そうでない場合はfalse。
 *   name：タスクの名前。
 *   average-operation-time：タスクの名前。タスクが平均して必要な秒数。
-*   last-operation-time：タスクが最後に必要な秒数。</section><section>
+*   last-operation-time：タスクが最後に必要な秒数。
 
 ### 9.30.Nemリクエストリザルト
 
@@ -4258,7 +4222,7 @@ JSON構造の例
     *   5：ローカルノードがブートされている(NISが実行中であることを意味します)。
     *   6：ローカルノードが同期している(NISが実行中で、ローカルノードが起動していることを意味します)。
     *   7：使用可能なリモートノードがありません(NISが実行され、ローカルノードが起動されていることを意味します)。
-    *   8：NISは現在ブロックチェーンをロードしています。</section><section>
+    *   8：NISは現在ブロックチェーンをロードしています。
 
 ### 9.31.NISノード情報
 
@@ -4282,7 +4246,7 @@ JSON構造の例
 *   node：ノードの下部構造の始まりを示します。
 *   <Node>：ノード([Node](#node))で説明されているNodeオブジェクト。
 *   nisInfo：アプリケーションメタデータの下部構造の始まりを示します。
-*   <ApplicationMetaData>：アプリケーションメタデータ([ApplicationMetaData](#applicationMetaData))で説明されているApplicationMetaDataオブジェクト。</section><section>
+*   <ApplicationMetaData>：アプリケーションメタデータ([ApplicationMetaData](#applicationMetaData))で説明されているApplicationMetaDataオブジェクト。
 
 ### 9.32.ノード
 
@@ -4328,7 +4292,7 @@ JSON構造の例
 *   host：エンドポイントのIPアドレス。
 *   identity：身元の下部構造の始まりを示す。
 *   name：ノードの名前。
-*   public-key：ノードを識別するために使用される公開鍵。</section><section>
+*   public-key：ノードを識別するために使用される公開鍵。
 
 ### 9.33.ノード収集
 
@@ -4371,7 +4335,7 @@ JSON構造の例
 *   active：アクティブなノードの配列の先頭を示します。
 *   busy：ビジー状態のノードの配列の先頭を示します。
 *   failure：失敗したノードの配列の先頭を示します。
-*   <Node>：ノード([Node](#node))で説明されているNodeオブジェクト。</section><section>
+*   <Node>：ノード([Node](#node))で説明されているNodeオブジェクト。
 
 ### 9.34.秘密鍵
 
@@ -4387,7 +4351,7 @@ JSON構造の例
 
 フィールドの説明
 
-*   value：秘密鍵の256ビット値を16進数文字列として表します。</section><section>
+*   value：秘密鍵の256ビット値を16進数文字列として表します。
 
 ### 9.35.リクエストアナウンス
 
@@ -4413,7 +4377,7 @@ JSON構造の例
 フィールドの説明
 
 *   data：文字列としてのトランザクションデータ。文字列は最初に対応するbyte配列を作成し(第6.7章を参照)、byte配列を16進数文字列に変換して作成されます。
-*   signature：トランザクションの署名(16進数文字列)。</section><section>
+*   signature：トランザクションの署名(16進数文字列)。
 
 ### 9.36.アナウンス準備のリクエスト
 
@@ -4446,7 +4410,7 @@ JSON構造の例(テストネットワーク)
 フィールドの説明
 
 *   transaction：トランザクションデータ部分の先頭を示します。トランザクションデータについては[Transaction](#transaction)で説明しています。この時点でトランザクションが署名されていないため、フィールドの署名がありません。
-*   privateKey：NISがトランザクションに署名するために使用する秘密鍵。</section><section>
+*   privateKey：NISがトランザクションに署名するために使用する秘密鍵。
 
 ### 9.37.時刻同期結果
 
@@ -4466,7 +4430,7 @@ JSON構造の例
 
 *   dateTime：同期が実行された日時。
 *   currentTimeOffset：ミリ秒単位でのローカルコンピュータクロックへの現在のオフセット。
-*   change：最後の同期と比較したミリ秒単位の変化。</section><section>
+*   change：最後の同期と比較したミリ秒単位の変化。
 
 ### 9.38.トランザクションメタデータ
 
@@ -4488,7 +4452,7 @@ JSON構造の例
 
 *   height：トランザクションが含まれていたブロックの高さ。
 *   id：トランザクションのID。
-*   hash：トランザクションハッシュ。</section><section>
+*   hash：トランザクションハッシュ。
 
 ### 9.39.トランザクションメタデータペア
 
@@ -4498,20 +4462,19 @@ JSON構造の例
 
 JSON構造の例
 
-<code>{
+        {
             "meta":
             <transactionmetadata>,
             "transaction":
             <transaction>
             }
-    </transaction></transactionmetadata></code>
 
 フィールドの説明
 
 *   meta：トランザクションメタデータオブジェクトが含まれます。
 *   <TransactionMetaData>：トランザクションメタデータ([TransactionMetaData](#transactionMetaData))で説明されているトランザクションメタデータオブジェクト。
 *   Transaction：トランザクションオブジェクトが含まれます。
-*   <Transaction>：トランザクション([Transaction](#transaction))に記述されているトランザクションオブジェクト。</section><section>
+*   <Transaction>：トランザクション([Transaction](#transaction))に記述されているトランザクションオブジェクト。
 
 ### 9.40.未確認トランザクションメタデータ
 
@@ -4527,7 +4490,7 @@ JSON構造の例
 
 フィールドの説明
 
-*   data：内部トランザクションのハッシュ、またはトランザクションがマルチシグトランザクションでない場合はnull</section><section>
+*   data：内部トランザクションのハッシュ、またはトランザクションがマルチシグトランザクションでない場合はnull
 
 ### 9.41.未確認トランザクションメタデータペア
 
@@ -4549,7 +4512,7 @@ JSON構造の例
 *   meta：トランザクションメタデータオブジェクトが含まれます。
 *   <UnconfirmedTransactionMetaData>：未確認トランザクションメタデータ([UnconfirmedTransactionMetaData](#unconfirmedTransactionMetaData))で説明されているトランザクションメタデータオブジェクト。
 *   transaction：トランザクションオブジェクトが含まれます。
-*   <Transaction>：トランザクションに記述されているトランザクションオブジェクト。</section><section>
+*   <Transaction>：トランザクションに記述されているトランザクションオブジェクト。
 
 ### 9.42.エラーオブジェクト
 
@@ -4571,14 +4534,13 @@ JSON構造の例
 *   timeStamp：ネメシスブロックの作成から経過した秒数。
 *   error：エラーの一般的な説明。
 *   message：詳細なエラーメッセージ。
-*   Status：HTTPステータス。</section></section><section>
+*   Status：HTTPステータス。
 
 ## 10.NISエラー
 
 公式情報：[Appendix B: NIS Errors](http://bob.nem.ninja/docs/#appendix-B:-NIS-errors)
 
 リクエストの処理中にNISでエラーが発生した場合、その構造は[エラーオブジェクト](#error-object)で説明されているJSONエラーオブジェクトを返します。この章ではNISから返されるエラーメッセージについて説明します。
-<section>
 
 ### 10.1.エラーメッセージ
 
