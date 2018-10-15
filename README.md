@@ -225,7 +225,7 @@ NISはクライアントと通信するためにポート7890番を使用しま�
 
 NISがローカルで実行されていると仮定すると、HTTP GETリクエストはブラウザから実行され次の形式になります。
 
-*   例：http://127.0.0.1:7890<path to API request>?<parameters>
+*   例：`http://127.0.0.1:7890<path to API request>?<parameters>`
 *   http://127.0.0.1:7890/account/get?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
 
 通常、HTTP POSTリクエストは実行可能なプラグインを使用しない限りブラウザ内では実行できません。
