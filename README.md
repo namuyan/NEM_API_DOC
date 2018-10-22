@@ -260,13 +260,14 @@ Nemリクエストリザルトの詳細については、[Nemリクエストリ�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/heartbeat
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "code": 1,
-                "type": 2,
-                "message": "ok"
-                }
+```json
+{
+    "code": 1,
+    "type": 2,
+    "message": "ok"
+}
+```
 
 可能性のあるエラー：このリクエストに対する応答がない場合、NISは実行されていないか、リクエストを処理できない状態になっています。
 
@@ -280,13 +281,14 @@ Nemリクエストリザルトの詳細については、[Nemリクエストリ�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/status
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "code": 6,
-                "type": 4,
-                "message": "status"
-                }
+```json
+{
+    "code": 6,
+    "type": 4,
+    "message": "status"
+}
+```
 
 コードは次のように解釈出来ます。
 *   *   0：不明なステータス。
@@ -332,12 +334,12 @@ Nemリクエストリザルトの詳細については、[Nemリクエストリ�
 
 対応するJSONオブジェクトについては[アカウント情報](#accountInfo)を参照してください。これにはフィールド値があります。
 
-    *   アドレス(address)：各アカウントには固有のアドレスがあります。 アドレスの最初の文字はアカウントが属するネットワークを示します。 現在アカウントアドレスが大文字Tで始まるテストネットワークと、アカウントアドレスが常に大文字Nで始まるメインネットワークの2つのネットワークが定義されています。アドレスの長さは常に40文字で、[base32](http://en.wikipedia.org/wiki/Base32)にエンコードされます。
-    *   balance：各アカウントにはゼロ以上の整数を持ったマイクロNEMの数を示す残高を所持しています。したがって、123456789の残高はアカウントが123.456789 NEMを所有していることを意味します。残高には確定部分および未確定部分に分かれており、確定部分のみが重要度計算に関連しています。ある残高から他の残高へ振替する場合には残高そのものが関連します。
-    *   importance：各アカウントには重要度が割り当てられており、重要度には0と1が用いられます。これはハーベスティングが有効になっている場合に次のブロックを収穫するアカウントの確率を示します。なお、重要度を計算するための正確な公式はまだ公開されておらず、またアカウントの重要度計算には最低10000のNEMを所持している必要があります。
-    *   publicKey：アカウントの公開鍵を使用してそのアカウントの署名を検証することができます。 すでにトランザクションを公開しているアカウントのみがそのアカウントに割り当てられた公開鍵を持っています。 それ以外の場合、フィールドはNULLとなっています。
-    *   ラベル(label)：このフィールドはまだ使用されておらず、常にnullです。
-    *   ハーベストブロック(harvestedBlocks)：ハーベスティングは新しいブロックを生成するプロセスです。フィールドはこれまでアカウントが収穫したブロックの数を示します。新しいアカウントの場合は数値は0です。
+*   アドレス(address)：各アカウントには固有のアドレスがあります。 アドレスの最初の文字はアカウントが属するネットワークを示します。 現在アカウントアドレスが大文字Tで始まるテストネットワークと、アカウントアドレスが常に大文字Nで始まるメインネットワークの2つのネットワークが定義されています。アドレスの長さは常に40文字で、[base32](http://en.wikipedia.org/wiki/Base32)にエンコードされます。
+*   balance：各アカウントにはゼロ以上の整数を持ったマイクロNEMの数を示す残高を所持しています。したがって、123456789の残高はアカウントが123.456789 NEMを所有していることを意味します。残高には確定部分および未確定部分に分かれており、確定部分のみが重要度計算に関連しています。ある残高から他の残高へ振替する場合には残高そのものが関連します。
+*   importance：各アカウントには重要度が割り当てられており、重要度には0と1が用いられます。これはハーベスティングが有効になっている場合に次のブロックを収穫するアカウントの確率を示します。なお、重要度を計算するための正確な公式はまだ公開されておらず、またアカウントの重要度計算には最低10000のNEMを所持している必要があります。
+*   publicKey：アカウントの公開鍵を使用してそのアカウントの署名を検証することができます。 すでにトランザクションを公開しているアカウントのみがそのアカウントに割り当てられた公開鍵を持っています。 それ以外の場合、フィールドはNULLとなっています。
+*   ラベル(label)：このフィールドはまだ使用されておらず、常にnullです。
+*   ハーベストブロック(harvestedBlocks)：ハーベスティングは新しいブロックを生成するプロセスです。フィールドはこれまでアカウントが収穫したブロックの数を示します。新しいアカウントの場合は数値は0です。
 
 アカウントのメタデータはアカウントのハーベスティング状況を表し、アカウントが少なくとも1つのマルチシグアカウントの署名者である場合、そのマルチアカウントのリストも含まれます。
 
@@ -423,13 +425,14 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/account/generate
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "privateKey": "0962c6505d02123c40e858ff8ef21e2b7b5466be12c4770e3bf557aae828390f",
-                "address": "NCKMNCU3STBWBR7E3XD2LR7WSIXF5IVJIDBHBZQT",
-                "publicKey": "c2e19751291d01140e62ece9ee3923120766c6302e1099b04014fe1009bc89d3"
-                }
+```json
+{
+    "privateKey": "0962c6505d02123c40e858ff8ef21e2b7b5466be12c4770e3bf557aae828390f",
+    "address": "NCKMNCU3STBWBR7E3XD2LR7WSIXF5IVJIDBHBZQT",
+    "publicKey": "c2e19751291d01140e62ece9ee3923120766c6302e1099b04014fe1009bc89d3"
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -443,27 +446,26 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
 *   パラメータ：address：アカウントのアドレス。
 *   例：http://127.0.0.1:7890/account/get?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "account":
-                {
-                "address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
-                "balance": 124446551689680,
-                "vestedBalance": 104443451691625,
-                "importance": 0.010263666447108395,
-                "publicKey": "a11a1a6c17a24252e674d151713cdf51991ad101751e4af02a20c61b59f1fe1a",
-                "label": null,
-                "harvestedBlocks": 645
-                },
-                "meta":
-                {
-                "cosignatoryOf": [ ],
-                "cosignatories": [ ],
-                "status": "LOCKED",
-                "remoteStatus": "ACTIVE"
-                }
-                }
+```json
+{
+	"account": {
+		"address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+		"balance": 124446551689680,
+		"vestedBalance": 104443451691625,
+		"importance": 0.010263666447108395,
+		"publicKey": "a11a1a6c17a24252e674d151713cdf51991ad101751e4af02a20c61b59f1fe1a",
+		"label": null,
+		"harvestedBlocks": 645
+	},
+	"meta": {
+		"cosignatoryOf": [],
+		"cosignatories": [],
+		"status": "LOCKED",
+		"remoteStatus": "ACTIVE"
+	}
+}
+```
 
 可能性のあるエラー：addressパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -488,27 +490,26 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
 
 例：http://127.0.0.1:7890/account/get/forwarded?address=NC2ZQKEFQIL3JZEOB2OZPWXWPOR6LKYHIROCR7PK
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "account":
-                {
-                "address": "NALICE2A73DLYTP4365GNFCURAUP3XVBFO7YNYOW",
-                "balance": 11793338398661,
-                "vestedBalance": 10890953464862,
-                "importance": 0.001264596432148395,
-                "publicKey": "bdd8dd702acb3d88daf188be8d6d9c54b3a29a32561a068b25d2261b2b2b7f02",
-                "label": null,
-                "harvestedBlocks": 742
-                },
-                "meta":
-                {
-                "cosignatoryOf": [ ],
-                "cosignatories": [ ],
-                "status": "LOCKED",
-                "remoteStatus": "ACTIVE"
-                }
-                }
+```json
+{
+	"account": {
+		"address": "NALICE2A73DLYTP4365GNFCURAUP3XVBFO7YNYOW",
+		"balance": 11793338398661,
+		"vestedBalance": 10890953464862,
+		"importance": 0.001264596432148395,
+		"publicKey": "bdd8dd702acb3d88daf188be8d6d9c54b3a29a32561a068b25d2261b2b2b7f02",
+		"label": null,
+		"harvestedBlocks": 742
+	},
+	"meta": {
+		"cosignatoryOf": [],
+		"cosignatories": [],
+		"status": "LOCKED",
+		"remoteStatus": "ACTIVE"
+	}
+}
+```
 
 可能性のあるエラー：addressパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -531,13 +532,14 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
 *   パラメータ：Address：アカウントのアドレス。
 *   例：http://127.0.0.1:7890/account/status?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "cosignatoryOf": [ ],
-                "status": "LOCKED",
-                "remoteStatus": "ACTIVE"
-                }
+```json
+{
+	"cosignatoryOf": [],
+	"status": "LOCKED",
+	"remoteStatus": "ACTIVE"
+}
+```
 
 可能性のあるエラー：addressパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -566,65 +568,61 @@ recipient：受信者のアドレス。アドレスが有効でない場合は�
 *   パラメータ：id：トランザクションが返されるまでのトランザクションID。
 *   例：http://127.0.0.1:7890/account/transfers/incoming?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a2
 *   返されるJSONオブジェクトの例(テストネットワーク)
-*   
 
-        {
-                "data": [
-                {
-                "meta":
-                {
-                "id": 71245,
-                "height": 40706,
-                "hash": {
-                "data":"15c373ad4c3fe6af47d1941379ff262f785bdcfa07c02ac3608bc10da27d5e82"
-                }
-                },
-                "transaction":
-                {
-                "timeStamp": 9106400,
-                "amount": 1000000000,
-                "signature": "449cd76ea8bda2220b3d6ad6f8db5f81d4e68ad3d4b0c3db9a3c267355657639eabed3dbcef8e0cc22953ae2b36a22ee7dc6327484c9649cccd686a511eca105",
-                "fee": 3000000,
-                "recipient": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
-                "type": 257,
-                "deadline": 9149600,
-                "message":
-                {
-                "payload": "280000005444334b32493543524850595634425a5a5a4c335850454e4",
-                "type": 2
-                },
-                "version": -1744830463,
-                "signer": "c20a1dffe699c7a68328986273265e33fceebe074f274240ef890dd80ad55ed6"
-                }
-                },
-                {
-                "meta":
-                {
-                "id": 71356,
-                "height": 40629,
-                "hash": {
-                "data":"37c34ead4c3fe6af42d994135798262f785ba2d807c02ac3608bc10da12e5f87"
-                }
-                },
-                "transaction":
-                {
-                "timeStamp": 9101541,
-                "amount": 49997995000000,
-                "signature": "57c3c48d2ae8b24240b57d72493f498cfeb61e2ab87237dc0e08c51007d5c7f15847d0e08c0286e68a72028925db5fa809ca9d57e2cb6eebe11822176a834c0b",
-                "fee": 2005000000,
-                "recipient": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
-                "type": 257,
-                "deadline": 9144741,
-                "message":
-                {
-                "payload": "526f6262657279212121",
-                "type": 1
-                },
-                "version": -1744830463,
-                "signer": "546e4fb9c81db84e04d8e9e67380db0fe1f540df09a527fb995b589b5695ae24"
-                }
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"meta": {
+				"id": 71245,
+				"height": 40706,
+				"hash": {
+					"data": "15c373ad4c3fe6af47d1941379ff262f785bdcfa07c02ac3608bc10da27d5e82"
+				}
+			},
+			"transaction": {
+				"timeStamp": 9106400,
+				"amount": 1000000000,
+				"signature": "449cd76ea8bda2220b3d6ad6f8db5f81d4e68ad3d4b0c3db9a3c267355657639eabed3dbcef8e0cc22953ae2b36a22ee7dc6327484c9649cccd686a511eca105",
+				"fee": 3000000,
+				"recipient": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+				"type": 257,
+				"deadline": 9149600,
+				"message": {
+					"payload": "280000005444334b32493543524850595634425a5a5a4c335850454e4",
+					"type": 2
+				},
+				"version": -1744830463,
+				"signer": "c20a1dffe699c7a68328986273265e33fceebe074f274240ef890dd80ad55ed6"
+			}
+		},
+		{
+			"meta": {
+				"id": 71356,
+				"height": 40629,
+				"hash": {
+					"data": "37c34ead4c3fe6af42d994135798262f785ba2d807c02ac3608bc10da12e5f87"
+				}
+			},
+			"transaction": {
+				"timeStamp": 9101541,
+				"amount": 49997995000000,
+				"signature": "57c3c48d2ae8b24240b57d72493f498cfeb61e2ab87237dc0e08c51007d5c7f15847d0e08c0286e68a72028925db5fa809ca9d57e2cb6eebe11822176a834c0b",
+				"fee": 2005000000,
+				"recipient": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+				"type": 257,
+				"deadline": 9144741,
+				"message": {
+					"payload": "526f6262657279212121",
+					"type": 1
+				},
+				"version": -1744830463,
+				"signer": "546e4fb9c81db84e04d8e9e67380db0fe1f540df09a527fb995b589b5695ae24"
+			}
+		}
+	]
+}
+```
 
 可能性のあるエラー：addressパラメータが有効でないか、データベース内にidが見つからない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -651,38 +649,37 @@ APIパス：/account/transfers/outgoing
 *   パラメータ：id：トランザクションが返されるまでのトランザクションID。
 *   例：http://127.0.0.1:7890/account/transfers/outgoing?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22
 *   返されるJSONオブジェクトの例(テストネットワーク)
-*   
 
-        {
-                "data": [
-                {
-                "meta":
-                {
-                "id": 70498,
-                "height": 40803,
-                "hash": {
-                "data":"37c34ead4c3fe6af42d994135798262f785ba2d807c02ac3608bc10da12e5f87"
-                }
-                },
-                "transaction":
-                {
-                "timeStamp": 9111526,
-                "amount": 1000000000,
-                "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-                "fee": 3000000,
-                "recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
-                "type": 257,
-                "deadline": 9154726,
-                "message":
-                {
-                "payload": "74657374207472616e73616374696f6e",
-                "type": 1
-                },
-                "version": -1744830463,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                }
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"meta": {
+				"id": 70498,
+				"height": 40803,
+				"hash": {
+					"data": "37c34ead4c3fe6af42d994135798262f785ba2d807c02ac3608bc10da12e5f87"
+				}
+			},
+			"transaction": {
+				"timeStamp": 9111526,
+				"amount": 1000000000,
+				"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+				"fee": 3000000,
+				"recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
+				"type": 257,
+				"deadline": 9154726,
+				"message": {
+					"payload": "74657374207472616e73616374696f6e",
+					"type": 1
+				},
+				"version": -1744830463,
+				"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+			}
+		}
+	]
+}
+```
 
 可能性のあるエラー：addressパラメータが有効でないか、データベース内にidが見つからない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -725,29 +722,31 @@ APIパス：/account/unconfirmedTransactions
 *   パラメータ：address：アカウントのアドレス。
 *   例：http://127.0.0.1:7890/account/unconfirmedTransactions?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
 *   返されるJSONオブジェクトの例(テストネットワーク)
-*   
 
-        {
-                "meta": {
-                "data": "d7c9e33421e43bf4a5d6e21304c8096c599142755d581bd6e9037f41545a5873"
-                },
-                "data": [
-                {
-                "timeStamp": 9131839,
-                "amount": 1000000000,
-                "signature": "0acface77696a54340a7da8592750ea0410f62717d07e4df30e09718092521262465df5c4d98d32cd9d6e8699d66e016ec8db716d20090ad99cc16f7a6d13904",
-                "fee": 2000000,
-                "recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
-                "type": 257,
-                "deadline": 9175039,
-                "message": {
-                "payload": "",
-                "type": 1
-                },
-                "version": -1744830463,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                }]
-                }
+```json
+{
+	"meta": {
+		"data": "d7c9e33421e43bf4a5d6e21304c8096c599142755d581bd6e9037f41545a5873"
+	},
+	"data": [
+		{
+			"timeStamp": 9131839,
+			"amount": 1000000000,
+			"signature": "0acface77696a54340a7da8592750ea0410f62717d07e4df30e09718092521262465df5c4d98d32cd9d6e8699d66e016ec8db716d20090ad99cc16f7a6d13904",
+			"fee": 2000000,
+			"recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
+			"type": 257,
+			"deadline": 9175039,
+			"message": {
+				"payload": "",
+				"type": 1
+			},
+			"version": -1744830463,
+			"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+		}
+	]
+}
+```
 
 可能性のあるエラー：addressパラメータが有効でない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -785,18 +784,21 @@ APIパス：/local/account/transfers/incoming
 *   パラメータ：hash：トランザクションが返された256bitのsha3ハッシュ。
 *   例：http://127.0.0.1:7890/account/harvests?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=81d52a7df4abba8bb1613bcc42b6b93cf3114524939035d88ae8e864cd2c34c8
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "data": [{
-                "timeStamp": 8879051,
-                "blockHash": {
-                "data": "be3bb308ce33625f0dab64fd31b9ebe1c50dd4b94b43b03c228f481ab82458c3"
-                },
-                "totalFee": 102585065,
-                "height": 37015
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"timeStamp": 8879051,
+			"blockHash": {
+				"data": "be3bb308ce33625f0dab64fd31b9ebe1c50dd4b94b43b03c228f481ab82458c3"
+			},
+			"totalFee": 102585065,
+			"height": 37015
+		}
+	]
+}
+```
 
 可能性のあるエラー：addressパラメータが有効でないか、またはハッシュがデータベースに見つからない場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -810,25 +812,28 @@ APIパス：/local/account/transfers/incoming
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/account/importances
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "data": [{
-                "address": "TCYGT6GHZPNASMAXV7YCFCU5R5XTJKNNT66R4A4T",
-                "importance": {
-                "isSet": 0
-                }
-                },
-                {
-                "address": "TD2JJJVPKDZFXWK3N3ZJLN7A5TGNOTM3J5EVSTIG",
-                "importance": {
-                "score": 0.001222376902598832,
-                "ev": 0.004252356221747241,
-                "isSet": 1,
-                "height": 40926
-                }
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"address": "TCYGT6GHZPNASMAXV7YCFCU5R5XTJKNNT66R4A4T",
+			"importance": {
+				"isSet": 0
+			}
+		},
+		{
+			"address": "TD2JJJVPKDZFXWK3N3ZJLN7A5TGNOTM3J5EVSTIG",
+			"importance": {
+				"score": 0.001222376902598832,
+				"ev": 0.004252356221747241,
+				"isSet": 1,
+				"height": 40926
+			}
+		}
+	]
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -845,15 +850,18 @@ APIパス：/local/account/transfers/incoming
 *   パラメータ：pageSize：ネームスペースの(オプション)番号が返されます。
 *   例：http://127.0.0.1:7890/account/namespace/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH&parent=makoto.metal
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "data": [{
-                "fqn": "makoto.metal.coins",
-                "owner": TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
-                "height": 13465
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"fqn": "makoto.metal.coins",
+			"owner": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+			"height": 13465
+		}
+	]
+}
+```
 
 可能性のあるエラー：アドレスまたは(提供されている)親が無効である場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -873,31 +881,39 @@ idパラメータはオプションであり、25のモザイク定義のバッ�
 *   パラメータ：id：モザイク定義が返されるオプションのモザイク定義データベースID。
 *   例：http://127.0.0.1:7890/account/mosaic/definition/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH&parent=makoto.metal.coins
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "data": [{
-                "creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
-                "id": {
-                "namespaceId": "makoto.metal.coins",
-                "name": "silver coin"
-                },
-                "description": "Real silver coins, pure silver",
-                "properties": [{
-                "name": "divisibility",
-                "value": "0"
-                },{
-                "name": "initialSupply",
-                "value": "1000"
-                },{
-                "name": "supplyMutable",
-                "value": "false"
-                },{
-                "name": "transferable",
-                "value": "true"
-                }]
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
+			"id": {
+				"namespaceId": "makoto.metal.coins",
+				"name": "silver coin"
+			},
+			"description": "Real silver coins, pure silver",
+			"properties": [
+				{
+					"name": "divisibility",
+					"value": "0"
+				},
+				{
+					"name": "initialSupply",
+					"value": "1000"
+				},
+				{
+					"name": "supplyMutable",
+					"value": "false"
+				},
+				{
+					"name": "transferable",
+					"value": "true"
+				}
+			]
+		}
+	]
+}
+```
 
 可能性のあるエラー：アドレスもしくは親(提供されている場合)またはID(提供されている場合)が無効な場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -911,23 +927,27 @@ idパラメータはオプションであり、25のモザイク定義のバッ�
 *   パラメータ：address：アカウントのアドレス。
 *   例：http://127.0.0.1:7890/account/mosaic/owned?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "data": [{
-                "mosaicId": {
-                "namespaceId": "alice.drinks",
-                "name": "orange juice"
-                },
-                "quantity": 123
-                },{
-                "mosaicId": {
-                "namespaceId": "makoto.metal.coins",
-                "name": "silver coin"
-                },
-                "quantity": 8
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"mosaicId": {
+				"namespaceId": "alice.drinks",
+				"name": "orange juice"
+			},
+			"quantity": 123
+		},
+		{
+			"mosaicId": {
+				"namespaceId": "makoto.metal.coins",
+				"name": "silver coin"
+			},
+			"quantity": 8
+		}
+	]
+}
+```
 
 可能性のあるエラー：アドレスが無効な場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -974,12 +994,13 @@ NIS構成には許可されたハーベスタの最大数を設定するため�
 *   パラメータ：無し。
 *   例：リクエストはブラウザでは実行できません。
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "num-unlocked" : 2,
-                "max-unlocked" : 3
-                }
+```json
+{
+	"num-unlocked": 2,
+	"max-unlocked": 3
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -1002,21 +1023,20 @@ NISでこの機能を有効にするには、config.propertiesファイルのオ
 *   パラメータ：increment：各データポイント間で高さが増加する値。値は0より大きくなければなりません。NISは1回の要求で最大1000のデータポイントを供給できます。1000を超えるデータポイントを要求すると、エラーが発生します。
 *   例：http://bigalice3.nem.ninja:7890/account/historical/get?address=NALICELGU3IVY4DPJKHYLSSVYFFWYS5QPLYEZDJJ&startHeight=17592&endHeight=17592&increment=1
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                [
-                {
-                "height": 17592,
-                "address": "NALICELGU3IVY4DPJKHYLSSVYFFWYS5QPLYEZDJJ",
-                "balance": 509676000000,
-                "vestedBalance": 100999147150,
-                "unvestedBalance": 408676852850,
-                "importance": 0.00008857563463531297,
-                "pageRank": 0.0007605047835049349
-                }
-                ]
-                }
+```json
+[
+	{
+		"height": 17592,
+		"address": "NALICELGU3IVY4DPJKHYLSSVYFFWYS5QPLYEZDJJ",
+		"balance": 509676000000,
+		"vestedBalance": 100999147150,
+		"unvestedBalance": 408676852850,
+		"importance": 0.00008857563463531297,
+		"pageRank": 0.0007605047835049349
+	}
+]
+```
 
 可能性のあるエラー：アドレスが無効であることや、開始の高さが終わりの高さより大きい場合、または増加数が正数でない場合、あるいはリクエストの結果が1000データを超える場合にエラーが返されます。
 
@@ -1064,11 +1084,12 @@ NEMは求められるあらゆる情報を含むブロックチェーンを構�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/chain/height
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "height": 42799
-                }
+```json
+{
+"height": 42799
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -1082,11 +1103,12 @@ NEMは求められるあらゆる情報を含むブロックチェーンを構�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/chain/score
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "score": "18722d5a7d590deb"
-                }
+```json
+{
+    "score": "18722d5a7d590deb"
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -1100,21 +1122,19 @@ NEMは求められるあらゆる情報を含むブロックチェーンを構�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/chain/last-block
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "timeStamp": 9232968,
-                "signature": "0a1351ef3e9b19c601e804a6d329c9ade662051d1da2c12c3aec9934353e421c79de7d8e59b127a8ca9b9d764e3ca67daefcf1952f71bc36f747c8a738036b05",
-                "prevBlockHash": {
-                "data": "58efa578aea719b644e8d7c731852bb26d8505257e03a897c8102e8c894a99d6"
-                },
-                "type": 1,
-                "transactions": [
-                ],
-                "version": 1744830465,
-                "signer": "2afca04d2cb8d16cf3656274bc55b95e60be823cfb7230d82f791ed42a309ee7",
-                "height": 42804
-                }
+```json
+{
+	"timeStamp": 9232968,
+	"signature": "0a1351ef3e9b19c601e804a6d329c9ade662051d1da2c12c3aec9934353e421c79de7d8e59b127a8ca9b9d764e3ca67daefcf1952f71bc36f747c8a738036b05",
+	"prevBlockHash": {"data": "58efa578aea719b644e8d7c731852bb26d8505257e03a897c8102e8c894a99d6"},
+	"type": 1,
+	"transactions": [],
+	"version": 1744830465,
+	"signer": "2afca04d2cb8d16cf3656274bc55b95e60be823cfb7230d82f791ed42a309ee7",
+	"height": 42804
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -1134,21 +1154,21 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：blockHash：ブロックの256ビットsha3ハッシュ。ハッシュは16進数文字列として指定する必要があります。
 *   例：http://127.0.0.1:7890/block/get?blockHash=58efa578aea719b644e8d7c731852bb26d8505257e03a897c8102e8c894a99d6
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "timeStamp": 9232942,
-                "signature": "005f91b8908fc173a428ff8e8c4a0ee0d69e4004aed0d08f27690b6b6672ef74ccc6b89695bed5f29b0f4a812cb84bfa459f52a4e14a11e574793969f0e1a30f",
-                "prevBlockHash": {
-                "data": "f721e563b4431594c5af6f6be0a913f47f0aca6c3b8ee6a703bfe175ee54babf"
-                },
-                "type": 1,
-                "transactions": [
-                ],
-                "version": 1744830465,
-                "signer": "78e121cc1cf63424651ec64251e78efda81386c9f5e9eb4cb08b2a2192c9dce5",
-                "height": 42803
-                }
+```json
+{
+	"timeStamp": 9232942,
+	"signature": "005f91b8908fc173a428ff8e8c4a0ee0d69e4004aed0d08f27690b6b6672ef74ccc6b89695bed5f29b0f4a812cb84bfa459f52a4e14a11e574793969f0e1a30f",
+	"prevBlockHash": {
+		"data": "f721e563b4431594c5af6f6be0a913f47f0aca6c3b8ee6a703bfe175ee54babf"
+	},
+	"type": 1,
+	"transactions": [],
+	"version": 1744830465,
+	"signer": "78e121cc1cf63424651ec64251e78efda81386c9f5e9eb4cb08b2a2192c9dce5",
+	"height": 42803
+}
+```
 
 可能性のあるエラー：ブロックハッシュがデータベースに見つからない場合、NISはJSONエラーオブジェクトを返します。 エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1162,21 +1182,21 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：blockHeight：ブロックの高さ([BlockHeight](#blockHeight))で説明されているBlockHeight JSONオブジェクト。
 *   例：リクエストはブラウザでは実行できません。
 *   返されるJSONオブジェクトの例
-*   
 
-        {
-                "timeStamp": 9232942,
-                "signature": "005f91b8908fc173a428ff8e8c4a0ee0d69e4004aed0d08f27690b6b6672ef74ccc6b89695bed5f29b0f4a812cb84bfa459f52a4e14a11e574793969f0e1a30f",
-                "prevBlockHash": {
-                "data": "f721e563b4431594c5af6f6be0a913f47f0aca6c3b8ee6a703bfe175ee54babf"
-                },
-                "type": 1,
-                "transactions": [
-                ],
-                "version": -1744830463,
-                "signer": "78e121cc1cf63424651ec64251e78efda81386c9f5e9eb4cb08b2a2192c9dce5",
-                "height": 42803
-                }
+```json
+{
+	"timeStamp": 9232942,
+	"signature": "005f91b8908fc173a428ff8e8c4a0ee0d69e4004aed0d08f27690b6b6672ef74ccc6b89695bed5f29b0f4a812cb84bfa459f52a4e14a11e574793969f0e1a30f",
+	"prevBlockHash": {
+		"data": "f721e563b4431594c5af6f6be0a913f47f0aca6c3b8ee6a703bfe175ee54babf"
+	},
+	"type": 1,
+	"transactions": [],
+	"version": -1744830463,
+	"signer": "78e121cc1cf63424651ec64251e78efda81386c9f5e9eb4cb08b2a2192c9dce5",
+	"height": 42803
+}
+```
 
 可能性のあるエラー：指定された高さのブロックがデータベースに見つからない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1252,27 +1272,25 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/node/info
 *   返されるJSON[ノード](#node)の例
-*   
 
-        {
-                "metaData":
-                {
-                "application": "NIS",
-                "version": "0.4.33-BETA",
-                "platform": "Oracle Corporation (1.8.0_25) on Windows 8"
-                },
-                "endpoint":
-                {
-                "protocol": "http",
-                "port": 7890,
-                "host": "81.224.224.156"
-                },
-                "identity":
-                {
-                "name": "Alice",
-                "public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                }
-                }
+```json
+{
+	"metaData": {
+		"application": "NIS",
+		"version": "0.4.33-BETA",
+		"platform": "Oracle Corporation (1.8.0_25) on Windows 8"
+	},
+	"endpoint": {
+		"protocol": "http",
+		"port": 7890,
+		"host": "81.224.224.156"
+	},
+	"identity": {
+		"name": "Alice",
+		"public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+	}
+}
+```
 
 可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1286,38 +1304,34 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/node/extended-info
 *   返されるJSON[NISノード情報](#nisNodeInfo)の例
-*   
 
-        {
-                "node": {
-                "metaData":
-                {
-                "application": "NIS",
-                "version": "0.4.33-BETA",
-                "platform": "Oracle Corporation (1.8.0_25) on Windows 8"
-                },
-                "endpoint":
-                {
-                "protocol": "http",
-                "port": 7890,
-                "host": "81.224.224.156"
-                },
-                "identity":
-                {
-                "name": "Alice",
-                "public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                }
-                },
-                "nisInfo":
-                {
-                "currentTime": 9288341,
-                "application": "NEM Infrastructure Server",
-                "startTime": 9238484,
-                "version": "0.4.33-BETA",
-                "signer": "CN=VeriSign Class 3 Code Signing 2010 CA,OU=Terms of use at https://www.verisign.com/rpa (c)10,OU=VeriSign Trust Network,O=VeriSign\\,
-                Inc.,C=US"
-                }
-                }
+```json
+{
+	"node": {
+		"metaData": {
+			"application": "NIS",
+			"version": "0.4.33-BETA",
+			"platform": "Oracle Corporation (1.8.0_25) on Windows 8"
+		},
+		"endpoint": {
+			"protocol": "http",
+			"port": 7890,
+			"host": "81.224.224.156"
+		},
+		"identity": {
+			"name": "Alice",
+			"public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+		}
+	},
+	"nisInfo": {
+		"currentTime": 9288341,
+		"application": "NEM Infrastructure Server",
+		"startTime": 9238484,
+		"version": "0.4.33-BETA",
+		"signer": "CN=VeriSign Class 3 Code Signing 2010 CA,OU=Terms of use at https://www.verisign.com/rpa (c)10,OU=VeriSign Trust Network,O=VeriSign\\,Inc.,C=US"
+	}
+}
+```
 
 可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1368,29 +1382,27 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/node/peer-list/reachable
 *   返されるJSON[ノードコレクション](#nodeCollection)の例(<Node>はNodeオブジェクトを表します。)
-*   
 
-        {
-                "data": [
-                "metaData":
-                {
-                "application": "NIS",
-                "version": "0.4.33-BETA",
-                "platform": "Oracle Corporation (1.8.0_25) on Windows 8"
-                },
-                "endpoint":
-                {
-                "protocol": "http",
-                "port": 7890,
-                "host": "81.224.224.156"
-                },
-                "identity":
-                {
-                "name": "Alice",
-                "public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                },
-                ]
-                }
+```json
+{
+	"data": {
+		"metaData": {
+			"application": "NIS",
+			"version": "0.4.33-BETA",
+			"platform": "Oracle Corporation (1.8.0_25) on Windows 8"
+		},
+		"endpoint": {
+			"protocol": "http",
+			"port": 7890,
+			"host": "81.224.224.156"
+		},
+		"identity": {
+			"name": "Alice",
+			"public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+		}
+	}
+}
+```
 
 可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1404,29 +1416,27 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/node/peer-list/active
 *   返されるJSON[ノードコレクション](#nodeCollection)の例(<Node>はNodeオブジェクトを表します。)
-*   
 
-        {
-                "data": [
-                "metaData":
-                {
-                "application": "NIS",
-                "version": "0.4.33-BETA",
-                "platform": "Oracle Corporation (1.8.0_25) on Windows 8"
-                },
-                "endpoint":
-                {
-                "protocol": "http",
-                "port": 7890,
-                "host": "81.224.224.156"
-                },
-                "identity":
-                {
-                "name": "Alice",
-                "public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                },
-                ]
-                }
+```json
+{
+	"data": {
+		"metaData": {
+			"application": "NIS",
+			"version": "0.4.33-BETA",
+			"platform": "Oracle Corporation (1.8.0_25) on Windows 8"
+		},
+		"endpoint": {
+			"protocol": "http",
+			"port": 7890,
+			"host": "81.224.224.156"
+		},
+		"identity": {
+			"name": "Alice",
+			"public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+		}
+	}
+}
+```
 
 可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1440,11 +1450,12 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/node/active-peers/max-chain-height
 *   返されるJSON ブロックの高さ([BlockHeight](#blockHeight))オブジェクトの例
-*   
 
-        {
-                "height": 43920
-                }
+```json
+{
+    "height": 43920
+}
+```
 
 可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1458,37 +1469,34 @@ NISはブロックの高さまたはブロックのハッシュによって識�
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/node/experiences
 *   返されるJSON エクステンドノードエクスペリエンスペア([ExtendedNodeExperiencePair](#extendedNodeExperiencePair))オブジェクト配列の例
-*   
 
-        {
-                "data": [
-                {
-                "node":
-                "metaData":
-                {
-                "application": "NIS",
-                "version": "0.4.33-BETA",
-                "platform": "Oracle Corporation (1.8.0_25) on Windows 8"
-                },
-                "endpoint":
-                {
-                "protocol": "http",
-                "port": 7890,
-                "host": "81.224.224.156"
-                },
-                "identity":
-                {
-                "name": "Alice",
-                "public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                },
-                "syncs": 3,
-                "experience":
-                {
-                "s": 1,
-                "f": 0
-                }
-                }]
-                }
+```json
+{
+	"data": {
+		"node": {
+			"metaData": {
+				"application": "NIS",
+				"version": "0.4.33-BETA",
+				"platform": "Oracle Corporation (1.8.0_25) on Windows 8"
+			},
+			"endpoint": {
+				"protocol": "http",
+				"port": 7890,
+				"host": "81.224.224.156"
+			},
+			"identity": {
+				"name": "Alice",
+				"public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+			},
+			"syncs": 3,
+			"experience": {
+				"s": 1,
+				"f": 0
+			}
+		}
+	}
+}
+```
 
 可能性のあるエラー：ノードがまだ起動されていない場合、NISはJSONエラーオブジェクトを返します。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1562,9 +1570,34 @@ NEMはインターネットドメイン名のNEMアナログであるネーム�
 *   パラメータ：pagesize：リクエストごとに返されるネームスペースオブジェクトの数。パラメータはオプションです。デフォルト値は25、最小値は5、最大値は100です。
 *   例：http://127.0.0.1:7890/namespace/roots?id=26754&pageSize;=35
 *   返されるJSON オブジェクトの例
-*   
 
-`{ "data": [{ "meta":{ "id":26264, }, "namespace":{ "fqn": "makoto.metal.coins", "owner": TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH", "height": 13465 } },{ "meta":{ "id":25421, }, "namespace":{ "fqn": "gimre.vouchers", "owner": TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA", "height": 12392 } }] }`
+```json
+{
+	"data": [
+		{
+			"meta": {
+				"id": 26264
+			},
+			"namespace": {
+				"fqn": "makoto.metal.coins",
+				"owner": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+				"height": 13465
+			}
+		},
+		{
+			"meta": {
+				"id": 25421
+			},
+			"namespace": {
+				"fqn": "gimre.vouchers",
+				"owner": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
+				"height": 12392
+			}
+		}
+	]
+}
+```
+
 可能性のあるエラー：無し。
 
 #### 6.1.2.特定のネームスペースを取得
@@ -1610,11 +1643,11 @@ properties：モザイクの動作は一連のプロパティによってカス�
 
 levyデータは以下のとおりです。
 
-    *   fee type：絶対料金(absolute fee)とパーセンタイル料金(percentile fee)があります。
-    *   *   絶対料金：手数料は絶対量として指定されているため、転送される数量には依存しません。
-    *   パーセンタイル料金：料金は転送される数量のパーセンタイルの倍数として指定されます。 転送されたモザイクの量に応じて料金は直線的に増加します。recipient：課徴金の受領者。 これはどのアカウントでもかまいません。
-    *   mosaic id：料金を支払う必要があるモザイクのIDです。既存のモザイクIDを指定できます。作成者がXEMで料金を支払うことを希望する場合、モザイクID『nem * xem』を使用しなければなりません。
-    *   fee：この解釈はフィールド『fee type』に依存します(上記参照)。
+*   fee type：絶対料金(absolute fee)とパーセンタイル料金(percentile fee)があります。
+*   *   絶対料金：手数料は絶対量として指定されているため、転送される数量には依存しません。
+*   パーセンタイル料金：料金は転送される数量のパーセンタイルの倍数として指定されます。 転送されたモザイクの量に応じて料金は直線的に増加します。recipient：課徴金の受領者。 これはどのアカウントでもかまいません。
+*   mosaic id：料金を支払う必要があるモザイクのIDです。既存のモザイクIDを指定できます。作成者がXEMで料金を支払うことを希望する場合、モザイクID『nem:xem』を使用しなければなりません。
+*   fee：この解釈はフィールド『fee type』に依存します(上記参照)。
 
 モザイク定義はモザイク定義作成トランザクション([MosaicDefinitionCreationTransaction](#mosaicDefinitionCreationTransaction))によって作成することができます。通常のトランザクション手数料に加えて、作成料があります。この手数料はアドレスを持つ特別なアドレスであるクリエイションフィーシンク(creation fee sink)に支払われます。
 
@@ -1646,36 +1679,44 @@ levyデータは以下のとおりです。
 *   パラメータ：pagesize：各要求に対して返されるモザイク定義のオブジェクト数。パラメータはオプションです。デフォルト値は25、最小値は5、最大値は100です。
 *   例：http://127.0.0.1:7890/namespace/mosaic/definition/page?namespace=makoto.metal.coins
 *   返されるJSON オブジェクトの例
-*   
 
-        {
-                "data": [{
-                "meta" {
-                "id": 3541
-                },
-                "mosaic": {
-                "creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
-                "id": {
-                "namespaceId": "makoto.metal.coins",
-                "name": "silver coin"
-                },
-                "description": "Real silver coins, pure silver",
-                "properties": [{
-                "name": "divisibility",
-                "value": "0"
-                },{
-                "name": "initialSupply",
-                "value": "1000"
-                },{
-                "name": "supplyMutable",
-                "value": "false"
-                },{
-                "name": "transferable",
-                "value": "true"
-                }]
-                }
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"meta": {
+				"id": 3541
+			},
+			"mosaic": {
+				"creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
+				"id": {
+					"namespaceId": "makoto.metal.coins",
+					"name": "silver coin"
+				},
+				"description": "Real silver coins, pure silver",
+				"properties": [
+					{
+						"name": "divisibility",
+						"value": "0"
+					},
+					{
+						"name": "initialSupply",
+						"value": "1000"
+					},
+					{
+						"name": "supplyMutable",
+						"value": "false"
+					},
+					{
+						"name": "transferable",
+						"value": "true"
+					}
+				]
+			}
+		}
+	]
+}
+```
 
 可能性のあるエラー：ネームスペースパラメータがないか無効である場合、NISはエラーを返します。エラーの詳細についてはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 
@@ -1721,19 +1762,20 @@ levyデータは以下のとおりです。
 *   パラメータ：requestPrepareAnnounce：リクエスト準備(RequestPrepare)は、アナウンス準備のリクエスト([RequestPrepareAnnounce](#requestPrepareAnnounce))の説明に従ってJSONオブジェクトをアナウンスします。
 *   例：リクエストはブラウザでは実行できません。
 *   返されるJSON Nemアナウンスリザルト([NemAnnounceResult](#nemAnnounceResult)) オブジェクトの例
-*   
 
-        {
-                "type":1,
-                "code":1,
-                "message":"SUCCESS",
-                "transactionHash": {
-                "data":"c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
-                },
-                "innerTransactionHash": {
-                "data":"cc317a7674d56352b4c711096a7594bd11908bf518293a191fc2faa12eac0fbb"
-                }
-                }
+```json
+{
+	"type": 1,
+	"code": 1,
+	"message": "SUCCESS",
+	"transactionHash": {
+		"data": "c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
+	},
+	"innerTransactionHash": {
+		"data": "cc317a7674d56352b4c711096a7594bd11908bf518293a191fc2faa12eac0fbb"
+	}
+}
+```
 
 可能性のあるエラー：トランザクションの検証が失敗が原因によるエラーはさまざまです。エラーの詳細についてはエラーオブジェクト([Error object](#error-object))、もしくはNISエラー([NIS Errors](#appendix-B:-NIS-errors))を参照してください。
 *   
@@ -1763,25 +1805,25 @@ NISはバージョン1または2の転送トランザクションをサポート
 
 POSTリクエストを介してNISに送信する必要のあるアナウンス準備のリクエスト(RequestPrepareAnnounce) JSONオブジェクトは、これと同じようになります(テストネットワーク)。
 
-        {
-                "transaction":
-                {
-                "timeStamp": 9111526,
-                "amount": 1000000000,
-                "fee": 3000000,
-                "recipient": "TBOBBSXX7BESJXDWGLP5Z7FM5HSTKUH5WIMPW562",
-                "type": 257,
-                "deadline": 9154726,
-                "message":
-                {
-                "payload": "",
-                "type": 1
-                },
-                "version": -1744830463,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                },
-                "privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
-                }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"amount": 1000000000,
+		"fee": 3000000,
+		"recipient": "TBOBBSXX7BESJXDWGLP5Z7FM5HSTKUH5WIMPW562",
+		"type": 257,
+		"deadline": 9154726,
+		"message": {
+			"payload": "",
+			"type": 1
+		},
+		"version": -1744830463,
+		"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+	},
+	"privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
+}
+```
 
 NISは署名を作成するため、オブジェクトのトランザクション部分に署名がないことに注意してください。
 
@@ -1789,15 +1831,17 @@ NISは署名を作成するため、オブジェクトのトランザクショ�
 
 送信者アカウントのトランザクションに十分な資金がある場合、NISはJSONオブジェクトで応答します。
 
-        {
-                "type": 1,
-                "code": 1,
-                "message": "SUCCESS",
-                "transactionHash": {
-                "data":"c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
-                },
-                "innerTransactionHash": {}
-                }
+```json
+{
+	"type": 1,
+	"code": 1,
+	"message": "SUCCESS",
+	"transactionHash": {
+		"data": "c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
+	},
+	"innerTransactionHash": {}
+}
+```
 
 
 #### 7.2.2.転送トランザクションバージョン2
@@ -1810,38 +1854,32 @@ NISは署名を作成するため、オブジェクトのトランザクショ�
 
 可分性0のid『makoto.metals.silver * coin』を持つモザイクをすでに作成していて、100 XEMの転送でそれらモザイクの転送を紐付けしたいとします。 3つのsilver coin モザイクと300 XEMを1回の転送トランザクションで転送するには、次のようなアナウンス準備のリクエスト(RequestPrepareAnnounce) JSONオブジェクトをNISに発行します。
 
-        {
-                "transaction":
-                {
-                "timeStamp": 9111526,
-                "amount": 3000000,
-                "fee": 30000000,
-                "recipient": "TBOBBSXX7BESJXDWGLP5Z7FM5HSTKUH5WIMPW562",
-                "type": 257,
-                "deadline": 9154726,
-                "message":
-                {
-                "payload": "",
-                "type": 1
-                },
-                "version": -1744830462,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                "mosaics":[{
-                "mosaicId":{
-                "namespaceId": "makoto.metals.silver",
-                "name": "coin"
-                },
-                "quantity": 1
-                },{
-                "mosaicId":{
-                "namespaceId": "nem",
-                "name": "xem"
-                },
-                "quantity": 100000000
-                }]
-                },
-                "privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
-                }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"amount": 3000000,
+		"fee": 30000000,
+		"recipient": "TBOBBSXX7BESJXDWGLP5Z7FM5HSTKUH5WIMPW562",
+		"type": 257,
+		"deadline": 9154726,
+		"message": {"payload": "", "type": 1},
+		"version": -1744830462,
+		"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
+		"mosaics": [
+			{
+				"mosaicId": {"namespaceId": "makoto.metals.silver", "name": "coin"},
+				"quantity": 1
+			},
+			{
+				"mosaicId": {"namespaceId": "nem", "name": "xem"},
+				"quantity": 100000000
+			}
+		]
+	},
+	"privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
+}
+```
 
 転送トランザクションには2つのモザイクが添付されています。
 
@@ -1884,33 +1922,36 @@ Aliceを公開鍵で変換したいと仮定した場合、以下のとおりで
 
 以下に似たJSONオブジェクト(テストネットワーク)を作成する必要があります。
 
-         {
-                "transaction":
-                {
-                "timeStamp": 9111526,
-                "fee": 28000000,
-                "type": 4097,
-                "deadline": 9154726,
-                "version": -1744830462,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
-                "modifications": [
-                {
-                "modificationType": 1,
-                "cosignatoryAccount": "6083df7119d43e815ed2967c795f806f6b73f8f92a56a7611e3848816ec50958"
-                },{
-                "modificationType": 1,
-                "cosignatoryAccount": "0662ed29cbfa7038530fb7f52df865eed6708d51bc7a24bcd05db35185b53c70"
-                },{
-                "modificationType": 1,
-                "cosignatoryAccount": "cc61676a4275abcffd10a9ea1081091ff054a1a8a720429256aebf8034aab099"
-                }
-                ],
-                "minCosignatories" : {
-                "relativeChange": 2
-                }
-                },
-                "privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
-                }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"fee": 28000000,
+		"type": 4097,
+		"deadline": 9154726,
+		"version": -1744830462,
+		"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
+		"modifications": [
+			{
+				"modificationType": 1,
+				"cosignatoryAccount": "6083df7119d43e815ed2967c795f806f6b73f8f92a56a7611e3848816ec50958"
+			},
+			{
+				"modificationType": 1,
+				"cosignatoryAccount": "0662ed29cbfa7038530fb7f52df865eed6708d51bc7a24bcd05db35185b53c70"
+			},
+			{
+				"modificationType": 1,
+				"cosignatoryAccount": "cc61676a4275abcffd10a9ea1081091ff054a1a8a720429256aebf8034aab099"
+			}
+		],
+		"minCosignatories": {
+			"relativeChange": 2
+		}
+	},
+	"privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
+}
+```
 
 なお、NISによって署名されるため、署名はありません。
 
@@ -1928,51 +1969,52 @@ BobはアカウントAliceからアカウントJusanに1000NEMを送信する転
 
 対応するアナウンス準備のリクエスト(RequestPrepareAnnounce)オブジェクトは、次のようになります(テストネットワーク)。
 
-        {
-                "transaction":
-                {
-                "timeStamp": 9111526,
-                "fee": 3000000,
-                "type": 4100,
-                "deadline": 9154726,
-                "version": -1744830463,
-                "signer": "6083df7119d43e815ed2967c795f806f6b73f8f92a56a7611e3848816ec50958",
-                "otherTrans": {
-                "timeStamp": 9111526,
-                "amount": 1000000000,
-                "fee": 4000000,
-                "recipient": "TBJUSANZ63AKNJ57XMK6Y2IBH55UNNRXJFZRDTRW",
-                "type": 257,
-                "deadline": 9154726,
-                "message":
-                {
-                "payload": "",
-                "type": 1
-                },
-                "version": -1744830463,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                },
-                "signatures":[
-                ]
-                },
-                "privateKey": "00a6e2526b5cc84f9174c4ff050ca352623061115951c649b36b08409c4ccb7b2e"
-                }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"fee": 3000000,
+		"type": 4100,
+		"deadline": 9154726,
+		"version": -1744830463,
+		"signer": "6083df7119d43e815ed2967c795f806f6b73f8f92a56a7611e3848816ec50958",
+		"otherTrans": {
+			"timeStamp": 9111526,
+			"amount": 1000000000,
+			"fee": 4000000,
+			"recipient": "TBJUSANZ63AKNJ57XMK6Y2IBH55UNNRXJFZRDTRW",
+			"type": 257,
+			"deadline": 9154726,
+			"message": {
+				"payload": "",
+				"type": 1
+			},
+			"version": -1744830463,
+			"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+		},
+		"signatures": []
+	},
+	"privateKey": "00a6e2526b5cc84f9174c4ff050ca352623061115951c649b36b08409c4ccb7b2e"
+}
+```
 
 NISはトランザクションに署名し、それを公表します。
 
 今回返されたNemアナウンスリザルト(NemAnnounceResult)オブジェクトには、内部トランザクションのハッシュ(上記構造のotherTrans)が含まれています。
 
-            {
-                "type": 1,
-                "code": 1,
-                "message": "SUCCESS"
-                "transactionHash": {
-                    "data":"c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
-                },
-                "innerTransactionHash": {
-                    "data": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039"
-                }
-            }
+```json
+{
+	"type": 1,
+	"code": 1,
+	"message": "SUCCESS",
+	"transactionHash": {
+		"data": "c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
+	},
+	"innerTransactionHash": {
+		"data": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039"
+	}
+}
+```
 
 ハッシュは上記のトランザクションのためにマルチシグ署名トランザクションを作成するノードによって必要とされます。
 
@@ -1986,22 +2028,23 @@ NISはトランザクションに署名し、それを公表します。
 
 Jusanはこれに似たアナウンス準備のリクエスト(equestPrepareAnnounce) JSONオブジェクト(テストネットワーク)を作成する必要があります。
 
-        {
-                "transaction":
-                {
-                "timeStamp": 9111526,
-                "fee": 6000000,
-                "type": 4098,
-                "deadline": 9157365,
-                "version": -1744830463,
-                "signer": "0662ed29cbfa7038530fb7f52df865eed6708d51bc7a24bcd05db35185b53c70",
-                "otherHash": {
-                "data": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039"
-                },
-                "otherAccount": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
-                },
-                "privateKey": "00be34fdb20a9f6fed51376f0bab9f25ea7a48d610324588a6b203d0a1a6db4bc1"
-                }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"fee": 6000000,
+		"type": 4098,
+		"deadline": 9157365,
+		"version": -1744830463,
+		"signer": "0662ed29cbfa7038530fb7f52df865eed6708d51bc7a24bcd05db35185b53c70",
+		"otherHash": {
+			"data": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039"
+		},
+		"otherAccount": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
+	},
+	"privateKey": "00be34fdb20a9f6fed51376f0bab9f25ea7a48d610324588a6b203d0a1a6db4bc1"
+}
+```
 
 JusanはBobの要求からNISによって返されたハッシュ『otherHash』を使用したことに注意してください。
 
@@ -2021,37 +2064,37 @@ JusanがBobが開始したマルチシグトランザクションに署名する
 
 これを行うためには、既存の署名者の1人が(ここではJusanと仮定して)対応するマルチシグトランザクション(テストネットワーク)を開始する必要があります。
 
-        {
-                "transaction":
-                {
-                "timeStamp": 9111526,
-                "fee": 6000000,
-                "type": 4100,
-                "deadline": 9154726,
-                "version": -1744830462,
-                "signer": "6083df7119d43e815ed2967c795f806f6b73f8f92a56a7611e3848816ec50958",
-                "otherTrans": {
-                "timeStamp": 9111526,
-                "fee": 16000000,
-                "type": 4097,
-                "deadline": 9154726,
-                "version": -1744830462,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
-                "modifications": [
-                {
-                "modificationType": 1,
-                "cosignatoryAccount": "6c66ea288522990db7a0a63c9c20f532cdcb68dc3c9544fb20f7322c92ceadbb"
-                }
-                ],
-                "minCosignatories" : {
-                "relativeChange": 1
-                }
-                },
-                "signatures":[
-                ]
-                },
-                "privateKey": "00be34fdb20a9f6fed51376f0bab9f25ea7a48d610324588a6b203d0a1a6db4bc1"
-                }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"fee": 6000000,
+		"type": 4100,
+		"deadline": 9154726,
+		"version": -1744830462,
+		"signer": "6083df7119d43e815ed2967c795f806f6b73f8f92a56a7611e3848816ec50958",
+		"otherTrans": {
+			"timeStamp": 9111526,
+			"fee": 16000000,
+			"type": 4097,
+			"deadline": 9154726,
+			"version": -1744830462,
+			"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
+			"modifications": [
+				{
+					"modificationType": 1,
+					"cosignatoryAccount": "6c66ea288522990db7a0a63c9c20f532cdcb68dc3c9544fb20f7322c92ceadbb"
+				}
+			],
+			"minCosignatories": {
+				"relativeChange": 1
+			}
+		},
+		"signatures": []
+	},
+	"privateKey": "00be34fdb20a9f6fed51376f0bab9f25ea7a48d610324588a6b203d0a1a6db4bc1"
+}
+```
 
 NISがネットワークに署名してそのトランザクションをネットワークにブロードキャストした後、他の2つの署名者のうち1人はトランザクションに署名する必要があります。
 
@@ -2100,22 +2143,23 @@ NISがネットワークに署名してそのトランザクションをネッ�
 
 この場合、次のようになります。
 
-        {
-                    "transaction":
-                    {
-                    "timeStamp": 9111526,
-                    "fee": 108000000,
-                    "type": 8193,
-                    "deadline": 9154726,
-                    "version": -1744830463,
-                    "signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
-                    "rentalFeeSink": "3e82e1c1e4a75adaa3cba8c101c3cd31d9817a2eb966eb3b511fb2ed45b8e262",
-                    "rentalFee": 50000000000,
-                    "newPart": "alice",
-                    "parent": null
-                    },
-                    "privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
-                    }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"fee": 108000000,
+		"type": 8193,
+		"deadline": 9154726,
+		"version": -1744830463,
+		"signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
+		"rentalFeeSink": "3e82e1c1e4a75adaa3cba8c101c3cd31d9817a2eb966eb3b511fb2ed45b8e262",
+		"rentalFee": 50000000000,
+		"newPart": "alice",
+		"parent": null
+	},
+	"privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
+}
+```
 
 フィールド『parent』は、ルートネームスペースをレンタルすることを示すnullに設定されています。また、誰もそのルートネームスペースを既に借りていないことを確認する必要があります。そうでなければNISはエラーを返します。
 
@@ -2136,22 +2180,23 @@ NISが成功メッセージで応答すると、トランザクションはネ�
 
 サブネームスペース『alice.vouchers』をレンタルするには、次のようなアナウンス準備のリクエスト(RequestPrepareAnnounce) JSONオブジェクトをNISに送信する必要があります。
 
-                     {
-                     "transaction":
-                     {
-                     "timeStamp": 9111526,
-                     "fee": 108000000,
-                     "type": 8193,
-                     "deadline": 9154726,
-                     "version": -1744830463,
-                     "signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
-                     "rentalFeeSink": "3e82e1c1e4a75adaa3cba8c101c3cd31d9817a2eb966eb3b511fb2ed45b8e262",
-                     "rentalFee": 5000000000,
-                     "newPart": "vouchers",
-                     "parent": "alice"
-                     },
-                     "privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
-                     }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"fee": 108000000,
+		"type": 8193,
+		"deadline": 9154726,
+		"version": -1744830463,
+		"signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
+		"rentalFeeSink": "3e82e1c1e4a75adaa3cba8c101c3cd31d9817a2eb966eb3b511fb2ed45b8e262",
+		"rentalFee": 5000000000,
+		"newPart": "vouchers",
+		"parent": "alice"
+	},
+	"privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
+}
+```
 
 今回は親が親のネームスペースに設定されています。この場合、ルートのネームスペース『alice』に設定されています。サブネームスペースのレンタル料金はルートネームスペースの料金の10％、つまり500XEMです(**注：現在のサブネームスペースレンタル料金は200XEMです**)。ルートネームスペースを所有するまで待つか、NISがエラーメッセージで応答します。トランザクションがブロックに含まれると、ルートネームスペース『alice』が期限切れでない限り、サブネームスペース『alice.vouchers』を所有します。
 
@@ -2173,51 +2218,56 @@ NEMモザイクの概念の基礎は[モザイク](#mosaics)の章にありま�
 
 内容は次のようになります。
 
-                    {
-                    "transaction":
-                    {
-                    "timeStamp": 9111526,
-                    "fee": 108000000,
-                    "type": 16385,
-                    "deadline": 9154726,
-                    "version": -1744830463,
-                    "signer": "cbda3edb771d42801a5c6ce0725f9374efade19a8933d6ac22ccfa50c777d0f9",
-                    "creationFee": 50000000000,
-                    "creationFeeSink": "53e140b5947f104cabc2d6fe8baedbc30ef9a0609c717d9613de593ec2a266d3",
-                    "mosaicDefinition": {
-                    "creator": "cbda3edb771d42801a5c6ce0725f9374efade19a8933d6ac22ccfa50c777d0f9",
-                    "description": "precious vouchers",
-                    "id": {
-                    "namespaceId": "alice.vouchers",
-                    "name": "Alice's gift vouchers"
-                    },
-                    "properties": [{
-                    "name": "divisibility",
-                    "value": "0"
-                    },{
-                    "name": "initialSupply",
-                    "value": "1000"
-                    },{
-                    "name": "supplyMutable",
-                    "value": "true"
-                    },{
-                    "name": "transferable",
-                    "value": "false"
-                    }
-                    ],
-                    "levy": {
-                    "type": 1,
-                    "recipient": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
-                    "mosaicId": {
-                    "namespaceId": "nem",
-                    "name": "xem"
-                    },
-                    "fee": 10
-                    }
-                    }
-                    },
-                    "privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
-                    }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"fee": 108000000,
+		"type": 16385,
+		"deadline": 9154726,
+		"version": -1744830463,
+		"signer": "cbda3edb771d42801a5c6ce0725f9374efade19a8933d6ac22ccfa50c777d0f9",
+		"creationFee": 50000000000,
+		"creationFeeSink": "53e140b5947f104cabc2d6fe8baedbc30ef9a0609c717d9613de593ec2a266d3",
+		"mosaicDefinition": {
+			"creator": "cbda3edb771d42801a5c6ce0725f9374efade19a8933d6ac22ccfa50c777d0f9",
+			"description": "precious vouchers",
+			"id": {
+				"namespaceId": "alice.vouchers",
+				"name": "Alice's gift vouchers"
+			},
+			"properties": [
+				{
+					"name": "divisibility",
+					"value": "0"
+				},
+				{
+					"name": "initialSupply",
+					"value": "1000"
+				},
+				{
+					"name": "supplyMutable",
+					"value": "true"
+				},
+				{
+					"name": "transferable",
+					"value": "false"
+				}
+			],
+			"levy": {
+				"type": 1,
+				"recipient": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+				"mosaicId": {
+					"namespaceId": "nem",
+					"name": "xem"
+				},
+				"fee": 10
+			}
+		}
+	},
+	"privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
+}
+```
 
 上記のトランザクションではid『alice.vouchers * Alice’s gift vouchers』という名前のモザイクがネームスペース『alice.vouchers』内に作成されます。アカウントにはそのネームスペースを所有して、モザイクを作成できるようにする必要があります。
 
@@ -2263,24 +2313,25 @@ NEMモザイクの概念の基礎は[モザイク](#mosaics)の章にありま�
 
 このオブジェクトは、次のようになります。
 
-                    {
-                    "transaction":
-                    {
-                    "timeStamp": 9111526,
-                    "fee": 108000000,
-                    "type": 16386,
-                    "deadline": 9154726,
-                    "version": -1744830463,
-                    "signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
-                    "supplyType": 1,
-                    "delta": 100,
-                    "mosaicId": {
-                    "namespaceId": "alice.vouchers",
-                    "name": "Alice's gift vouchers"
-                    }
-                    },
-                    "privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
-                    }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"fee": 108000000,
+		"type": 16386,
+		"deadline": 9154726,
+		"version": -1744830463,
+		"signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
+		"supplyType": 1,
+		"delta": 100,
+		"mosaicId": {
+			"namespaceId": "alice.vouchers",
+			"name": "Alice's gift vouchers"
+		}
+	},
+	"privateKey": "00983bb01d05edecfaef55df9486c111abb6299c754a002069b1d0ef4537441bda"
+}
+```
 
 上記の例では、id『alice.vouchers * Alice’s gift vouchers』を持つ既存のモザイクの供給が変更されています。
 
@@ -2821,19 +2872,20 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
 *   パラメータ：requestAnnounce：リクエストアナウンス([RequestAnnounce](#requestAnnounce))で説明されている、RequestAnnounce JSONオブジェクト。
 *   例：リクエストはブラウザでは実行できません。
 *   返されるJSON [NemAnnounceResult](#nemAnnounceResult)オブジェクトの例
-*   
 
-        {
-                "type":1,
-                "code":1,
-                "message":"SUCCESS",
-                "transactionHash": {
-                "data":"c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
-                },
-                "innerTransactionHash": {
-                "data":"cc317a7674d56352b4c711096a7594bd11908bf518293a191fc2faa12eac0fbb"
-                }
-                }
+```json
+{
+	"type": 1,
+	"code": 1,
+	"message": "SUCCESS",
+	"transactionHash": {
+		"data": "c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
+	},
+	"innerTransactionHash": {
+		"data": "cc317a7674d56352b4c711096a7594bd11908bf518293a191fc2faa12eac0fbb"
+	}
+}
+```
 
 可能性のあるエラー：可能性のあるエラーについては、6.1章で説明しています。
 
@@ -2892,26 +2944,28 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/debug/time-synchronization
 *   返されるJSON [TimeSynchronizationResult](#timeSynchronizationResult)オブジェクトの例
-*   
 
-        {
-                "data": [
-                {
-                "dateTime": "2014-11-19 19:23:04",
-                "currentTimeOffset": 1747,
-                "change": 57
-                },
-                {
-                "dateTime": "2014-11-19 19:24:17",
-                "currentTimeOffset": 1776,
-                "change": 29
-                },
-                {
-                "dateTime": "2014-11-19 19:25:18",
-                "currentTimeOffset": 1729,
-                "change": -47
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"dateTime": "2014-11-19 19:23:04",
+			"currentTimeOffset": 1747,
+			"change": 57
+		},
+		{
+			"dateTime": "2014-11-19 19:24:17",
+			"currentTimeOffset": 1776,
+			"change": 29
+		},
+		{
+			"dateTime": "2014-11-19 19:25:18",
+			"currentTimeOffset": 1729,
+			"change": -47
+		}
+	]
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -2925,33 +2979,37 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/debug/connections/incoming
 *   返されるJSON [AuditCollection](#auditCollection)オブジェクトの例
-*   
 
-        {
-                "outstanding": [
-                {
-                "path": "/debug/connections/incoming",
-                "start-time": 9317306,
-                "host": "127.0.0.1",
-                "elapsed-time": 0,
-                "id": 4070
-                }],
-                "most-recent": [
-                {
-                "path": "/debug/connections/incoming",
-                "start-time": 9317306,
-                "host": "127.0.0.1",
-                "elapsed-time": 0,
-                "id": 4070
-                },
-                {
-                "path": "/chain/score",
-                "start-time": 9317303,
-                "host": "95.16.203.168",
-                "elapsed-time": 3,
-                "id": 4069
-                }]
-                }
+```json
+{
+	"outstanding": [
+		{
+			"path": "/debug/connections/incoming",
+			"start-time": 9317306,
+			"host": "127.0.0.1",
+			"elapsed-time": 0,
+			"id": 4070
+		}
+	],
+	"most-recent": [
+		{
+			"path": "/debug/connections/incoming",
+			"start-time": 9317306,
+			"host": "127.0.0.1",
+			"elapsed-time": 0,
+			"id": 4070
+		},
+		{
+			"path": "/chain/score",
+			"start-time": 9317303,
+			"host": "95.16.203.168",
+			"elapsed-time": 3,
+			"id": 4069
+		}
+	]
+}
+```
+
 
 可能性のあるエラー：無し。
 *   APIパス：/debug/connections/outgoing
@@ -2960,33 +3018,36 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/debug/connections/outgoing
 *   返されるJSON [AuditCollection](#auditCollection)オブジェクトの例
-*   
 
-        {
-                "outstanding": [
-                {
-                "path": "/chain/blocks-after",
-                "start-time": 9317511,
-                "host": "88.12.55.125",
-                "elapsed-time": 6,
-                "id": 6452
-                }],
-                "most-recent": [
-                {
-                "path": "/chain/blocks-after",
-                "start-time": 9317511,
-                "host": "88.12.55.125",
-                "elapsed-time": 6,
-                "id": 6452
-                },
-                {
-                "path": "/chain/hashes-from",
-                "start-time": 9317511,
-                "host": "88.12.55.125",
-                "elapsed-time": 6,
-                "id": 6451
-                }]
-                }
+```json
+{
+	"outstanding": [
+		{
+			"path": "/chain/blocks-after",
+			"start-time": 9317511,
+			"host": "88.12.55.125",
+			"elapsed-time": 6,
+			"id": 6452
+		}
+	],
+	"most-recent": [
+		{
+			"path": "/chain/blocks-after",
+			"start-time": 9317511,
+			"host": "88.12.55.125",
+			"elapsed-time": 6,
+			"id": 6452
+		},
+		{
+			"path": "/chain/hashes-from",
+			"start-time": 9317511,
+			"host": "88.12.55.125",
+			"elapsed-time": 6,
+			"id": 6451
+		}
+	]
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -3000,33 +3061,35 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
 *   パラメータ：無し。
 *   例：http://127.0.0.1:7890/debug/timers
 *   返されるJSON [NemAsyncTimerVisitor](#nemAsyncTimerVisitor)オブジェクトの例
-*   
 
-        {
-                "data": [
-                {
-                "last-delay-time": 3000,
-                "executions": 1024,
-                "failures": 0,
-                "successes": 1024,
-                "last-operation-start-time": 9317695,
-                "is-executing": 0,
-                "name": "FORAGING",
-                "average-operation-time": 0,
-                "last-operation-time": 0
-                },
-                {
-                "last-delay-time": 74181,
-                "executions": 71,
-                "failures": 0,
-                "successes": 71,
-                "last-operation-start-time": 9317654,
-                "is-executing": 0,
-                "name": "REFRESH",
-                "average-operation-time": 6,
-                "last-operation-time": 7
-                }]
-                }
+```json
+{
+	"data": [
+		{
+			"last-delay-time": 3000,
+			"executions": 1024,
+			"failures": 0,
+			"successes": 1024,
+			"last-operation-start-time": 9317695,
+			"is-executing": 0,
+			"name": "FORAGING",
+			"average-operation-time": 0,
+			"last-operation-time": 0
+		},
+		{
+			"last-delay-time": 74181,
+			"executions": 71,
+			"failures": 0,
+			"successes": 71,
+			"last-operation-start-time": 9317654,
+			"is-executing": 0,
+			"name": "REFRESH",
+			"average-operation-time": 6,
+			"last-operation-time": 7
+		}
+	]
+}
+```
 
 可能性のあるエラー：無し。
 
@@ -3042,15 +3105,17 @@ NISはSHA3-256ハッシュ関数を使用します。トランザクションの
 
 JSON構造の例
 
-        {
-                "height": 8976,
-                "address": "NALICELGU3IVY4DPJKHYLSSVYFFWYS5QPLYEZDJJ",
-                "balance": 80670000000,
-                "vestedBalance": 13949175142,
-                "unvestedBalance": 66720824858,
-                "importance": 0.00008166760846617221,
-                "pageRank": 0.0006944567083595363
-                }
+```json
+{
+	"height": 8976,
+	"address": "NALICELGU3IVY4DPJKHYLSSVYFFWYS5QPLYEZDJJ",
+	"balance": 80670000000,
+	"vestedBalance": 13949175142,
+	"unvestedBalance": 66720824858,
+	"importance": 0.00008166760846617221,
+	"pageRank": 0.0006944567083595363
+}
+```
 
 フィールドの説明
 
@@ -3070,16 +3135,17 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS"
-                "importance":
-                {
-                "isSet": 1,
-                "score": 0.0011561555164258449,
-                "ev": 0.004367936531009263,
-                "height": 38413
-                }
-                }
+```json
+{
+	"address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+	"importance": {
+		"isSet": 1,
+		"score": 0.0011561555164258449,
+		"ev": 0.004367936531009263,
+		"height": 38413
+	}
+}
+```
 
 フィールドの説明
 
@@ -3098,15 +3164,17 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
-                "balance": 124446551689680,
-                "vestedBalance": 1041345514976241,
-                "importance": 0.010263666447108395,
-                "publicKey": "a11a1a6c17a24252e674d151713cdf51991ad101751e4af02a20c61b59f1fe1a",
-                "label": null,
-                "harvestedBlocks": 645
-                }
+```json
+{
+	"address": "TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS",
+	"balance": 124446551689680,
+	"vestedBalance": 1041345514976241,
+	"importance": 0.010263666447108395,
+	"publicKey": "a11a1a6c17a24252e674d151713cdf51991ad101751e4af02a20c61b59f1fe1a",
+	"label": null,
+	"harvestedBlocks": 645
+}
+```
 
 フィールドの説明
 
@@ -3126,18 +3194,20 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-            "status": "LOCKED",
-            "remoteStatus": "ACTIVE",
-            "cosignatoryOf" : [
-            <accountinfo>,
-            <accountinfo>
-            ],
-            "cosignatories" : [
-            <accountinfo>,
-            <accountinfo>
-            ]
-            }
+```json
+{
+    "status": "LOCKED",
+    "remoteStatus": "ACTIVE",
+    "cosignatoryOf" : [
+        <accountinfo>,
+        <accountinfo>
+    ],
+    "cosignatories" : [
+        <accountinfo>,
+        <accountinfo>
+    ]
+}
+```
 
 
 フィールドの説明
@@ -3155,12 +3225,12 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "account":
-                <AccountInfo>,
-                "meta":
-                <AccountMetaData>
-                }
+```json
+{
+    "account": <AccountInfo>,
+    "meta": <AccountMetaData>
+}
+```
 
 フィールドの説明
 
@@ -3177,11 +3247,13 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "value": "68e4f79f886927de698df4f857de2aada41ccca6617e56bb0d61623b35b08cc0",
-                "hash": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039",
-                "id": "12345"
-                }
+```json
+{
+    "value": "68e4f79f886927de698df4f857de2aada41ccca6617e56bb0d61623b35b08cc0",
+    "hash": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039",
+    "id": "12345"
+}
+```
 
 フィールドの説明
 
@@ -3198,13 +3270,15 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "currentTime": 9189086,
-                "application": "NEM Infrastructure Server",
-                "startTime": 9060202,
-                "version": "0.4.30-BETA",
-                "signer": "CN=NEM Community,OU=Development Team,O=NEM,L=Internet,ST=web,C=WD"
-                }
+```json
+{
+    "currentTime": 9189086,
+    "application": "NEM Infrastructure Server",
+    "startTime": 9060202,
+    "version": "0.4.30-BETA",
+    "signer": "CN=NEM Community,OU=Development Team,O=NEM,L=Internet,ST=web,C=WD"
+}
+```
 
 フィールドの説明
 
@@ -3222,22 +3296,28 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "outstanding": [{
-                "path": "/chain/score",
-                "start-time": 9020618,
-                "host": "86.124.91.183",
-                "elapsed-time": 5,
-                "id": 797725
-                }],
-                "most-recent": [{
-                "path": "/push/transaction",
-                "start-time": 9020621,
-                "host": "hachi.nem.ninja",
-                "elapsed-time": 2,
-                id": 797750
-                }]
-                }
+```json
+{
+	"outstanding": [
+		{
+			"path": "/chain/score",
+			"start-time": 9020618,
+			"host": "86.124.91.183",
+			"elapsed-time": 5,
+			"id": 797725
+		}
+	],
+	"most-recent": [
+		{
+			"path": "/push/transaction",
+			"start-time": 9020621,
+			"host": "hachi.nem.ninja",
+			"elapsed-time": 2,
+			"id": 797750
+		}
+	]
+}
+```
 
 フィールドの説明
 
@@ -3255,21 +3335,25 @@ JSON構造の例
 
 JSON構造の例(メインネットワーク)
 
-        {
-                "timeStamp": 9022656,
-                "signature": "256ebcfa4f92e2881963359c51095a390b9f4d1b3fee75ae19f96d5e6bcf055abbcaae3e55bcc17e6214924e4e6a9ebbe77357236b1a235e944950b851bda804",
-                "prevBlockHash":
-                {
-                "data": "0a3d6bea020bb1a503364c37d57392342f368389bb23b05799c54d536d94749b"
-                },
-                "type": 1,
-                "transactions": [
-                Transaction1, Transaction2, …, Transaction11
-                ],
-                "version": 1744830465,
-                "signer": "6c66ea288522990db7a0a63c9c20f532cdcb68dc3c9544fb20f7322c92ceadbb",
-                "height": 39324
-                }
+```json
+{
+	"timeStamp": 9022656,
+	"signature": "256ebcfa4f92e2881963359c51095a390b9f4d1b3fee75ae19f96d5e6bcf055abbcaae3e55bcc17e6214924e4e6a9ebbe77357236b1a235e944950b851bda804",
+	"prevBlockHash": {
+		"data": "0a3d6bea020bb1a503364c37d57392342f368389bb23b05799c54d536d94749b"
+	},
+	"type": 1,
+	"transactions": [
+		"Transaction1",
+		"Transaction2",
+		"…",
+		"Transaction11"
+	],
+	"version": 1744830465,
+	"signer": "6c66ea288522990db7a0a63c9c20f532cdcb68dc3c9544fb20f7322c92ceadbb",
+	"height": 39324
+}
+```
 
 フィールドの説明
 
@@ -3290,9 +3374,11 @@ JSON構造の例(メインネットワーク)
 
 JSON構造の例
 
-        {
-                "score": "17a3077c927d9a7e"
-                }
+```json
+{
+    "score": "17a3077c927d9a7e"
+}
+```
 
 フィールドの説明
 
@@ -3306,9 +3392,11 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "height": 2649
-                }
+```json
+{
+    "height": 2649
+}
+```
 
 フィールドの説明
 
@@ -3322,23 +3410,22 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "metaData":
-                {
-                "application":"NIS"
-                },
-                "endpoint":
-                {
-                "protocol":"http",
-                "port":7890,
-                "host":"localhost"
-                },
-                "identity":
-                {
-                "private-key":"a6cbd01d04edecfaef51df9486c111abb6299c764a00206eb1d01f4587491b3f",
-                "name":"Alice"
-                }
-                }
+```json
+{
+	"metaData": {
+		"application": "NIS"
+	},
+	"endpoint": {
+		"protocol": "http",
+		"port": 7890,
+		"host": "localhost"
+	},
+	"identity": {
+		"private-key": "a6cbd01d04edecfaef51df9486c111abb6299c764a00206eb1d01f4587491b3f",
+		"name": "Alice"
+	}
+}
+```
 
 フィールドの説明
 
@@ -3360,10 +3447,12 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "sendTimeStamp": 9145477789,
-                "receiveTimeStamp": 9145477789
-                }
+```json
+{
+    "sendTimeStamp": 9145477789,
+    "receiveTimeStamp": 9145477789
+}
+```
 
 フィールドの説明
 
@@ -3378,21 +3467,21 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-            "data":[
-            {
-            "txes":[
-            <explorertransferviewmodel>,
-            &vellip;
-            <explorertransferviewmodel>
-            ],
-            "block": <block> ,
-            "hash":"a6f62c62eedf4fafe6991e5cf31eae440963577c919f4eae86b4db8f8e572dce",
-            "difficulty": 23456345897
-            },
-            …
-            ]
-            }
+```json
+{
+	"data": [
+		{
+			"txes": [
+				"<explorertransferviewmodel>",
+				"<explorertransferviewmodel>"
+			],
+			"block": "<block>",
+			"hash": "a6f62c62eedf4fafe6991e5cf31eae440963577c919f4eae86b4db8f8e572dce",
+			"difficulty": 23456345897
+		}
+	]
+}
+```
 
 
 フィールドの説明
@@ -3412,11 +3501,13 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-            "tx": <transaction>,
-            "hash": "5cba4614e52af19417fb53c4bdf442a57b9f558aee17ece530a5220da55cf47d",
-            "innerHash": "ae3b107f1216e1ccf12b6f3c3c555bc1d95311747338ce66f539ea2c18c0aa57"
-            }
+```json
+{
+    "tx": <transaction>,
+    "hash": "5cba4614e52af19417fb53c4bdf442a57b9f558aee17ece530a5220da55cf47d",
+    "innerHash": "ae3b107f1216e1ccf12b6f3c3c555bc1d95311747338ce66f539ea2c18c0aa57"
+}
+```
 
 フィールドの説明
 
@@ -3435,19 +3526,21 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "node":
-                {
-                <Node>
-                },
-                "syncs": 822,
-                "experience":
-                {
-                "s": 357,
-                "f": 0
-                }
-                }
-
+```json
+{
+    "node":
+    {
+        <Node>
+    },
+    "syncs": 822,
+    "experience":
+    {
+        "s": 357,
+        "f": 0
+    }
+}
+```
+                
 フィールドの説明
 
 *   node：JSON Transactionオブジェクトを含むエントリ。
@@ -3467,13 +3560,15 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "timeStamp": 8963798,
-                "id": 254378,
-                "difficulty": 46534789865332,
-                "totalFee": 2041299054,
-                "height": 38453
-                }
+```json
+{
+    "timeStamp": 8963798,
+    "id": 254378,
+    "difficulty": 46534789865332,
+    "totalFee": 2041299054,
+    "height": 38453
+}
+```
 
 フィールドの説明
 
@@ -3493,11 +3588,13 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "privateKey": "0962c6505d02123c40e858ff8ef21e2b7b5466be12c4770e3bf557aae828390f",
-                "publicKey": "c2e19751291d01140e62ece9ee3923120766c6302e1099b04014fe1009bc89d3",
-                "address": "NCKMNCU3STBWBR7E3XD2LR7WSIXF5IVJIDBHBZQT"
-                }
+```json
+{
+    "privateKey": "0962c6505d02123c40e858ff8ef21e2b7b5466be12c4770e3bf557aae828390f",
+    "publicKey": "c2e19751291d01140e62ece9ee3923120766c6302e1099b04014fe1009bc89d3",
+    "address": "NCKMNCU3STBWBR7E3XD2LR7WSIXF5IVJIDBHBZQT"
+}
+```
 
 フィールドの説明
 
@@ -3517,17 +3614,19 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "timeStamp": 9111526,
-                "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-                "fee": 3000000,
-                "mode": 1,
-                "remoteAccount": "cc6c9485d15b992501e57fe3799487e99de272f79c5442de94eeb998b45e0144",
-                "type": 2049,
-                "deadline": 9154726,
-                "version": 1744830465,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                }
+```json
+{
+	"timeStamp": 9111526,
+	"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+	"fee": 3000000,
+	"mode": 1,
+	"remoteAccount": "cc6c9485d15b992501e57fe3799487e99de272f79c5442de94eeb998b45e0144",
+	"type": 2049,
+	"deadline": 9154726,
+	"version": 1744830465,
+	"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+}
+```
 
 フィールドの説明
 
@@ -3549,48 +3648,54 @@ JSON構造の例
 
 JSON構造の例(テストネットワーク)
 
-        {
-                "timeStamp": 9111526,
-                "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-                "fee": 108000000,
-                "type": 16385,
-                "deadline": 9154726,
-                "version": -1744830463,
-                "signer": "cbda3edb771d42801a5c6ce0725f9374efade19a8933d6ac22ccfa50c777d0f9",
-                "creationFee": 50000000000,
-                "creationFeeSink": "53e140b5947f104cabc2d6fe8baedbc30ef9a0609c717d9613de593ec2a266d3",
-                "mosaicDefinition": {
-                "creator": "cbda3edb771d42801a5c6ce0725f9374efade19a8933d6ac22ccfa50c777d0f9",
-                "description": "precious vouchers",
-                "id": {
-                "namespaceId": "alice.vouchers",
-                "name": "Alice's gift vouchers"
-                },
-                "properties": [{
-                "name": "divisibility",
-                "value": "3"
-                },{
-                "name": "initialSupply",
-                "value": "1000"
-                },{
-                "name": "supplyMutable",
-                "value": "false"
-                },{
-                "name": "transferable",
-                "value": "true"
-                }
-                ],
-                "levy": {
-                "type": 1,
-                "recipient": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
-                "mosaicId": {
-                "namespaceId": "nem",
-                "name": "xem"
-                },
-                "fee": 1000
-                }
-                }
-                }
+```json
+{
+	"timeStamp": 9111526,
+	"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+	"fee": 108000000,
+	"type": 16385,
+	"deadline": 9154726,
+	"version": -1744830463,
+	"signer": "cbda3edb771d42801a5c6ce0725f9374efade19a8933d6ac22ccfa50c777d0f9",
+	"creationFee": 50000000000,
+	"creationFeeSink": "53e140b5947f104cabc2d6fe8baedbc30ef9a0609c717d9613de593ec2a266d3",
+	"mosaicDefinition": {
+		"creator": "cbda3edb771d42801a5c6ce0725f9374efade19a8933d6ac22ccfa50c777d0f9",
+		"description": "precious vouchers",
+		"id": {
+			"namespaceId": "alice.vouchers",
+			"name": "Alice's gift vouchers"
+		},
+		"properties": [
+			{
+				"name": "divisibility",
+				"value": "3"
+			},
+			{
+				"name": "initialSupply",
+				"value": "1000"
+			},
+			{
+				"name": "supplyMutable",
+				"value": "false"
+			},
+			{
+				"name": "transferable",
+				"value": "true"
+			}
+		],
+		"levy": {
+			"type": 1,
+			"recipient": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+			"mosaicId": {
+				"namespaceId": "nem",
+				"name": "xem"
+			},
+			"fee": 1000
+		}
+	}
+}
+```
 
 フィールドの説明
 
@@ -3614,21 +3719,23 @@ JSON構造の例(テストネットワーク)
 
 JSON構造の例(テストネットワーク)
 
-        {
-                "timeStamp": 9111526,
-                "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-                "fee": 108000000,
-                "type": 16386,
-                "deadline": 9154726,
-                "version": -1744830463,
-                "signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
-                "supplyType": 1,
-                "delta": 123,
-                "mosaicId": {
-                "namespaceId": "alice.vouchers",
-                "name": "gift vouchers"
-                }
-                }
+```json
+{
+	"timeStamp": 9111526,
+	"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+	"fee": 108000000,
+	"type": 16386,
+	"deadline": 9154726,
+	"version": -1744830463,
+	"signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
+	"supplyType": 1,
+	"delta": 123,
+	"mosaicId": {
+		"namespaceId": "alice.vouchers",
+		"name": "gift vouchers"
+	}
+}
+```
 
 フィールドの説明
 
@@ -3652,22 +3759,24 @@ JSON構造の例(テストネットワーク)
 
 JSON構造の例(メインネットワーク)
 
-        {
-            "timeStamp": 9111526,
-            "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-            "fee": 3000000,
-            "type": 257,
-            "deadline": 9154726,
-            "version": 1744830466,
-            "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
-            "modifications": [
-            <multisigcosignatorymodification>,
-            <multisigcosignatorymodification>
-            ],
-            "minCosignatories" : {
-            "relativeChange" : 2
-            }
-            }
+```json
+{
+	"timeStamp": 9111526,
+	"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+	"fee": 3000000,
+	"type": 257,
+	"deadline": 9154726,
+	"version": 1744830466,
+	"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
+	"modifications": [
+		"<multisigcosignatorymodification>",
+		"<multisigcosignatorymodification>"
+	],
+	"minCosignatories": {
+		"relativeChange": 2
+	}
+}
+```
 
 フィールドの説明
 
@@ -3691,10 +3800,12 @@ JSON構造の例(メインネットワーク)
 
 JSON構造の例
 
-        {
-                "modificationType": 1,
-                "cosignatoryAccount": "213150649f51d6e9113316cbec5bf752ef7968c1e823a28f19821e91daf848be"
-                }
+```json
+{
+    "modificationType": 1,
+    "cosignatoryAccount": "213150649f51d6e9113316cbec5bf752ef7968c1e823a28f19821e91daf848be"
+}
+```
 
 フィールドの説明
 
@@ -3709,19 +3820,21 @@ JSON構造の例
 
 JSON構造の例(テストネットワーク)
 
-        {
-                "timeStamp": 9111526,
-                "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-                "fee": 3000000,
-                "type": 257,
-                "deadline": 9154726,
-                "version": -1744830463,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
-                "otherHash": {
-                "data": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039"
-                },
-                "otherAccount": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA"
-                }
+```json
+{
+	"timeStamp": 9111526,
+	"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+	"fee": 3000000,
+	"type": 257,
+	"deadline": 9154726,
+	"version": -1744830463,
+	"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
+	"otherHash": {
+		"data": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039"
+	},
+	"otherAccount": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA"
+}
+```
 
 フィールドの説明
 
@@ -3744,20 +3857,22 @@ JSON構造の例(テストネットワーク)
 
 JSON構造の例(テストネットワーク)
 
-        {
-            "timeStamp": 9111526,
-            "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-            "fee": 3000000,
-            "type": 257,
-            "deadline": 9154726,
-            "version": -1744830463,
-            "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
-            "otherTrans": <inner transaction="">,
-            "signatures":[
-            <multisigsignaturetransaction>,
-            <multisigsignaturetransaction>
-            ]
-            }
+```json
+{
+	"timeStamp": 9111526,
+	"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+	"fee": 3000000,
+	"type": 257,
+	"deadline": 9154726,
+	"version": -1744830463,
+	"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a",
+	"otherTrans": "<inner transaction=\"\">",
+	"signatures": [
+		"<multisigsignaturetransaction>",
+		"<multisigsignaturetransaction>"
+	]
+}
+```
 
 フィールドの説明
 
@@ -3780,19 +3895,21 @@ JSON構造の例(テストネットワーク)
 
 JSON構造の例(テストネットワーク)
 
-        {
-                "timeStamp": 9111526,
-                "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-                "fee": 108000000,
-                "type": 8193,
-                "deadline": 9154726,
-                "version": -1744830463,
-                "signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
-                "rentalFeeSink": "3e82e1c1e4a75adaa3cba8c101c3cd31d9817a2eb966eb3b511fb2ed45b8e262",
-                "rentalFee": 5000000000,
-                "newPart": "voucher",
-                "parent": "alice"
-                }
+```json
+{
+	"timeStamp": 9111526,
+	"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+	"fee": 108000000,
+	"type": 8193,
+	"deadline": 9154726,
+	"version": -1744830463,
+	"signer": "d99e88c90da71a4b0d848454e59e296c9ef7a8f018f3eaa3a198dc460b6621a4",
+	"rentalFeeSink": "3e82e1c1e4a75adaa3cba8c101c3cd31d9817a2eb966eb3b511fb2ed45b8e262",
+	"rentalFee": 5000000000,
+	"newPart": "voucher",
+	"parent": "alice"
+}
+```
 
 フィールドの説明
 
@@ -3818,54 +3935,59 @@ JSON構造の例(テストネットワーク)
 
 JSON構造の例(転送トランザクションバージョン1)
 
-        {
-                "timeStamp": 9111526,
-                "amount": 1000000000,
-                "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
-                "fee": 3000000,
-                "recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
-                "type": 257,
-                "deadline": 9154726,
-                "message":
-                {
-                "payload": "74657374207472616e73616374696f6e",
-                "type": 1
-                },
-                "version": -1744830463,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                }
+```json
+{
+	"timeStamp": 9111526,
+	"amount": 1000000000,
+	"signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+	"fee": 3000000,
+	"recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
+	"type": 257,
+	"deadline": 9154726,
+	"message": {
+		"payload": "74657374207472616e73616374696f6e",
+		"type": 1
+	},
+	"version": -1744830463,
+	"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+}
+```
 
 JSON構造の例(転送トランザクションバージョン2)
 
-        {
-                "timeStamp": 9111526,
-                "amount": 123000000,
-                "signature": "fad7ea2b5df5f7846f45fd9983a75ad8d333af3660f4f0d355864420f4482605d675e89d97177385338b226097342b4222add52c5397423f9eaf6b01fe3ef70c",
-                "fee": 3000000,
-                "recipient": "TBEH27FNRS43FNH3PXE4XN3H7HXA37H77APSZW46",
-                "type": 257,
-                "deadline": 9154726,
-                "message":
-                {
-                "payload": "74657374207472616e73616374696f6e",
-                "type": 1
-                },
-                "version": -1744830462,
-                "signer": "cb4ef3709d25ccd0c022b2d53e4ce31478ebc4bf177b1b54482afb8e55692521",
-                "mosaics":[{
-                "mosaicId":{
-                "namespaceId": "id0",
-                "name": "name0"
-                },
-                "quantity": 10
-                },{
-                "mosaicId":{
-                "namespaceId": "id1",
-                "name": "name1"
-                },
-                "quantity": 11
-                }]
-                }
+```json
+{
+	"timeStamp": 9111526,
+	"amount": 123000000,
+	"signature": "fad7ea2b5df5f7846f45fd9983a75ad8d333af3660f4f0d355864420f4482605d675e89d97177385338b226097342b4222add52c5397423f9eaf6b01fe3ef70c",
+	"fee": 3000000,
+	"recipient": "TBEH27FNRS43FNH3PXE4XN3H7HXA37H77APSZW46",
+	"type": 257,
+	"deadline": 9154726,
+	"message": {
+		"payload": "74657374207472616e73616374696f6e",
+		"type": 1
+	},
+	"version": -1744830462,
+	"signer": "cb4ef3709d25ccd0c022b2d53e4ce31478ebc4bf177b1b54482afb8e55692521",
+	"mosaics": [
+		{
+			"mosaicId": {
+				"namespaceId": "id0",
+				"name": "name0"
+			},
+			"quantity": 10
+		},
+		{
+			"mosaicId": {
+				"namespaceId": "id1",
+				"name": "name1"
+			},
+			"quantity": 11
+		}
+	]
+}
+```
 
 フィールドの説明
 
@@ -3912,36 +4034,43 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
-                "id": {
-                "namespaceId": "alice.drinks",
-                "name": "orange juice"
-                },
-                "description": "A healthy drink with lots of vitamins",
-                "properties": [{
-                "name": "divisibility",
-                "value": "3"
-                },{
-                "name": "initialSupply",
-                "value": "1000"
-                },{
-                "name": "supplyMutable",
-                "value": "false"
-                },{
-                "name": "transferable",
-                "value": "true"
-                }],
-                "levy": {
-                "type": 1,
-                "recipient": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
-                "mosaicId": {
-                "namespaceId": "alice.drinks",
-                "name": "orange juice"
-                },
-                "fee": 1000
-                }
-                }
+```json
+{
+	"creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
+	"id": {
+		"namespaceId": "alice.drinks",
+		"name": "orange juice"
+	},
+	"description": "A healthy drink with lots of vitamins",
+	"properties": [
+		{
+			"name": "divisibility",
+			"value": "3"
+		},
+		{
+			"name": "initialSupply",
+			"value": "1000"
+		},
+		{
+			"name": "supplyMutable",
+			"value": "false"
+		},
+		{
+			"name": "transferable",
+			"value": "true"
+		}
+	],
+	"levy": {
+		"type": 1,
+		"recipient": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+		"mosaicId": {
+			"namespaceId": "alice.drinks",
+			"name": "orange juice"
+		},
+		"fee": 1000
+	}
+}
+```
 
 フィールドの説明
 
@@ -3959,21 +4088,22 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "meta" {
-                "id": 3541
-                }
-                "mosaic": {
-                "creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
-                "id": {
-                "namespaceId": "alice.drinks",
-                "name": "orange juice"
-                },
-                "description": "A healthy drink with lots of vitamins",
-                "properties": [
-                ]
-                }
-                }
+```json
+{
+	"meta": {
+		"id": 3541
+	},
+	"mosaic": {
+		"creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
+		"id": {
+			"namespaceId": "alice.drinks",
+			"name": "orange juice"
+		},
+		"description": "A healthy drink with lots of vitamins",
+		"properties": []
+	}
+}
+```
 
 フィールドの説明
 
@@ -3995,23 +4125,28 @@ JSON構造の例
 *   initialSupply：最初に作成されるモザイクの単位数を定義します。これらのモザイクはモザイクの作成者に貸し出されます。最初の供給には9,000,000,000ユニットの上限があります。
 *   supplyMutable：後でモザイク供給変更トランザクション([MosaicSupplyChangeTransaction](#mosaicSupplyChangeTransaction))を使用して作成者が供給を変更できるかどうかを決定します。可能な値は『true』と『false』であり、前者は供給を変更することができ、後者は供給が常に固定されていることを意味します。
 *   transferable：モザイクを作成者以外のユーザーに転送できるかどうかを判断します。特定のシナリオではユーザーがモザイクを交換できるようにすることは望ましくありません(たとえば、モザイクは会社が他のユーザーに移転したくないボーナスポイントを表す場合など)。可能な値は『true』と『false』です。前者はユーザー間で任意に転送でき、後者は作成者との間でのみモザイクを転送できることを意味します。
-*   
+* JSON構造の例
 
-JSON構造の例
-
-        [{
-                "name": "divisibility",
-                "value": "3"
-                },{
-                "name": "initialSupply",
-                "value": "1000"
-                },{
-                "name": "supplyMutable",
-                "value": "false"
-                },{
-                "name": "transferable",
-                "value": "true"
-                }]
+```json
+[
+	{
+		"name": "divisibility",
+		"value": "3"
+	},
+	{
+		"name": "initialSupply",
+		"value": "1000"
+	},
+	{
+		"name": "supplyMutable",
+		"value": "false"
+	},
+	{
+		"name": "transferable",
+		"value": "true"
+	}
+]
+```
 
 フィールドの説明
 
@@ -4026,15 +4161,17 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "type": 1,
-                "recipient": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
-                "mosaicId": {
-                "namespaceId": "nem",
-                "name": "xem"
-                },
-                "fee": 1000
-                }
+```json
+{
+	"type": 1,
+	"recipient": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+	"mosaicId": {
+		"namespaceId": "nem",
+		"name": "xem"
+	},
+	"fee": 1000
+}
+```
 
 フィールドの説明
 
@@ -4089,16 +4226,18 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "meta":{
-                "id":26264,
-                },
-                "namespace":{
-                "fqn": "makoto.metal.coins",
-                "owner": TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
-                "height": 13465
-                }
-                }
+```json
+{
+	"meta": {
+		"id": 26264
+	},
+	"namespace": {
+		"fqn": "makoto.metal.coins",
+		"owner": "TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+		"height": 13465
+	}
+}
+```
 
 フィールドの説明
 
@@ -4117,17 +4256,19 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "type": 4,
-                "code": 6,
-                "message": "status",
-                "transactionHash": {
-                "data":"c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
-                },
-                "innerTransactionHash": {
-                "data": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039"
-                }
-                }
+```json
+{
+	"type": 4,
+	"code": 6,
+	"message": "status",
+	"transactionHash": {
+		"data": "c1786437336da077cd572a27710c40c378610e8d33880bcb7bdb0a42e3d35586"
+	},
+	"innerTransactionHash": {
+		"data": "44e4968e5aa35fe182d4def5958e23cf941c4bf809364afb4431ebbf6a18c039"
+	}
+}
+```
 
 フィールドの説明
 
@@ -4145,17 +4286,19 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "last-delay-time": 3000,
-                "executions": 1024,
-                "failures": 0,
-                "successes": 1024,
-                "last-operation-start-time": 9317695,
-                "is-executing": 0,
-                "name": "FORAGING",
-                "average-operation-time": 0,
-                "last-operation-time": 0
-                }
+```json
+{
+	"last-delay-time": 3000,
+	"executions": 1024,
+	"failures": 0,
+	"successes": 1024,
+	"last-operation-start-time": 9317695,
+	"is-executing": 0,
+	"name": "FORAGING",
+	"average-operation-time": 0,
+	"last-operation-time": 0
+}
+```
 
 フィールドの説明
 
@@ -4256,27 +4399,26 @@ JSON構造の例
 
 JSON構造の例
 
-        {
-                "metaData":
-                {
-                "features": 1,
-                "networkId": 104,
-                "application": "NIS",
-                "version": "0.4.30-BETA",
-                "platform": "Oracle Corporation (1.8.0_05) on Windows 8.1"
-                },
-                "endpoint":
-                {
-                "protocol": "http",
-                "port": 7890,
-                "host": "85.25.36.97"
-                },
-                "identity":
-                {
-                "name": "Hi, I am Alice2",
-                "public-key": "3302e7703ee9f364c25bbfebb9c12ac91fa9dcd69e09a5d4f3830d71505a2350"
-                }
-                }
+```json
+{
+	"metaData": {
+		"features": 1,
+		"networkId": 104,
+		"application": "NIS",
+		"version": "0.4.30-BETA",
+		"platform": "Oracle Corporation (1.8.0_05) on Windows 8.1"
+	},
+	"endpoint": {
+		"protocol": "http",
+		"port": 7890,
+		"host": "85.25.36.97"
+	},
+	"identity": {
+		"name": "Hi, I am Alice2",
+		"public-key": "3302e7703ee9f364c25bbfebb9c12ac91fa9dcd69e09a5d4f3830d71505a2350"
+	}
+}
+```
 
 フィールドの説明
 
@@ -4387,25 +4529,25 @@ JSON構造の例
 
 JSON構造の例(テストネットワーク)
 
-        {
-                "transaction":
-                {
-                "timeStamp": 9111526,
-                "amount": 1000000000,
-                "fee": 3000000,
-                "recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
-                "type": 257,
-                "deadline": 9154726,
-                "message":
-                {
-                "payload": "74657374207472616e73616374696f6e",
-                "type": 1
-                },
-                "version": -1744830463,
-                "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
-                },
-                "privateKey": "68e4f79f886927de698df4f857de2aada41ccca6617e56bb0d61623b35b08cc0"
-                }
+```json
+{
+	"transaction": {
+		"timeStamp": 9111526,
+		"amount": 1000000000,
+		"fee": 3000000,
+		"recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
+		"type": 257,
+		"deadline": 9154726,
+		"message": {
+			"payload": "74657374207472616e73616374696f6e",
+			"type": 1
+		},
+		"version": -1744830463,
+		"signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+	},
+	"privateKey": "68e4f79f886927de698df4f857de2aada41ccca6617e56bb0d61623b35b08cc0"
+}
+```
 
 フィールドの説明
 
